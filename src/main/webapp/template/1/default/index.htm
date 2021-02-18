@@ -109,7 +109,25 @@ navigation: {nextEl: '.swiper-button-next',prevEl: '.swiper-button-prev'}
      </div> {/ms:arclist} 
     </div> 
     <a href="{ms:global.url/}/product/index.html" class="more"> 更多产品 </a> 
-   </div> 
+   </div>
+
+   <div class="product">
+    <div class="title">
+     <span> APP应用 </span>
+    </div>
+    <div class="body">
+     {ms:arclist flag='c' typeid='1357173269415239682'}
+     <div class="prod">
+      <!-- <div class="pic">
+       <img title="" alt="" src="{ms:global.host/}/{@ms:file field.litpic/}">
+      </div> -->
+      <!-- <a href="{ms:global.url/}${field.link}" class="text"> ${field.title} </a>  -->
+      ${field.content}
+     </div> {/ms:arclist}
+    </div>
+    <a href="{ms:global.url/}/product/index.html" class="more"> 更多产品 </a>
+   </div>
+
    <div class="news"> 
     <div class="title"> 
      <span> 新闻动态 </span> 
