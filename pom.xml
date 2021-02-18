@@ -9,9 +9,9 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <groupId>net.mingsoft</groupId>
-    <artifactId>website</artifactId>
+    <artifactId>ctcloud</artifactId>
     <version>5.2.0.RELEASE</version>
-    <name>website</name>
+    <name>ctcloud</name>
     <!-- 打包war包 -->
 <!--    <packaging>war</packaging>-->
     <properties>
