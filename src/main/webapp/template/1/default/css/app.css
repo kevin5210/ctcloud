@@ -37,7 +37,7 @@
 }
 
 .ms-nav .body .logo .logo-pic {
-    width: 200px;
+    width: 207px;
     height: 66px;
 }
 
@@ -386,7 +386,7 @@
 }
 
 .ms-footer .body .copyright {
-    text-align: left;
+    text-align: center;
     flex-direction: row;
     word-wrap: break-word;
     display: inline-block;
@@ -636,7 +636,7 @@
     }
 
     .ms-footer {
-        background-color: #F2F2F2;
+        background-color: rgb(59, 60, 61);
         align-items: center;
         flex-direction: row;
         display: flex;

@@ -1,15 +1,16 @@
 <html>
  <head> 
   <meta charset="utf-8"> 
-  <title>铭飞MCms</title> 
+  <title>demo云平台</title> 
   <meta http-equiv="content-type" content="text/html"> 
   <meta HTTP-EQUIV="Pragma" CONTENT="no-cache"> 
   <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,width=device-width"> 
   <meta name="format-detection" content="telephone=no"> 
   <meta name="app-mobile-web-app-capable" content="yes"> 
   <meta name="app-mobile-web-app-status-bar-style" content="black-translucent"> 
-  <meta name="keywords" content="铭飞MCMS"> 
-  <meta name="description" content="铭飞MCMS"> 
+  <meta name="keywords" content="demo云平台"> 
+  <meta name="description" content="demo云平台">
+  <link rel="shortcut icon" href="http://www.roboct.com/wp-content/themes/ugo/images/favicon.ico" type="x-icon"/>
   <script type="text/javascript" src="http://localhost:8080/static/plugins/vue/2.6.9/vue.min.js"></script> 
   <link rel="stylesheet" href="http://localhost:8080/static/plugins/minireset/0.0.2/minireset.min.css"> 
   <link rel="stylesheet" href="https://cdn.mingsoft.net/iconfont/iconfont.css"> 
@@ -56,21 +57,21 @@ Vue.use(VueAwesomeSwiper)
 <div class="ms-nav">
  <div class="body"> 
   <div class="logo">
-   <img title="" alt="" src="http://localhost:8080//upload/1/appLogo/1609397756549.png" class="logo-pic">
-   <img title="" alt="" src="https://www.mingsoft.net//template/1/ms/images/1596437934982.png" class="logo-desc"> 
+   <img title="" alt="" src="http://localhost:8080//upload/1/appLogo/1613714116165.jpg" class="logo-pic">
+   <!-- <img title="" alt="" src="https://www.mingsoft.net//template/1/ms/images/1596437934982.png" class="logo-desc"> -->
   </div> 
   <div @click="switchShow([&quot;1605172743000_96378&quot;]);" class="nav-h5">
    <i class="iconfont icon-caidan nav-h5-icon"></i> 
    <div id="key_1605172743000_96378" class="nav-h5-body" style="display: none">
     <a href="http://localhost:8080" class="nav-h5-item"> 首页 </a>
     <a href="http://localhost:8080/html/web/product/index.html" class="nav-h5-item ">
-     公司产品
+     云平台
     </a>
     <a href="http://localhost:8080/html/web/news/index.html" class="nav-h5-item ">
-     新闻动态
+     APP产品
     </a>
     <a href="http://localhost:8080/html/web/gywm/lianxiwomen/index.html" class="nav-h5-item ">
-     关于我们
+     技术实验室
     </a>
    </div> 
   </div> 
@@ -78,13 +79,13 @@ Vue.use(VueAwesomeSwiper)
    <a href="http://localhost:8080" class="item"> 首页 </a>
 
    <a href="http://localhost:8080/html/web/product/index.html" class="item">
-    公司产品
+    云平台
    </a>
    <a href="http://localhost:8080/html/web/news/index.html" class="item">
-    新闻动态
+    APP产品
    </a>
    <a href="http://localhost:8080/html/web/gywm/lianxiwomen/index.html" class="item">
-    关于我们
+    技术实验室
    </a>
   </div> 
   <div class="nav-search"> 
@@ -118,14 +119,20 @@ navigation: {nextEl: '.swiper-button-next',prevEl: '.swiper-button-prev'}
      <!--静态图片--> 
      <!--动态图片-->
      <swiper-slide>
-      <a href="https://www.mingsoft.net" target="_blank" style="width:100%;height: 100%">
-       <div style="background-image: url('http://localhost:8080//upload/1/cms/content/1609838691084.png');background-size: cover; background-position: center; width:100%;height: 100%">
+      <a href="" target="_blank" style="width:100%;height: 100%">
+       <div style="background-image: url('http://localhost:8080//upload/1/cms/content/1613716723631.jpeg');background-size: cover; background-position: center; width:100%;height: 100%">
+       </div>
+      </a>
+     </swiper-slide>
+     <swiper-slide>
+      <a href="http://www.roboct.com/" target="_blank" style="width:100%;height: 100%">
+       <div style="background-image: url('http://localhost:8080//upload/1/cms/content/1612163288128.jpg');background-size: cover; background-position: center; width:100%;height: 100%">
        </div>
       </a>
      </swiper-slide>
     </swiper> 
    </div> 
-   <div class="about">
+   <div class="about" style="display: none">
     <div class="body"> 
      <div class="left"> 
       <img title="" alt="" src="http://localhost:8080//upload/1/cms/content/1609838258663.png">
@@ -135,101 +142,190 @@ navigation: {nextEl: '.swiper-button-next',prevEl: '.swiper-button-prev'}
        <span> 公司介绍 </span> 
       </div> 
       <div class="desc"> 
-       <span> 团队成立于2012年，是一群不断的以技术创新与软件研发为核心的学习型技术团队。团队在软件研发的技术领域，不断地积累通用、实用、好用的通用功能插件，实现系统模块化集成开发解决方案。方案适用于传统互联网、移动互联网、物联网，不仅大大降低软件产品在研发投入的成本，更能加快软件的研发进程！ </span>
+       <span> 程天科技是一个致力于外骨骼机器人研发的科技企业，研发团队包含科研、机械、电子、软件四个主要研发部门，具有多年的特种机器人、水下机器人等高精尖人才与技术，涵盖自动化、互联网、运动医学等多个专业。与哈工大、哈工程（哈军工）、浙江大学、加拿大卡尔顿大学等多所高校密切科研合作关系，并与哈尔滨医大、首都医科大学、黑龙江中医药大学、浙二医院、等著名医院一起合作进行外骨骼配套康复方案的研究。为行动不便和需要助力的人群提供更好的外骨骼产品。 </span>
       </div> 
      </div> 
     </div>  
    </div> 
    <div class="product"> 
     <div class="title"> 
-     <span> 核心产品 </span> 
+     <span> 云平台 </span>
     </div> 
     <div class="body">
-     <div class="prod"> 
+     <div class="prod"  style="text-align:center;">
+      <a href="http://localhost:8080/html/web/product/sys/1362659757740482562.html">
+       <img class="pic" title="" alt="" src="http://localhost:8080//upload/1/cms/content/1613718367889.png">
+       <span>lab </span></a>
+     </div>
+     <!--<div class="prod">
+      <div class="pic"> 
+       <img title="" alt="" src="http://localhost:8080//upload/1/cms/content/1613718367889.png">
+      </div> 
+      <a href="http://localhost:8080/html/web/product/sys/1362659757740482562.html" class="text"> lab </a> 
+     </div>-->      <div class="prod"  style="text-align:center;">
+      <a href="http://localhost:8080/html/web/product/APPchanpin/1362339600330530817.html">
+       <img class="pic" title="" alt="" src="http://localhost:8080//upload/1/cms/content/1613716365107.png">
+       <span>集控中心平台APP </span></a>
+     </div>
+     <!--<div class="prod">
+      <div class="pic"> 
+       <img title="" alt="" src="http://localhost:8080//upload/1/cms/content/1613716365107.png">
+      </div> 
+      <a href="http://localhost:8080/html/web/product/APPchanpin/1362339600330530817.html" class="text"> 集控中心平台APP </a> 
+     </div>-->      <div class="prod"  style="text-align:center;">
+      <a href="http://localhost:8080/html/web/product/pingtaichanpin/1356149737847693314.html">
+       <img class="pic" title="" alt="" src="http://localhost:8080//upload/1/cms/content/1612166266385.png">
+       <span>作战平台 </span></a>
+     </div>
+     <!--<div class="prod">
+      <div class="pic"> 
+       <img title="" alt="" src="http://localhost:8080//upload/1/cms/content/1612166266385.png">
+      </div> 
+      <a href="http://localhost:8080/html/web/product/pingtaichanpin/1356149737847693314.html" class="text"> 作战平台 </a> 
+     </div>-->      <div class="prod"  style="text-align:center;">
+      <a href="http://localhost:8080/html/web/product/pingtaichanpin/1356149547774418946.html">
+       <img class="pic" title="" alt="" src="http://localhost:8080//upload/1/cms/content/1612166208718.png">
+       <span>无人机平台 </span></a>
+     </div>
+     <!--<div class="prod">
+      <div class="pic"> 
+       <img title="" alt="" src="http://localhost:8080//upload/1/cms/content/1612166208718.png">
+      </div> 
+      <a href="http://localhost:8080/html/web/product/pingtaichanpin/1356149547774418946.html" class="text"> 无人机平台 </a> 
+     </div>-->      <div class="prod"  style="text-align:center;">
+      <a href="http://localhost:8080/html/web/product/pingtaichanpin/1356069712922349569.html">
+       <img class="pic" title="" alt="" src="http://localhost:8080//upload/1/cms/content/1612147146686.png">
+       <span>意见管理平台 </span></a>
+     </div>
+     <!--<div class="prod">
+      <div class="pic"> 
+       <img title="" alt="" src="http://localhost:8080//upload/1/cms/content/1612147146686.png">
+      </div> 
+      <a href="http://localhost:8080/html/web/product/pingtaichanpin/1356069712922349569.html" class="text"> 意见管理平台 </a> 
+     </div>-->      <div class="prod"  style="text-align:center;">
+      <a href="http://localhost:8080/html/web/product/pingtaichanpin/1354987239958372353.html">
+       <img class="pic" title="" alt="" src="http://localhost:8080//upload/1/cms/content/1613716383612.png">
+       <span>峰谷储能云平台 </span></a>
+     </div>
+     <!--<div class="prod">
+      <div class="pic"> 
+       <img title="" alt="" src="http://localhost:8080//upload/1/cms/content/1613716383612.png">
+      </div> 
+      <a href="http://localhost:8080/html/web/product/pingtaichanpin/1354987239958372353.html" class="text"> 峰谷储能云平台 </a> 
+     </div>-->      <div class="prod"  style="text-align:center;">
+      <a href="http://localhost:8080/html/web/product/pingtaichanpin/1329316951228489729.html">
+       <img class="pic" title="" alt="" src="http://localhost:8080//upload/1/cms/content/1609836029087.png">
+       <span>Store应用市场 </span></a>
+     </div>
+     <!--<div class="prod">
       <div class="pic"> 
        <img title="" alt="" src="http://localhost:8080//upload/1/cms/content/1609836029087.png">
       </div> 
       <a href="http://localhost:8080/html/web/product/pingtaichanpin/1329316951228489729.html" class="text"> Store应用市场 </a> 
-     </div>      <div class="prod"> 
+     </div>-->      <div class="prod"  style="text-align:center;">
+      <a href="http://localhost:8080/html/web/product/pingtaichanpin/1329316887084998658.html">
+       <img class="pic" title="" alt="" src="http://localhost:8080//upload/1/cms/content/1609837914855.png">
+       <span>Designer设计器 </span></a>
+     </div>
+     <!--<div class="prod">
       <div class="pic"> 
        <img title="" alt="" src="http://localhost:8080//upload/1/cms/content/1609837914855.png">
       </div> 
       <a href="http://localhost:8080/html/web/product/pingtaichanpin/1329316887084998658.html" class="text"> Designer设计器 </a> 
-     </div>      <div class="prod"> 
+     </div>-->      <div class="prod"  style="text-align:center;">
+      <a href="http://localhost:8080/html/web/product/pingtaichanpin/1329316838384934914.html">
+       <img class="pic" title="" alt="" src="http://localhost:8080//upload/1/cms/content/1609838011513.png">
+       <span>Code代码生成器 </span></a>
+     </div>
+     <!--<div class="prod">
       <div class="pic"> 
        <img title="" alt="" src="http://localhost:8080//upload/1/cms/content/1609838011513.png">
       </div> 
       <a href="http://localhost:8080/html/web/product/pingtaichanpin/1329316838384934914.html" class="text"> Code代码生成器 </a> 
-     </div>      <div class="prod"> 
+     </div>-->      <div class="prod"  style="text-align:center;">
+      <a href="http://localhost:8080/html/web/product/pingtaichanpin/1329316558960402434.html">
+       <img class="pic" title="" alt="" src="http://localhost:8080//upload/1/cms/content/1609838116473.png">
+       <span>PM项目管理 </span></a>
+     </div>
+     <!--<div class="prod">
       <div class="pic"> 
        <img title="" alt="" src="http://localhost:8080//upload/1/cms/content/1609838116473.png">
       </div> 
       <a href="http://localhost:8080/html/web/product/pingtaichanpin/1329316558960402434.html" class="text"> PM项目管理 </a> 
-     </div>      <div class="prod"> 
-      <div class="pic"> 
-       <img title="" alt="" src="http://localhost:8080//upload/1/cms/content/1609837616948.png">
-      </div> 
-      <a href="http://localhost:8080/html/web/product/hycp/1329315928002863105.html" class="text"> BIMCms施工管理软件 </a> 
-     </div>      <div class="prod"> 
-      <div class="pic"> 
-       <img title="" alt="" src="http://localhost:8080//upload/1/cms/content/1609837720097.png">
-      </div> 
-      <a href="http://localhost:8080/html/web/product/hycp/1329315860382294018.html" class="text"> MEC工程造价咨询管理软件 </a> 
-     </div>  
+     </div>--> 
     </div> 
     <a href="http://localhost:8080/html/web/product/index.html" class="more"> 更多产品 </a> 
-   </div> 
+   </div>
+
+   <div class="product-app">
+    <div class="title">
+     <span> APP应用 </span>
+    </div>
+    <div class="body">
+     <div class="prod" style="margin:0 auto; ">
+      <p><video class="edui-upload-video  vjs-default-skin      video-js" controls="" preload="none" width="420" height="280" src="/upload/1/cms/content/editor/1613696412610.mp4" data-setup="{}"><source src="/upload/1/cms/content/editor/1613696412610.mp4" type="video/mp4"/></video><br/></p>
+     </div>
+     <div style="float: right; width:45%">
+      集控中心平台APP 描述
+     </div>
+    </div>
+    <a href="http://localhost:8080/html/web/product/index.html" class="more" style="background-color: #F2F2F2"> 更多产品 </a>
+   </div>
+
+   <div class="lab">
+    <div class="title">
+     <span> 技术实验室 </span>
+    </div>
+    <div class="body">
+    </div>
+   </div>
+
    <div class="news"> 
     <div class="title"> 
      <span> 新闻动态 </span> 
     </div> 
     <div class="body">
      <div class="left"> 
-      <img title="" alt="" src="http://localhost:8080//upload/1/cms/content/1609825459624.png">
-      <a href="http://localhost:8080/html/web/news/gsdt/1329374638616158210.html" target="_blank" class="title"> 5.2.0稳定版本发布 </a>
+      <img title="" alt="" src="http://localhost:8080//upload/1/cms/content/1612160616926.png">
+      <a href="http://localhost:8080/html/web/news/gsdt/1356075479041773569.html" target="_blank" class="title"> 集控中心平台设备调试圆满完成 </a>
+      <span class="desc">  </span> 
+     </div>      <div class="left"> 
+      <img title="" alt="" src="http://localhost:8080//upload/1/cms/content/1612160630585.png">
+      <a href="http://localhost:8080/html/web/news/gsdt/1356074605330501634.html" target="_blank" class="title"> DEMO展示平台测试上线 </a>
       <span class="desc">  </span> 
      </div>  
      <div class="right">
       <div class="news-item"> 
        <div class="date"> 
-        <span class="day"> 04 </span> 
-        <span class="date"> 2021-01 </span> 
+        <span class="day"> 01 </span> 
+        <span class="date"> 2021-02 </span> 
        </div> 
        <div class="news-body"> 
-        <a href="http://localhost:8080/html/web/news/xingyedongtai/1346302136240926721.html" class="title"> 铭飞MCMS内容管理系统完整开源版J2EE代码 </a> 
-        <span class="desc"> 官网同时提供一键运行版本下载，请步移官网.... </span> 
+        <a href="http://localhost:8080/html/web/news/gsdt/1356075479041773569.html" class="title"> 集控中心平台设备调试圆满完成 </a> 
+        <span class="desc">  </span> 
        </div> 
       </div>       <div class="news-item"> 
        <div class="date"> 
-        <span class="day"> 04 </span> 
-        <span class="date"> 2021-01 </span> 
+        <span class="day"> 01 </span> 
+        <span class="date"> 2021-02 </span> 
        </div> 
        <div class="news-body"> 
-        <a href="http://localhost:8080/html/web/news/xingyedongtai/1346299650146922497.html" class="title"> 【网站】国内 前6名 Java开源CMS建站系统 </a> 
-        <span class="desc"> 下面我们开始分享一下开源中国中最火的Java开源CMS建站系统 </span> 
-       </div> 
-      </div>       <div class="news-item"> 
-       <div class="date"> 
-        <span class="day"> 19 </span> 
-        <span class="date"> 2020-11 </span> 
-       </div> 
-       <div class="news-body"> 
-        <a href="http://localhost:8080/html/web/news/xingyedongtai/1329374724146405378.html" class="title"> 国内最火的10款Java开源项目，都是国人开发，CMS居多 </a> 
-        <span class="desc"> 价值源自分享！铭飞系统不仅一套简单好用的开源系统、更是一整套优质的开源生态内容体系。铭飞的使命就是降低开发成本提高开发效率，提供全方位的企业级开发解决方案，每月28定期更新版本 </span> 
+        <a href="http://localhost:8080/html/web/news/gsdt/1356074605330501634.html" class="title"> DEMO展示平台测试上线 </a> 
+        <span class="desc">  </span> 
        </div> 
       </div>  
      </div> 
     </div> 
-    <div class="more"> 
-    </div> 
+   <!-- <div class="more">
+    </div> -->
     <a href="http://localhost:8080/html/web/news/index.html" class="more"> 更多新闻 </a>
    </div> 
 <div class="ms-footer"> 
  <div class="body"> 
   <div class="top"> 
-   <div class="top-left">
+   <div class="top-left" style="display:none">
          <div class="foot-nav"> 
-     <a href="http://localhost:8080/html/web/product/index.html" class="nav-item"> 公司产品 </a>  
+     <a href="http://localhost:8080/html/web/product/index.html" class="nav-item"> 云平台 </a>  
      <div> 
       <a href="http://localhost:8080/html/web/product/kycp/index.html" class="item"> 开源产品 </a> 
      </div>  
@@ -239,8 +335,14 @@ navigation: {nextEl: '.swiper-button-next',prevEl: '.swiper-button-prev'}
      <div> 
       <a href="http://localhost:8080/html/web/product/pingtaichanpin/index.html" class="item"> 平台产品 </a> 
      </div>  
+     <div> 
+      <a href="http://localhost:8080/html/web/product/APPchanpin/index.html" class="item"> APP应用 </a> 
+     </div>  
+     <div> 
+      <a href="http://localhost:8080/html/web/product/sys/index.html" class="item"> 技术实验室 </a> 
+     </div>  
     </div>     <div class="foot-nav"> 
-     <a href="http://localhost:8080/html/web/news/index.html" class="nav-item"> 新闻动态 </a>  
+     <a href="http://localhost:8080/html/web/news/index.html" class="nav-item"> APP产品 </a>  
      <div> 
       <a href="http://localhost:8080/html/web/news/gsdt/index.html" class="item"> 公司动态 </a> 
      </div>  
@@ -248,7 +350,7 @@ navigation: {nextEl: '.swiper-button-next',prevEl: '.swiper-button-prev'}
       <a href="http://localhost:8080/html/web/news/xingyedongtai/index.html" class="item"> 行业动态 </a> 
      </div>  
     </div>     <div class="foot-nav"> 
-     <a href="http://localhost:8080/html/web/gywm/index.html" class="nav-item"> 关于我们 </a>  
+     <a href="http://localhost:8080/html/web/gywm/index.html" class="nav-item"> 技术实验室 </a>  
      <div> 
       <a href="http://localhost:8080/html/web/gywm/lianxiwomen/index.html" class="item"> 联系我们 </a> 
      </div>  
@@ -256,21 +358,20 @@ navigation: {nextEl: '.swiper-button-next',prevEl: '.swiper-button-prev'}
       <a href="http://localhost:8080/html/web/gywm/gongsijieshao/index.html" class="item"> 公司介绍 </a> 
      </div>  
     </div>  
-   </div> 
-   <div class="top-right"> 
-    <div class="qr"> 
-     <img title="" alt="" src="http://localhost:8080/template/1/default/images/sw.png" class="pic">
-     <span class="text"> 商务微信 </span>
-    </div> 
-    <div class="qr"> 
-     <img title="" alt="" src="http://localhost:8080/template/1/default/images/gzh.png" class="pic">
-     <span class="text"> 公众号 </span> 
-    </div> 
-   </div> 
-  </div> 
-  <span class="copyright"> <el-link href="https://www.mingsoft.net/" type="primary">© 江西铭软科技有限公司</el-link> 2012-至今 All Rights Reserved. Powered by MCms </span>
-  <span class="power"> @该网页由 <el-link href="https://designer.mingsoft.net/" type="primary">MDesigner</el-link> 制作完成 </span>
- </div> 
+   </div>
+   <div class="top-right" style="display:none">
+    <div class="qr">
+     <img title="" alt="" src="http://localhost:8080/template/1/default/images/ctwb.png" class="pic">
+     <span class="text"> 程天微博 </span>
+    </div>
+    <div class="qr">
+     <img title="" alt="" src="http://localhost:8080/template/1/default/images/ctwx.jpg" class="pic">
+     <span class="text"> 程天公众号 </span>
+    </div>
+   </div>
+  </div>
+  <span class="copyright"> <el-link href="http://www.roboct.com/" type="primary" target="_blank">© 哈尔滨程天科技发展有限公司</el-link> 2021 All Rights Reserved. Powered by CT-TC </span>
+ </div>
 </div>  </div>   
   <script>
 var app = new Vue({
@@ -477,7 +578,22 @@ var app = new Vue({
             padding-left:0px;
             margin-top:20px;
     }
-    .product .title 
+    .product-app {
+            align-items:center;
+            flex-direction:column;
+            display:flex;
+            padding-right:0px;
+            box-sizing:border-box;
+            justify-content:center;
+            padding-bottom:40px;
+            flex-wrap:nowrap;
+            width:100%;
+            margin-bottom:0px;
+            padding-top:40px;
+            padding-left:0px;
+            margin-top:20px;
+    }
+    .product .title
     {
             align-items:center;
             flex-direction:row;
@@ -494,7 +610,7 @@ var app = new Vue({
             margin-top:0px;
             height:40px;
     }
-    .product .title span 
+    .product .title span
     {
             padding-bottom:0px;
             flex-direction:row;
@@ -505,7 +621,7 @@ var app = new Vue({
             padding-top:0px;
             padding-left:0px;
     }
-    .product .body 
+    .product .body
     {
             flex-direction:row;
             display:flex;
@@ -521,7 +637,7 @@ var app = new Vue({
             margin-top:40px;
             height:100%;
     }
-    .product .body .prod 
+    .product .body .prod
     {
             background-color:#FFFFFF;
             flex-direction:column;
@@ -537,7 +653,7 @@ var app = new Vue({
             margin-top:0px;
             height:100%;
     }
-    .product .body .prod .pic 
+    .product .body .prod .pic
     {
             padding-bottom:0px;
             flex-wrap:nowrap;
@@ -551,7 +667,7 @@ var app = new Vue({
             margin-top:0px;
             height:200px;
     }
-    .product .body .prod .pic img 
+    .product .body .prod .pic img
     {
             padding-bottom:0px;
             width:100%;
@@ -560,7 +676,7 @@ var app = new Vue({
             margin-top:0px;
             height:100%;
     }
-    .product .body .prod .text 
+    .product .body .prod .text
     {
             padding-bottom:0px;
             text-align:center;
@@ -574,7 +690,7 @@ var app = new Vue({
             margin-top:10px;
             height:40px;
     }
-    .product .more 
+    .product .more
     {
             background-color:#FFFFFF;
             align-items:center;
@@ -592,7 +708,181 @@ var app = new Vue({
             margin-top:0px;
             height:48px;
     }
-    .news 
+
+     .product-app .title
+    {
+            align-items:center;
+            flex-direction:row;
+            display:flex;
+            padding-right:0px;
+            box-sizing:border-box;
+            justify-content:center;
+            padding-bottom:0px;
+            flex-wrap:nowrap;
+            width:100%;
+            margin-bottom:0px;
+            padding-top:0px;
+            padding-left:0px;
+            margin-top:0px;
+            height:40px;
+    }
+    .product-app .title span
+    {
+            padding-bottom:0px;
+            flex-direction:row;
+            word-wrap:break-word;
+            display:inline-block;
+            padding-right:0px;
+            font-size:28PX;
+            padding-top:0px;
+            padding-left:0px;
+    }
+    .product-app .body
+    {
+            flex-direction:row;
+            display:flex;
+            padding-right:0px;
+            box-sizing:border-box;
+            justify-content:space-between;
+            padding-bottom:0px;
+            flex-wrap:wrap;
+            width:1200px;
+            margin-bottom:40px;
+            padding-top:0px;
+            padding-left:0px;
+            margin-top:40px;
+            height:100%;
+    }
+    .product-app .body .prod
+    {
+            background-color:#FFFFFF;
+            flex-direction:column;
+            display:flex;
+            padding-right:20px;
+            box-sizing:border-box;
+            padding-bottom:20px;
+            flex-wrap:nowrap;
+            width:32%;
+            margin-bottom:20px;
+            padding-top:20px;
+            padding-left:20px;
+            margin-top:0px;
+            height:100%;
+    }
+    .product-app .body .prod .pic
+    {
+            padding-bottom:0px;
+            flex-wrap:nowrap;
+            flex-direction:row;
+            display:flex;
+            padding-right:0px;
+            width:100%;
+            box-sizing:border-box;
+            padding-top:0px;
+            padding-left:0px;
+            margin-top:0px;
+            height:200px;
+    }
+    .product-app .body .prod .pic img
+    {
+            padding-bottom:0px;
+            width:100%;
+            margin-bottom:0px;
+            padding-top:0px;
+            margin-top:0px;
+            height:100%;
+    }
+    .product-app .body .prod .text
+    {
+            padding-bottom:0px;
+            text-align:center;
+            flex-direction:row;
+            word-wrap:break-word;
+            display:inline-block;
+            padding-right:0px;
+            font-size:16PX;
+            padding-top:8px;
+            padding-left:0px;
+            margin-top:10px;
+            height:40px;
+    }
+    .product-app .more
+    {
+            background-color:#FFFFFF;
+            align-items:center;
+            flex-direction:row;
+            display:flex;
+            padding-right:0px;
+            box-sizing:border-box;
+            justify-content:center;
+            padding-bottom:0px;
+            flex-wrap:nowrap;
+            width:100px;
+            margin-bottom:0px;
+            padding-top:0px;
+            padding-left:0px;
+            margin-top:0px;
+            height:48px;
+    }
+
+    .lab
+    {
+     align-items:center;
+     flex-direction:column;
+     display:flex;
+     padding-right:0px;
+     box-sizing:border-box;
+     justify-content:center;
+     flex-wrap:nowrap;
+     width:100%;
+     background-color:#F2F2F2;
+    }
+
+    .lab .title
+    {
+     align-items:center;
+     flex-direction:row;
+     display:flex;
+     padding-right:0px;
+     box-sizing:border-box;
+     justify-content:center;
+     padding-bottom:0px;
+     flex-wrap:nowrap;
+     width:100%;
+     margin-bottom:0px;
+     padding-top:0px;
+     padding-left:0px;
+     margin-top:0px;
+     height:40px;
+    }
+    .lab .title span
+    {
+     padding-bottom:0px;
+     flex-direction:row;
+     word-wrap:break-word;
+     display:inline-block;
+     padding-right:0px;
+     font-size:28PX;
+     padding-top:0px;
+     padding-left:0px;
+    }
+
+    .lab .body
+    {
+     padding-bottom:0px;
+     flex-wrap:nowrap;
+     flex-direction:row;
+     display:flex;
+     padding-right:0px;
+     width:1920px;
+     box-sizing:border-box;
+     padding-top:0px;
+     padding-left:0px;
+     margin-top:0px;
+     height:100%;
+    }
+
+    .news
     {
             align-items:center;
             flex-direction:column;

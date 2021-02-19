@@ -88,6 +88,11 @@
     <div class="body">
      <div class="left">
       <span class="title"> 云平台 </span>
+      <a href="http://localhost:8080/html/web/product/kycp/index.html" class="sub-title"> 开源产品 </a>
+      <a href="http://localhost:8080/html/web/product/hycp/index.html" class="sub-title"> 行业产品 </a>
+      <a href="http://localhost:8080/html/web/product/pingtaichanpin/index.html" class="sub-title"> 平台产品 </a>
+      <a href="http://localhost:8080/html/web/product/APPchanpin/index.html" class="sub-title"> APP应用 </a>
+      <a href="http://localhost:8080/html/web/product/sys/index.html" class="sub-title"> 技术实验室 </a>
     </div>
      <div class="right">
       <div class="ms-channel-path">
@@ -98,49 +103,13 @@
         首页
        </a>
        <i class="iconfont icon-youjiantou"></i>
-       <a href="http://localhost:8080/html/web/product/pingtaichanpin/index.html" class="ms-channel-path-link">
-        平台产品
+       <a href="http://localhost:8080/html/web/product/index.html" class="ms-channel-path-link">
+        云平台
        </a>
       </div>
       <div class="list">
        <div class="list-body">
-        <div class="product">
-         <img title="" alt="" src="http://localhost:8080//upload/1/cms/content/1612166266385.png" />
-         <a href="http://localhost:8080/html/web/product/pingtaichanpin/1356149737847693314.html">
-          作战平台
-         </a>
-        </div>
-                <div class="product">
-         <img title="" alt="" src="http://localhost:8080//upload/1/cms/content/1612166208718.png" />
-         <a href="http://localhost:8080/html/web/product/pingtaichanpin/1356149547774418946.html">
-          无人机平台
-         </a>
-        </div>
-                <div class="product">
-         <img title="" alt="" src="http://localhost:8080//upload/1/cms/content/1612147146686.png" />
-         <a href="http://localhost:8080/html/web/product/pingtaichanpin/1356069712922349569.html">
-          意见管理平台
-         </a>
-        </div>
-                <div class="product">
-         <img title="" alt="" src="http://localhost:8080//upload/1/cms/content/1613716383612.png" />
-         <a href="http://localhost:8080/html/web/product/pingtaichanpin/1354987239958372353.html">
-          峰谷储能云平台
-         </a>
-        </div>
-                <div class="product">
-         <img title="" alt="" src="http://localhost:8080//upload/1/cms/content/1609836029087.png" />
-         <a href="http://localhost:8080/html/web/product/pingtaichanpin/1329316951228489729.html">
-          Store应用市场
-         </a>
-        </div>
-                <div class="product">
-         <img title="" alt="" src="http://localhost:8080//upload/1/cms/content/1609837914855.png" />
-         <a href="http://localhost:8080/html/web/product/pingtaichanpin/1329316887084998658.html">
-          Designer设计器
-         </a>
-        </div>
-         </div>
+ </div>
        <div class="page">
         <el-pagination
                 background
@@ -215,13 +184,13 @@ var app = new Vue({
     },
     data: {
      //当前页数
-     pageCur: 1,
+     pageCur: 4,
      //每页文章条数
      pageSize: 6,
      //页数总数
-     pageTotal: 2,
+     pageTotal: 4,
      //内容总数
-     contentCount: 8
+     contentCount: 22
     },
     methods: {
      switchShow:function(arr){
@@ -235,9 +204,9 @@ var app = new Vue({
      },
      handleCurrentChange:function(val) {
       if(val==1) {
-       location.href = "http://localhost:8080/html/web//product/pingtaichanpin/index.html";
+       location.href = "http://localhost:8080/html/web//product/index.html";
       } else {
-       location.href = "http://localhost:8080/html/web//product/pingtaichanpin/list-" + val + ".html";
+       location.href = "http://localhost:8080/html/web//product/list-" + val + ".html";
       }
      }
     },
