@@ -254,7 +254,7 @@
 }
 
 .ms-footer {
-    background-color: #F2F2F2;
+    background-color: #2183B8;
     align-items: center;
     flex-direction: row;
     display: flex;
@@ -393,6 +393,7 @@
     font-size: 14px;
     padding-top: 6px;
     height: 32px;
+    color: white;
 }
 
 .ms-footer .body .power {
@@ -766,6 +767,7 @@
         font-size: 14px;
         padding-top: 6px;
         height: unset;
+        color: white;
     }
 
     .ms-footer .body .power {

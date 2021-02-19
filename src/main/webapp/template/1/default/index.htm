@@ -135,49 +135,16 @@ navigation: {nextEl: '.swiper-button-next',prevEl: '.swiper-button-prev'}
    </div>
 
    <div class="lab">
-    <div class="title">
-     <span> 技术实验室 </span>
-    </div>
     <div class="body">
-     {ms:arclist flag='c' typeid='1362659757740482562'}
-     <a href="[field.source/]" target="_blank" style="width:100%;height: 100%">
-      <div style="background-image: url('{ms:global.host/}/{@ms:file field.litpic/}');background-size: cover; background-position: center; width:100%;height: 100%">
-      </div>
-     </a>
+     {ms:arclist  flag='c' typeid='1362658871693762562'}
+         <img title="" alt="" src="{ms:global.host/}/{@ms:file field.litpic/}" style="background-size: cover; background-position: center; width:100%;height: 100%">
      {/ms:arclist}
     </div>
    </div>
-
-   <div class="news"> 
-    <div class="title"> 
-     <span> 新闻动态 </span> 
-    </div> 
-    <div class="body">
-      {ms:arclist flag='c' typeid='1329257282518720513'} 
-     <div class="left"> 
-      <img title="" alt="" src="{ms:global.host/}/{@ms:file field.litpic/}">
-      <a href="{ms:global.url/}${field.link}" target="_blank" class="title"> ${field.title} </a>
-      <span class="desc"> ${field.descrip} </span> 
-     </div> {/ms:arclist} 
-     <div class="right">
-       {ms:arclist size=3 typeid='1329257282518720513'} 
-      <div class="news-item"> 
-       <div class="date"> 
-        <span class="day"> ${field.date?string("dd")} </span> 
-        <span class="date"> ${field.date?string("yyyy-MM")} </span> 
-       </div> 
-       <div class="news-body"> 
-        <a href="{ms:global.url/}${field.link}" class="title"> ${field.title} </a> 
-        <span class="desc"> ${field.descrip} </span> 
-       </div> 
-      </div> {/ms:arclist} 
-     </div> 
-    </div> 
-   <!-- <div class="more">
-    </div> -->
-    <a href="{ms:global.url/}/news/index.html" class="more"> 更多新闻 </a>
-   </div> 
-   <#include "footer.htm" /> 
+   <div class="news">
+    <img title="" alt="" src="http://localhost:8080//upload/1/cms/content/1613718367990.png" style="background-size: cover; background-position: center center; width: 100%; height: 100%;">
+   </div>
+   <#include "footer.htm" />
   </div>   
   <script>
 var app = new Vue({
@@ -369,7 +336,7 @@ var app = new Vue({
     }
     .product 
     {
-            background-color:#F2F2F2;
+            background-color:#FAF9F9;
             align-items:center;
             flex-direction:column;
             display:flex;
@@ -382,22 +349,7 @@ var app = new Vue({
             margin-bottom:0px;
             padding-top:40px;
             padding-left:0px;
-            margin-top:20px;
-    }
-    .product-app {
-            align-items:center;
-            flex-direction:column;
-            display:flex;
-            padding-right:0px;
-            box-sizing:border-box;
-            justify-content:center;
-            padding-bottom:40px;
-            flex-wrap:nowrap;
-            width:100%;
-            margin-bottom:0px;
-            padding-top:40px;
-            padding-left:0px;
-            margin-top:20px;
+            margin-top:2px;
     }
     .product .title
     {
@@ -515,6 +467,22 @@ var app = new Vue({
             height:48px;
     }
 
+    .product-app {
+     align-items:center;
+     flex-direction:column;
+     display:flex;
+     padding-right:0px;
+     box-sizing:border-box;
+     justify-content:center;
+     padding-bottom:40px;
+     flex-wrap:nowrap;
+     width:100%;
+     margin-bottom:0px;
+     padding-top:40px;
+     padding-left:0px;
+     margin-top:2px;
+     background-color:#E3F4FA
+    }
      .product-app .title
     {
             align-items:center;
@@ -641,36 +609,7 @@ var app = new Vue({
      justify-content:center;
      flex-wrap:nowrap;
      width:100%;
-     background-color:#F2F2F2;
-    }
-
-    .lab .title
-    {
-     align-items:center;
-     flex-direction:row;
-     display:flex;
-     padding-right:0px;
-     box-sizing:border-box;
-     justify-content:center;
-     padding-bottom:0px;
-     flex-wrap:nowrap;
-     width:100%;
-     margin-bottom:0px;
-     padding-top:0px;
-     padding-left:0px;
-     margin-top:0px;
-     height:40px;
-    }
-    .lab .title span
-    {
-     padding-bottom:0px;
-     flex-direction:row;
-     word-wrap:break-word;
-     display:inline-block;
-     padding-right:0px;
-     font-size:28PX;
-     padding-top:0px;
-     padding-left:0px;
+     background-color:#FAF9F9;
     }
 
     .lab .body
@@ -696,13 +635,14 @@ var app = new Vue({
             padding-right:0px;
             box-sizing:border-box;
             justify-content:center;
-            padding-bottom:20px;
+            padding-bottom:0px;
             flex-wrap:nowrap;
             width:100%;
-            margin-bottom:20px;
-            padding-top:20px;
+            margin-bottom:0px;
+            padding-top:0px;
             padding-left:0px;
-            margin-top:20px;
+            margin-top:2px;
+     background-color:#E3F4FA;
     }
     .news .title 
     {
@@ -1090,7 +1030,7 @@ var app = new Vue({
         }
         .product 
         {
-                background-color:#F2F2F2;
+                background-color:#FAF9F9;
                 align-items:center;
                 flex-direction:column;
                 display:flex;
