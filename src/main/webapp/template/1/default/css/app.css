@@ -1,5 +1,4 @@
 .ms-nav {
-    border-bottom-color: #EBEEF5;
     flex-wrap: nowrap;
     flex-direction: row;
     display: flex;
@@ -7,7 +6,7 @@
     box-sizing: border-box;
     border-bottom-style: solid;
     padding-top: 0px;
-    border-bottom-width: 1px;
+    border-bottom-width: 0px;
     justify-content: center;
     height: 80px;
     margin-left: 0px;
@@ -37,8 +36,8 @@
 }
 
 .ms-nav .body .logo .logo-pic {
-    width: 207px;
-    height: 66px;
+    width: 150px;
+    height: 45px;
 }
 
 .ms-nav .body .logo .logo-desc {
@@ -118,6 +117,7 @@
     padding-right: 0px;
     font-size: 18PX;
     padding-left: 0px;
+    color: white;
 }
 
 .ms-nav .body .nav-item .sel{
@@ -139,7 +139,7 @@
 }
 
 .ms-nav .body .nav-search .ms-search-input {
-    border-color: #409EFF;
+    border-color: white;
     align-items: flex-end;
     flex-direction: row;
     border-width: 1px;
@@ -226,11 +226,11 @@
 }
 
 .ms-nav .body .nav-search .ms-search-input .ms-search-button:hover {
-    background-color: #E6E6E6;
+    background-color: transparent;
 }
 
 .ms-nav .body .nav-search .ms-search-input .ms-search-button i {
-    color: #409EFF;
+    color: white;
     border-bottom-left-radius: 0px;
     padding-right: 0px;
     border-bottom-right-radius: 0px;
@@ -240,7 +240,7 @@
 }
 
 .ms-nav .body .nav-search .ms-search-input .ms-search-button span {
-    color: #409EFF;
+    color: white;
     border-bottom-left-radius: 0px;
     flex-direction: row;
     word-wrap: break-word;
@@ -254,7 +254,7 @@
 }
 
 .ms-footer {
-    background-color: #2183B8;
+    background-color: #DCDFE6;
     align-items: center;
     flex-direction: row;
     display: flex;
@@ -392,8 +392,8 @@
     display: inline-block;
     font-size: 14px;
     padding-top: 6px;
-    height: 32px;
-    color: white;
+    height: 22px;
+    /* color: white;*/
 }
 
 .ms-footer .body .power {
@@ -406,6 +406,17 @@
     margin-bottom: 0px;
     padding-top: 0px;
     margin-top: 0px;
+}
+
+.header {
+    position: fixed;
+    z-index: 199;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    color: #fff;
+    background-image: linear-gradient(rgba(0, 0, 0, .5), transparent);
 }
 
 @media (max-width: 768px) {
@@ -526,6 +537,7 @@
         padding-right: 0px;
         font-size: 18PX;
         padding-left: 0px;
+        color: white;
     }
 
     .ms-nav .body .nav-search {

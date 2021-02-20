@@ -1,1409 +1,1495 @@
 <html>
- <head> 
-  <meta charset="utf-8"> 
-  <title>{ms:global.name/}</title> 
-  <meta http-equiv="content-type" content="text/html"> 
-  <meta HTTP-EQUIV="Pragma" CONTENT="no-cache"> 
-  <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,width=device-width"> 
-  <meta name="format-detection" content="telephone=no"> 
-  <meta name="app-mobile-web-app-capable" content="yes"> 
-  <meta name="app-mobile-web-app-status-bar-style" content="black-translucent"> 
-  <meta name="keywords" content="{ms:global.keyword/}"> 
-  <meta name="description" content="{ms:global.descrip/}">
-  <link rel="shortcut icon" href="http://www.roboct.com/wp-content/themes/ugo/images/favicon.ico" type="x-icon"/>
-  <script type="text/javascript" src="{ms:global.host/}/static/plugins/vue/2.6.9/vue.min.js"></script> 
-  <link rel="stylesheet" href="{ms:global.host/}/static/plugins/minireset/0.0.2/minireset.min.css"> 
-  <link rel="stylesheet" href="https://cdn.mingsoft.net/iconfont/iconfont.css"> 
-  <link rel="stylesheet" href="{ms:global.host/}/static/plugins/animate/4.1.0/animate.min.css"> 
-  <script src="{ms:global.host/}/static/plugins/element-ui/2.12.0/index.js"></script> 
-  <link rel="stylesheet" href="{ms:global.host/}/static/plugins/element-ui/2.12.0/index.css"> 
-  <link rel="stylesheet" href="{ms:global.host/}/{ms:global.style/}/css/app.css"> 
-  <!--网络请求框架--> 
-  <script src="{ms:global.host/}/static/plugins/axios/0.18.0/axios.min.js"></script> 
-  <script src="{ms:global.host/}/static/plugins/qs/6.6.0/qs.min.js"></script> 
-  <script src="{ms:global.host/}/static/plugins/ms/1.0.0/ms.js"></script> 
-  <script src="{ms:global.host/}/static/plugins/ms/1.0.0/ms.http.js"></script> 
-  <script src="{ms:global.host/}/static/plugins/ms/1.0.0/ms.util.js"></script> 
-  <script src="https://cdn.jsdelivr.net/npm/swiper@4.5.1/dist/js/swiper.min.js"></script> 
-  <script>
-SwiperClass = Swiper
-</script> 
-  <script src="https://cdn.jsdelivr.net/npm/vue-awesome-swiper@4.1.1/dist/vue-awesome-swiper.min.js"></script> 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@5.4.5/css/swiper.min.css"> 
-  <script>
-Vue.use(VueAwesomeSwiper)
-</script> 
-  <style>
-:root {
-    --swiper-theme-color:$ {
-        component.config.color.value
-    }
+<head>
+    <meta charset="utf-8">
+    <title>{ms:global.name/}</title>
+    <meta http-equiv="content-type" content="text/html">
+    <meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
+    <meta name="viewport"
+          content="initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,width=device-width">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="app-mobile-web-app-capable" content="yes">
+    <meta name="app-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="keywords" content="{ms:global.keyword/}">
+    <meta name="description" content="{ms:global.descrip/}">
+    <link rel="shortcut icon" href="http://www.roboct.com/wp-content/themes/ugo/images/favicon.ico" type="x-icon"/>
+    <script type="text/javascript" src="{ms:global.host/}/static/plugins/vue/2.6.9/vue.min.js"></script>
+    <link rel="stylesheet" href="{ms:global.host/}/static/plugins/minireset/0.0.2/minireset.min.css">
+    <link rel="stylesheet" href="https://cdn.mingsoft.net/iconfont/iconfont.css">
+    <link rel="stylesheet" href="{ms:global.host/}/static/plugins/animate/4.1.0/animate.min.css">
+    <script src="{ms:global.host/}/static/plugins/element-ui/2.12.0/index.js"></script>
+    <link rel="stylesheet" href="{ms:global.host/}/static/plugins/element-ui/2.12.0/index.css">
+    <link rel="stylesheet" href="{ms:global.host/}/{ms:global.style/}/css/app.css">
+    <!--网络请求框架-->
+    <script src="{ms:global.host/}/static/plugins/axios/0.18.0/axios.min.js"></script>
+    <script src="{ms:global.host/}/static/plugins/qs/6.6.0/qs.min.js"></script>
+    <script src="{ms:global.host/}/static/plugins/ms/1.0.0/ms.js"></script>
+    <script src="{ms:global.host/}/static/plugins/ms/1.0.0/ms.http.js"></script>
+    <script src="{ms:global.host/}/static/plugins/ms/1.0.0/ms.util.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@4.5.1/dist/js/swiper.min.js"></script>
+    <script>
+        SwiperClass = Swiper
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/vue-awesome-swiper@4.1.1/dist/vue-awesome-swiper.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@5.4.5/css/swiper.min.css">
+    <script>
+        Vue.use(VueAwesomeSwiper)
+    </script>
+    <style>
+        :root {
 
-    ;
-}
+        --swiper-theme-color:$ {
+            component . config . color . value
+        }
 
-</style> 
-  <script>
+        ;
+        }
+
+    </style>
+    <script>
         ms.base = "";
-    </script> 
-  <style>
-        [v-cloak]{
+    </script>
+    <style>
+        [v-cloak] {
             display: none;
         }
-    </style> 
- </head> 
- <body>
-  <div id="app" v-cloak>
-   <#include "nav.htm" />
-   <div class="ms-banner">
-    <swiper class="ms-vue-awesome-swiper" :options="{
+    </style>
+</head>
+<body>
+<div id="app" v-cloak>
+    <#include "nav.htm" />
+    <div class="ms-banner">
+        <swiper class="ms-vue-awesome-swiper" :options="{
 slidesPerView : 1,
 spaceBetween: 0,
 autoplay: {
-delay: 1500,
+delay: 3000,
 },
 navigation: {nextEl: '.swiper-button-next',prevEl: '.swiper-button-prev'}
-}"> 
-     <div class="swiper-button-prev " slot="button-prev"> 
-     </div> 
-     <div class="swiper-button-next " slot="button-next"> 
-     </div> 
-     <!--静态图片--> 
-     <!--动态图片-->
-     {ms:arclist typeid=1329357285870346241 size=3 }
-     <swiper-slide>
-      <a href="[field.source/]" target="_blank" style="width:100%;height: 100%">
-       <div style="background-image: url('{ms:global.host/}/{@ms:file field.litpic/}');background-size: cover; background-position: center; width:100%;height: 100%">
-       </div>
-      </a>
-     </swiper-slide>
-     {/ms:arclist}
-    </swiper> 
-   </div> 
-   <div class="about" style="display: none">
-     {ms:arclist typeid='1329259260493766658'} 
-    <div class="body"> 
-     <div class="left"> 
-      <img title="" alt="" src="{ms:global.host/}/{@ms:file field.litpic/}">
-     </div> 
-     <div class="right"> 
-      <div class="title"> 
-       <span> ${field.title} </span> 
-      </div> 
-      <div class="desc"> 
-       <span> ${field.descrip} </span>
-      </div> 
-     </div> 
-    </div> {/ms:arclist} 
-   </div> 
-   <div class="product"> 
-    <div class="title"> 
-     <span> 云平台 </span>
-    </div> 
-    <div class="body">
-      {ms:arclist flag='c' typeid='1329257213283344385'}
-     <div class="prod"  style="text-align:center;">
-      <a href="{ms:global.url/}${field.link}">
-       <img class="pic" title="" alt="" src="{ms:global.host/}/{@ms:file field.litpic/}">
-       <span>${field.title} </span></a>
-     </div>
-     <!--<div class="prod">
-      <div class="pic"> 
-       <img title="" alt="" src="{ms:global.host/}/{@ms:file field.litpic/}">
-      </div> 
-      <a href="{ms:global.url/}${field.link}" class="text"> ${field.title} </a> 
-     </div>--> {/ms:arclist}
-    </div> 
-    <a href="{ms:global.url/}/product/index.html" class="more"> 更多产品 </a> 
-   </div>
+}">
+            <div class="swiper-button-prev " slot="button-prev">
+            </div>
+            <div class="swiper-button-next " slot="button-next">
+            </div>
+            <!--静态图片-->
+            <!--动态图片-->
+            {ms:arclist typeid=1329357285870346241 size=3 }
+            <swiper-slide>
+                <a href="[field.source/]" target="_blank" style="width:100%;height: 100%">
+                    <div style="background-image: url('{ms:global.host/}/{@ms:file field.litpic/}');background-size: cover; background-position: center; width:100%;height: 100%">
+                    </div>
+                </a>
+            </swiper-slide>
+            {/ms:arclist}
+        </swiper>
+    </div>
+    <div class="about" style="display: none">
+        {ms:arclist typeid='1329259260493766658'}
+        <div class="body">
+            <div class="left">
+                <img title="" alt="" src="{ms:global.host/}/{@ms:file field.litpic/}">
+            </div>
+            <div class="right">
+                <div class="title">
+                    <span> ${field.title} </span>
+                </div>
+                <div class="desc">
+                    <span> ${field.descrip} </span>
+                </div>
+            </div>
+        </div>
+        {/ms:arclist}
+    </div>
+    <div class="product">
+        <div class="title">
+            <span> 云平台 </span>
+        </div>
+        <div class="body">
+            {ms:arclist flag='c' typeid='1329257213283344385' orderby='sort'}
+            <div class="prod" style="text-align:center;">
+                <a href="{ms:global.url/}${field.link}">
+                    <img class="pic" title="" alt="" src="{ms:global.host/}/{@ms:file field.litpic/}">
+                    <span>${field.title} </span></a>
+            </div>
+            <!--<div class="prod">
+             <div class="pic">
+              <img title="" alt="" src="{ms:global.host/}/{@ms:file field.litpic/}">
+             </div>
+             <a href="{ms:global.url/}${field.link}" class="text"> ${field.title} </a>
+            </div>--> {/ms:arclist}
+        </div>
+        <a href="{ms:global.url/}/product/index.html" class="more"> 更多产品 </a>
+    </div>
 
-   <div class="product-app">
-    <div class="title">
-     <span> APP应用 </span>
+    <div class="product-app">
+        <div class="title">
+            <span> APP应用 </span>
+        </div>
+        <div class="body">
+            {ms:arclist flag='c' typeid='1362337793902518273'}
+            <div class="prod" style="margin:0 auto; ">
+                ${field.content}
+            </div>
+            <div style="float: right; width:45%">
+                集控中心平台APP 描述
+            </div>
+            {/ms:arclist}
+        </div>
+        <a href="{ms:global.url/}/product/index.html" class="more" style="background-color: #F2F2F2"> 更多产品 </a>
     </div>
-    <div class="body">
-     {ms:arclist flag='c' typeid='1362337793902518273'}
-     <div class="prod" style="margin:0 auto; ">
-      ${field.content}
-     </div>
-     <div style="float: right; width:45%">
-      集控中心平台APP 描述
-     </div>
-     {/ms:arclist}
-    </div>
-    <a href="{ms:global.url/}/product/index.html" class="more" style="background-color: #F2F2F2"> 更多产品 </a>
-   </div>
 
-   <div class="lab">
-    <div class="body">
-     {ms:arclist  flag='c' typeid='1362658871693762562'}
-         <img title="" alt="" src="{ms:global.host/}/{@ms:file field.litpic/}" style="background-size: cover; background-position: center; width:100%;height: 100%">
-     {/ms:arclist}
+    <div class="lab">
+        {ms:arclist flag='c' typeid='1362658871693762562'}
+        <img title="" alt="" src="{ms:global.host/}/{@ms:file field.litpic/}"
+             style="background-size: cover; background-position: center; width:100%;height: 100%">
+        {/ms:arclist}
     </div>
-   </div>
-   <div class="news">
-    <img title="" alt="" src="http://localhost:8080//upload/1/cms/content/1613718367990.png" style="background-size: cover; background-position: center center; width: 100%; height: 100%;">
-   </div>
-   <#include "footer.htm" />
-  </div>   
-  <script>
-var app = new Vue({
-    el: '#app',
-    watch:{
-    },
-    data: {
-    },
-    methods: {
-       switchShow:function(arr){
-       var that = this
-           arr.forEach(function(x){
-              let e = that.$el.querySelector("#key_"+x)
-               if(e){
-                   e.style.display=e.style.display=='none'?'flex':'none'
-               }
-           })
-       },
-    },
-    created(){
+    <div data-v-23dd05ae="" data-v-4156ae8b="" class="bg_content">
+        <!--<div data-v-23dd05ae="" class="riskivy-content">
+            <div data-v-23dd05ae="" class="detail-header"><h2 data-v-23dd05ae="" class="title">能力中心</h2>
+                <p data-v-23dd05ae="" class="tit-desc">致力于最前沿的安全技术研究与分享</p></div>
+        </div>-->
+            <div data-v-6cca36ea="" class="left-text">
+                <div data-v-6cca36ea="" class="title"><span data-v-6cca36ea="">程天集成平台</span><br data-v-6cca36ea=""><br
+                        data-v-6cca36ea=""><span data-v-6cca36ea="">让集成更简单·智能·安全</span></div>
+                <div data-v-6cca36ea="" class="descript">以智能云平台、APP应用技术为基础的智能数据分析产品体系，引领的新一代产品解决方案</div>
+            </div>
+    </div>
+    <#include "footer.htm" />
+</div>
+<script>
+    var app = new Vue({
+        el: '#app',
+        watch: {},
+        data: {},
+        methods: {
+            switchShow: function (arr) {
+                var that = this
+                arr.forEach(function (x) {
+                    let e = that.$el.querySelector("#key_" + x)
+                    if (e) {
+                        e.style.display = e.style.display == 'none' ? 'flex' : 'none'
+                    }
+                })
+            },
+        },
+        created() {
+        }
+    })
+</script>
+<style>
+    .header1 {
+        width: 100%;
+        height: .9rem;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 199;
+        font-size: .16rem;
+        color: #fff;
+        background-image: linear-gradient(rgba(0, 0, 0, .5), transparent)
     }
-})
-</script> 
-  <style>
-    body {
-        background-color:#fff;
-        box-sizing:border-box;
-        font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Segoe UI", "Helvetica Neue", "PingFang SC", "Noto Sans", "Noto Sans CJK SC", "Microsoft YaHei", 微软雅黑, sans-serif;
-        moz-box-sizing:border-box;
-        webkit-box-sizing:border-box;
+
+    .bg_content {
+        position: relative;
+        height: 680px;
+        background: url('http://localhost:8080//upload/1/cms/content/1613718367990.jpg') no-repeat 100% 0;
     }
-    .swiper-button-prev, .swiper-button-next{
+
+    .bg_content .riskivy-content {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    body .riskivy-content {
+        margin: 0 auto;
+    }
+
+    .bg_content .riskivy-content .detail-header .title {
+        color: #fff;
+    }
+
+    .detail-header {
+        text-align: center;
+        padding: 70px 0 50px;
+    }
+
+    .detail-header .title {
+        color: #3e464c;
+        font-size: 32px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .detail-header .tit-desc {
+        color: #a1a6ab;
+        font-size: 16px;
+    }
+
+    .left-text{
+     margin-top: 225px;
+     display: block;
+     position: absolute;
+     left: 10%;
+     opacity: 1;
+     width: 550px;
+    }
+
+    .left-text .title{
+     margin-bottom: 25px;
+    }
+
+    .left-text .title span{
+     background: -webkit-gradient(linear,left top,right top,from(#00b3ff),to(#00ffec));
+     background: linear-gradient(90deg,#00b3ff,#00ffec);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+     margin-bottom: 20px;
+     font-size: 50px;
+     font-weight: 800;
+    }
+
+    .left-text .descript{
+     margin-bottom: 20px;
      color: #fff;
+     line-height: 30px;
+     font-weight: 400;
     }
-    .ms-banner 
-    {
-            flex-wrap:nowrap;
-            flex-direction:row;
-            display:flex;
-            width:100%;
-            box-sizing:border-box;
-            margin-top:0px;
-            height:630px;
+    /*----------------------------------------------------------------------*/
+    body {
+        background-color: #fff;
+        box-sizing: border-box;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Segoe UI", "Helvetica Neue", "PingFang SC", "Noto Sans", "Noto Sans CJK SC", "Microsoft YaHei", 微软雅黑, sans-serif;
+        moz-box-sizing: border-box;
+        webkit-box-sizing: border-box;
     }
-    .ms-banner .ms-vue-awesome-swiper 
-    {
-            background-color:#E8F4FD;
-            align-items:center;
-            flex-wrap:nowrap;
-            flex-direction:row;
-            display:flex;
-            width:100%;
-            box-sizing:border-box;
-            position:relative;
-            padding-left:0px;
-            justify-content:space-between;
-            margin-top:0px;
-            height:100%;
+
+    .swiper-button-prev, .swiper-button-next {
+        color: #fff;
     }
-    .ms-banner .ms-vue-awesome-swiper .ms-vue-awesome-swiper-bottom 
-    {
-            background-color:rgba(0,0,0,0.5);
-            align-items:center;
-            flex-direction:row;
-            bottom:0px;
-            display:flex;
-            box-sizing:border-box;
-            justify-content:flex-start;
-            flex-wrap:nowrap;
-            width:100%;
-            position:absolute;
-            padding-left:10px;
-            margin-top:0px;
-            height:40px;
+
+    .ms-banner {
+        flex-wrap: nowrap;
+        flex-direction: row;
+        display: flex;
+        width: 100%;
+        box-sizing: border-box;
+        margin-top: 0px;
+        height: 730px;
     }
-    .ms-banner .ms-vue-awesome-swiper .ms-vue-awesome-swiper-bottom .ms-vue-awesome-swiper-title 
-    {
-            color:#FFFFFF;
-            flex-direction:row;
-            word-wrap:break-word;
-            display:inline-block;
-            font-size:14px;
-            padding-left:0px;
+
+    .ms-banner .ms-vue-awesome-swiper {
+        background-color: #E8F4FD;
+        align-items: center;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        display: flex;
+        width: 100%;
+        box-sizing: border-box;
+        position: relative;
+        padding-left: 0px;
+        justify-content: space-between;
+        margin-top: 0px;
+        height: 100%;
     }
-    .about 
-    {
-            align-items:center;
-            flex-wrap:nowrap;
-            flex-direction:row;
-            display:flex;
-            padding-right:0px;
-            width:100%;
-            box-sizing:border-box;
-            padding-left:0px;
-            justify-content:center;
-            margin-top:18px;
-            height:200px;
+
+    .ms-banner .ms-vue-awesome-swiper .ms-vue-awesome-swiper-bottom {
+        background-color: rgba(0, 0, 0, 0.5);
+        align-items: center;
+        flex-direction: row;
+        bottom: 0px;
+        display: flex;
+        box-sizing: border-box;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        width: 100%;
+        position: absolute;
+        padding-left: 10px;
+        margin-top: 0px;
+        height: 40px;
     }
-    .about .body 
-    {
-            padding-bottom:0px;
-            flex-wrap:nowrap;
-            flex-direction:row;
-            display:flex;
-            padding-right:0px;
-            width:1200px;
-            box-sizing:border-box;
-            padding-top:0px;
-            padding-left:0px;
-            margin-top:0px;
-            height:100%;
+
+    .ms-banner .ms-vue-awesome-swiper .ms-vue-awesome-swiper-bottom .ms-vue-awesome-swiper-title {
+        color: #FFFFFF;
+        flex-direction: row;
+        word-wrap: break-word;
+        display: inline-block;
+        font-size: 14px;
+        padding-left: 0px;
     }
-    .about .body .left 
-    {
-            flex-wrap:nowrap;
-            flex-direction:row;
-            display:flex;
-            padding-right:0px;
-            width:40%;
-            box-sizing:border-box;
-            padding-left:0px;
-            height:100%;
+
+    .about {
+        align-items: center;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        display: flex;
+        padding-right: 0px;
+        width: 100%;
+        box-sizing: border-box;
+        padding-left: 0px;
+        justify-content: center;
+        margin-top: 18px;
+        height: 200px;
     }
-    .about .body .left img 
-    {
-            width:100%;
-            padding-top:0px;
-            padding-left:0px;
-            height:100%;
+
+    .about .body {
+        padding-bottom: 0px;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        display: flex;
+        padding-right: 0px;
+        width: 1200px;
+        box-sizing: border-box;
+        padding-top: 0px;
+        padding-left: 0px;
+        margin-top: 0px;
+        height: 100%;
     }
-    .about .body .right 
-    {
-            flex-wrap:nowrap;
-            flex-direction:column;
-            display:flex;
-            padding-right:20px;
-            width:100%;
-            box-sizing:border-box;
-            padding-left:20px;
-            margin-top:0px;
-            height:100%;
+
+    .about .body .left {
+        flex-wrap: nowrap;
+        flex-direction: row;
+        display: flex;
+        padding-right: 0px;
+        width: 40%;
+        box-sizing: border-box;
+        padding-left: 0px;
+        height: 100%;
     }
-    .about .body .right .title 
-    {
-            align-items:center;
-            flex-wrap:nowrap;
-            flex-direction:row;
-            display:flex;
-            padding-right:0px;
-            width:100%;
-            box-sizing:border-box;
-            padding-left:0px;
-            margin-top:0px;
-            height:40px;
+
+    .about .body .left img {
+        width: 100%;
+        padding-top: 0px;
+        padding-left: 0px;
+        height: 100%;
     }
-    .about .body .right .title span 
-    {
-            padding-bottom:0px;
-            flex-direction:row;
-            word-wrap:break-word;
-            display:inline-block;
-            padding-right:0px;
-            font-size:28PX;
-            padding-top:0px;
-            padding-left:0px;
+
+    .about .body .right {
+        flex-wrap: nowrap;
+        flex-direction: column;
+        display: flex;
+        padding-right: 20px;
+        width: 100%;
+        box-sizing: border-box;
+        padding-left: 20px;
+        margin-top: 0px;
+        height: 100%;
     }
-    .about .body .right .desc 
-    {
-            flex-wrap:nowrap;
-            flex-direction:row;
-            display:flex;
-            padding-right:0px;
-            width:100%;
-            box-sizing:border-box;
-            padding-left:0px;
-            height:100%;
+
+    .about .body .right .title {
+        align-items: center;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        display: flex;
+        padding-right: 0px;
+        width: 100%;
+        box-sizing: border-box;
+        padding-left: 0px;
+        margin-top: 0px;
+        height: 40px;
     }
-    .about .body .right .desc span 
-    {
-            padding-bottom:0px;
-            flex-direction:row;
-            word-wrap:break-word;
-            display:inline-block;
-            font-size:16PX;
-            padding-top:0px;
-            margin-top:20px;
-     line-height: 32px;
+
+    .about .body .right .title span {
+        padding-bottom: 0px;
+        flex-direction: row;
+        word-wrap: break-word;
+        display: inline-block;
+        padding-right: 0px;
+        font-size: 28PX;
+        padding-top: 0px;
+        padding-left: 0px;
+    }
+
+    .about .body .right .desc {
+        flex-wrap: nowrap;
+        flex-direction: row;
+        display: flex;
+        padding-right: 0px;
+        width: 100%;
+        box-sizing: border-box;
+        padding-left: 0px;
+        height: 100%;
+    }
+
+    .about .body .right .desc span {
+        padding-bottom: 0px;
+        flex-direction: row;
+        word-wrap: break-word;
+        display: inline-block;
+        font-size: 16PX;
+        padding-top: 0px;
+        margin-top: 20px;
+        line-height: 32px;
 
     }
-    .product 
-    {
-            background-color:#FAF9F9;
-            align-items:center;
-            flex-direction:column;
-            display:flex;
-            padding-right:0px;
-            box-sizing:border-box;
-            justify-content:center;
-            padding-bottom:40px;
-            flex-wrap:nowrap;
-            width:100%;
-            margin-bottom:0px;
-            padding-top:40px;
-            padding-left:0px;
-            margin-top:2px;
+
+    .product {
+        background-color: #FAF9F9;
+        align-items: center;
+        flex-direction: column;
+        display: flex;
+        padding-right: 0px;
+        box-sizing: border-box;
+        justify-content: center;
+        padding-bottom: 40px;
+        flex-wrap: nowrap;
+        width: 100%;
+        margin-bottom: 0px;
+        padding-top: 40px;
+        padding-left: 0px;
+        margin-top: 2px;
     }
-    .product .title
-    {
-            align-items:center;
-            flex-direction:row;
-            display:flex;
-            padding-right:0px;
-            box-sizing:border-box;
-            justify-content:center;
-            padding-bottom:0px;
-            flex-wrap:nowrap;
-            width:100%;
-            margin-bottom:0px;
-            padding-top:0px;
-            padding-left:0px;
-            margin-top:0px;
-            height:40px;
+
+    .product .title {
+        align-items: center;
+        flex-direction: row;
+        display: flex;
+        padding-right: 0px;
+        box-sizing: border-box;
+        justify-content: center;
+        padding-bottom: 0px;
+        flex-wrap: nowrap;
+        width: 100%;
+        margin-bottom: 0px;
+        padding-top: 0px;
+        padding-left: 0px;
+        margin-top: 0px;
+        height: 40px;
     }
-    .product .title span
-    {
-            padding-bottom:0px;
-            flex-direction:row;
-            word-wrap:break-word;
-            display:inline-block;
-            padding-right:0px;
-            font-size:28PX;
-            padding-top:0px;
-            padding-left:0px;
+
+    .product .title span {
+        padding-bottom: 0px;
+        flex-direction: row;
+        word-wrap: break-word;
+        display: inline-block;
+        padding-right: 0px;
+        font-size: 28PX;
+        padding-top: 0px;
+        padding-left: 0px;
     }
-    .product .body
-    {
-            flex-direction:row;
-            display:flex;
-            padding-right:0px;
-            box-sizing:border-box;
-            justify-content:space-between;
-            padding-bottom:0px;
-            flex-wrap:wrap;
-            width:1200px;
-            margin-bottom:40px;
-            padding-top:0px;
-            padding-left:0px;
-            margin-top:40px;
-            height:100%;
+
+    .product .body {
+        flex-direction: row;
+        display: flex;
+        padding-right: 0px;
+        box-sizing: border-box;
+        justify-content: space-between;
+        padding-bottom: 0px;
+        flex-wrap: wrap;
+        width: 1200px;
+        margin-bottom: 40px;
+        padding-top: 0px;
+        padding-left: 0px;
+        margin-top: 40px;
+        height: 100%;
     }
-    .product .body .prod
-    {
-            background-color:#FFFFFF;
-            flex-direction:column;
-            display:flex;
-            padding-right:20px;
-            box-sizing:border-box;
-            padding-bottom:20px;
-            flex-wrap:nowrap;
-            width:32%;
-            margin-bottom:20px;
-            padding-top:20px;
-            padding-left:20px;
-            margin-top:0px;
-            height:100%;
+
+    .product .body .prod {
+        background-color: #FFFFFF;
+        flex-direction: column;
+        display: flex;
+        padding-right: 20px;
+        box-sizing: border-box;
+        padding-bottom: 20px;
+        flex-wrap: nowrap;
+        width: 32%;
+        margin-bottom: 20px;
+        padding-top: 20px;
+        padding-left: 20px;
+        margin-top: 0px;
+        height: 100%;
     }
-    .product .body .prod .pic
-    {
-            padding-bottom:0px;
-            flex-wrap:nowrap;
-            flex-direction:row;
-            display:flex;
-            padding-right:0px;
-            width:100%;
-            box-sizing:border-box;
-            padding-top:0px;
-            padding-left:0px;
-            margin-top:0px;
-            height:200px;
+
+    .product .body .prod .pic {
+        padding-bottom: 0px;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        display: flex;
+        padding-right: 0px;
+        width: 100%;
+        box-sizing: border-box;
+        padding-top: 0px;
+        padding-left: 0px;
+        margin-top: 0px;
+        height: 200px;
     }
-    .product .body .prod .pic img
-    {
-            padding-bottom:0px;
-            width:100%;
-            margin-bottom:0px;
-            padding-top:0px;
-            margin-top:0px;
-            height:100%;
+
+    .product .body .prod .pic img {
+        padding-bottom: 0px;
+        width: 100%;
+        margin-bottom: 0px;
+        padding-top: 0px;
+        margin-top: 0px;
+        height: 100%;
     }
-    .product .body .prod .text
-    {
-            padding-bottom:0px;
-            text-align:center;
-            flex-direction:row;
-            word-wrap:break-word;
-            display:inline-block;
-            padding-right:0px;
-            font-size:16PX;
-            padding-top:8px;
-            padding-left:0px;
-            margin-top:10px;
-            height:40px;
+
+    .product .body .prod .text {
+        padding-bottom: 0px;
+        text-align: center;
+        flex-direction: row;
+        word-wrap: break-word;
+        display: inline-block;
+        padding-right: 0px;
+        font-size: 16PX;
+        padding-top: 8px;
+        padding-left: 0px;
+        margin-top: 10px;
+        height: 40px;
     }
-    .product .more
-    {
-            background-color:#FFFFFF;
-            align-items:center;
-            flex-direction:row;
-            display:flex;
-            padding-right:0px;
-            box-sizing:border-box;
-            justify-content:center;
-            padding-bottom:0px;
-            flex-wrap:nowrap;
-            width:100px;
-            margin-bottom:0px;
-            padding-top:0px;
-            padding-left:0px;
-            margin-top:0px;
-            height:48px;
+
+    .product .more {
+        background-color: #FFFFFF;
+        align-items: center;
+        flex-direction: row;
+        display: flex;
+        padding-right: 0px;
+        box-sizing: border-box;
+        justify-content: center;
+        padding-bottom: 0px;
+        flex-wrap: nowrap;
+        width: 100px;
+        margin-bottom: 0px;
+        padding-top: 0px;
+        padding-left: 0px;
+        margin-top: 0px;
+        height: 48px;
     }
 
     .product-app {
-     align-items:center;
-     flex-direction:column;
-     display:flex;
-     padding-right:0px;
-     box-sizing:border-box;
-     justify-content:center;
-     padding-bottom:40px;
-     flex-wrap:nowrap;
-     width:100%;
-     margin-bottom:0px;
-     padding-top:40px;
-     padding-left:0px;
-     margin-top:2px;
-     background-color:#E3F4FA
-    }
-     .product-app .title
-    {
-            align-items:center;
-            flex-direction:row;
-            display:flex;
-            padding-right:0px;
-            box-sizing:border-box;
-            justify-content:center;
-            padding-bottom:0px;
-            flex-wrap:nowrap;
-            width:100%;
-            margin-bottom:0px;
-            padding-top:0px;
-            padding-left:0px;
-            margin-top:0px;
-            height:40px;
-    }
-    .product-app .title span
-    {
-            padding-bottom:0px;
-            flex-direction:row;
-            word-wrap:break-word;
-            display:inline-block;
-            padding-right:0px;
-            font-size:28PX;
-            padding-top:0px;
-            padding-left:0px;
-    }
-    .product-app .body
-    {
-            flex-direction:row;
-            display:flex;
-            padding-right:0px;
-            box-sizing:border-box;
-            justify-content:space-between;
-            padding-bottom:0px;
-            flex-wrap:wrap;
-            width:1200px;
-            margin-bottom:40px;
-            padding-top:0px;
-            padding-left:0px;
-            margin-top:40px;
-            height:100%;
-    }
-    .product-app .body .prod
-    {
-            background-color:#FFFFFF;
-            flex-direction:column;
-            display:flex;
-            padding-right:20px;
-            box-sizing:border-box;
-            padding-bottom:20px;
-            flex-wrap:nowrap;
-            width:32%;
-            margin-bottom:20px;
-            padding-top:20px;
-            padding-left:20px;
-            margin-top:0px;
-            height:100%;
-    }
-    .product-app .body .prod .pic
-    {
-            padding-bottom:0px;
-            flex-wrap:nowrap;
-            flex-direction:row;
-            display:flex;
-            padding-right:0px;
-            width:100%;
-            box-sizing:border-box;
-            padding-top:0px;
-            padding-left:0px;
-            margin-top:0px;
-            height:200px;
-    }
-    .product-app .body .prod .pic img
-    {
-            padding-bottom:0px;
-            width:100%;
-            margin-bottom:0px;
-            padding-top:0px;
-            margin-top:0px;
-            height:100%;
-    }
-    .product-app .body .prod .text
-    {
-            padding-bottom:0px;
-            text-align:center;
-            flex-direction:row;
-            word-wrap:break-word;
-            display:inline-block;
-            padding-right:0px;
-            font-size:16PX;
-            padding-top:8px;
-            padding-left:0px;
-            margin-top:10px;
-            height:40px;
-    }
-    .product-app .more
-    {
-            background-color:#FFFFFF;
-            align-items:center;
-            flex-direction:row;
-            display:flex;
-            padding-right:0px;
-            box-sizing:border-box;
-            justify-content:center;
-            padding-bottom:0px;
-            flex-wrap:nowrap;
-            width:100px;
-            margin-bottom:0px;
-            padding-top:0px;
-            padding-left:0px;
-            margin-top:0px;
-            height:48px;
+        align-items: center;
+        flex-direction: column;
+        display: flex;
+        padding-right: 0px;
+        box-sizing: border-box;
+        justify-content: center;
+        padding-bottom: 40px;
+        flex-wrap: nowrap;
+        width: 100%;
+        margin-bottom: 0px;
+        padding-top: 40px;
+        padding-left: 0px;
+        margin-top: 2px;
+        background-color: #E3F4FA
     }
 
-    .lab
-    {
-     align-items:center;
-     flex-direction:column;
-     display:flex;
-     padding-right:0px;
-     box-sizing:border-box;
-     justify-content:center;
-     flex-wrap:nowrap;
-     width:100%;
-     background-color:#FAF9F9;
+    .product-app .title {
+        align-items: center;
+        flex-direction: row;
+        display: flex;
+        padding-right: 0px;
+        box-sizing: border-box;
+        justify-content: center;
+        padding-bottom: 0px;
+        flex-wrap: nowrap;
+        width: 100%;
+        margin-bottom: 0px;
+        padding-top: 0px;
+        padding-left: 0px;
+        margin-top: 0px;
+        height: 40px;
     }
 
-    .lab .body
-    {
-     padding-bottom:0px;
-     flex-wrap:nowrap;
-     flex-direction:row;
-     display:flex;
-     padding-right:0px;
-     width:1920px;
-     box-sizing:border-box;
-     padding-top:0px;
-     padding-left:0px;
-     margin-top:0px;
-     height:100%;
+    .product-app .title span {
+        padding-bottom: 0px;
+        flex-direction: row;
+        word-wrap: break-word;
+        display: inline-block;
+        padding-right: 0px;
+        font-size: 28PX;
+        padding-top: 0px;
+        padding-left: 0px;
     }
 
-    .news
-    {
-            align-items:center;
-            flex-direction:column;
-            display:flex;
-            padding-right:0px;
-            box-sizing:border-box;
-            justify-content:center;
-            padding-bottom:0px;
-            flex-wrap:nowrap;
-            width:100%;
-            margin-bottom:0px;
-            padding-top:0px;
-            padding-left:0px;
-            margin-top:2px;
-     background-color:#E3F4FA;
+    .product-app .body {
+        flex-direction: row;
+        display: flex;
+        padding-right: 0px;
+        box-sizing: border-box;
+        justify-content: space-between;
+        padding-bottom: 0px;
+        flex-wrap: wrap;
+        width: 1200px;
+        margin-bottom: 40px;
+        padding-top: 0px;
+        padding-left: 0px;
+        margin-top: 40px;
+        height: 100%;
     }
-    .news .title 
-    {
-            align-items:center;
-            flex-direction:row;
-            display:flex;
-            padding-right:0px;
-            box-sizing:border-box;
-            justify-content:center;
-            padding-bottom:0px;
-            flex-wrap:nowrap;
-            width:100%;
-            margin-bottom:0px;
-            padding-top:0px;
-            padding-left:0px;
-            margin-top:0px;
-            height:40px;
+
+    .product-app .body .prod {
+        background-color: #FFFFFF;
+        flex-direction: column;
+        display: flex;
+        padding-right: 20px;
+        box-sizing: border-box;
+        padding-bottom: 20px;
+        flex-wrap: nowrap;
+        width: 32%;
+        margin-bottom: 20px;
+        padding-top: 20px;
+        padding-left: 20px;
+        margin-top: 0px;
+        height: 100%;
     }
-    .news .title span 
-    {
-            padding-bottom:0px;
-            flex-direction:row;
-            word-wrap:break-word;
-            display:inline-block;
-            padding-right:0px;
-            font-size:28PX;
-            padding-top:0px;
-            padding-left:0px;
+
+    .product-app .body .prod .pic {
+        padding-bottom: 0px;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        display: flex;
+        padding-right: 0px;
+        width: 100%;
+        box-sizing: border-box;
+        padding-top: 0px;
+        padding-left: 0px;
+        margin-top: 0px;
+        height: 200px;
     }
-    .news .body 
-    {
-            align-items:flex-start;
-            flex-direction:row;
-            display:flex;
-            padding-right:0px;
-            box-sizing:border-box;
-            justify-content:space-between;
-            padding-bottom:0px;
-            flex-wrap:nowrap;
-            width:1200px;
-            margin-bottom:20px;
-            padding-top:0px;
-            padding-left:0px;
-            margin-top:20px;
-            height:100%;
+
+    .product-app .body .prod .pic img {
+        padding-bottom: 0px;
+        width: 100%;
+        margin-bottom: 0px;
+        padding-top: 0px;
+        margin-top: 0px;
+        height: 100%;
     }
-    .news .body .left 
-    {
-            padding-bottom:0px;
-            flex-wrap:nowrap;
-            flex-direction:column;
-            display:flex;
-            width:400px;
-            box-sizing:border-box;
-            margin-bottom:0px;
-            padding-top:0px;
-            padding-left:0px;
-            margin-top:0px;
+
+    .product-app .body .prod .text {
+        padding-bottom: 0px;
+        text-align: center;
+        flex-direction: row;
+        word-wrap: break-word;
+        display: inline-block;
+        padding-right: 0px;
+        font-size: 16PX;
+        padding-top: 8px;
+        padding-left: 0px;
+        margin-top: 10px;
+        height: 40px;
     }
-    .news .body .left img 
-    {
-            width:100%;
-            padding-top:0px;
-            height:280px;
+
+    .product-app .more {
+        background-color: #FFFFFF;
+        align-items: center;
+        flex-direction: row;
+        display: flex;
+        padding-right: 0px;
+        box-sizing: border-box;
+        justify-content: center;
+        padding-bottom: 0px;
+        flex-wrap: nowrap;
+        width: 100px;
+        margin-bottom: 0px;
+        padding-top: 0px;
+        padding-left: 0px;
+        margin-top: 0px;
+        height: 48px;
     }
-    .news .body .left .title 
-    {
-            text-align:left;
-            flex-direction:row;
-            word-wrap:break-word;
-            display:inline-block;
-            padding-right:0px;
-            justify-content:flex-start;
-            padding-bottom:0px;
-            font-size:18PX;
-            margin-bottom:0px;
-            padding-top:10px;
-            padding-left:0px;
-            margin-top:0px;
-            height:40px;
+
+    .lab {
+        align-items: center;
+        flex-direction: column;
+        display: flex;
+        padding-right: 0px;
+        box-sizing: border-box;
+        justify-content: center;
+        flex-wrap: nowrap;
+        width: 100%;
+        background-color: #FAF9F9;
     }
-    .news .body .left .desc 
-    {
-            padding-bottom:0px;
-            color:#B5B5B5;
-            text-align:left;
-            flex-direction:row;
-            word-wrap:break-word;
-            display:inline-block;
-            padding-right:0px;
-            font-size:14PX;
-            padding-top:0px;
-            padding-left:0px;
-            margin-top:0px;
+
+    .lab .body {
+        padding-bottom: 0px;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        display: flex;
+        padding-right: 0px;
+        width: 1920px;
+        box-sizing: border-box;
+        padding-top: 0px;
+        padding-left: 0px;
+        margin-top: 0px;
+        height: 100%;
     }
-    .news .body .right 
-    {
-            padding-bottom:0px;
-            flex-wrap:nowrap;
-            flex-direction:column;
-            display:flex;
-            padding-right:0px;
-            width:800px;
-            margin-bottom:0px;
-            box-sizing:border-box;
-            padding-top:0px;
-            padding-left:20px;
-            margin-top:0px;
-            height:100%;
+
+    .news {
+        align-items: center;
+        flex-direction: column;
+        display: flex;
+        padding-right: 0px;
+        box-sizing: border-box;
+        justify-content: center;
+        padding-bottom: 0px;
+        flex-wrap: nowrap;
+        width: 100%;
+        margin-bottom: 0px;
+        padding-top: 0px;
+        padding-left: 0px;
+        margin-top: 2px;
+        background-color: #E3F4FA;
     }
-    .news .body .right .news-item 
-    {
-            padding-bottom:0px;
-            flex-wrap:nowrap;
-            flex-direction:row;
-            display:flex;
-            padding-right:0px;
-            width:100%;
-            margin-bottom:10px;
-            box-sizing:border-box;
-            padding-top:0px;
-            padding-left:0px;
-            margin-top:0px;
-            height:100px;
+
+    .news .title {
+        align-items: center;
+        flex-direction: row;
+        display: flex;
+        padding-right: 0px;
+        box-sizing: border-box;
+        justify-content: center;
+        padding-bottom: 0px;
+        flex-wrap: nowrap;
+        width: 100%;
+        margin-bottom: 0px;
+        padding-top: 0px;
+        padding-left: 0px;
+        margin-top: 0px;
+        height: 40px;
     }
-    .news .body .right .news-item .date 
-    {
-            background-color:#EEEEEE;
-            align-items:center;
-            flex-direction:column;
-            display:flex;
-            padding-right:8px;
-            box-sizing:border-box;
-            justify-content:center;
-            padding-bottom:8px;
-            flex-wrap:nowrap;
-            width:100px;
-            margin-bottom:0px;
-            padding-top:8px;
-            padding-left:8px;
-            height:100%;
+
+    .news .title span {
+        padding-bottom: 0px;
+        flex-direction: row;
+        word-wrap: break-word;
+        display: inline-block;
+        padding-right: 0px;
+        font-size: 28PX;
+        padding-top: 0px;
+        padding-left: 0px;
     }
-    .news .body .right .news-item .date .day 
-    {
-            padding-bottom:0px;
-            text-align:center;
-            flex-direction:row;
-            word-wrap:break-word;
-            display:inline-block;
-            padding-right:0px;
-            font-size:28PX;
-            padding-top:14px;
-            padding-left:0px;
-            height:70%;
+
+    .news .body {
+        align-items: flex-start;
+        flex-direction: row;
+        display: flex;
+        padding-right: 0px;
+        box-sizing: border-box;
+        justify-content: space-between;
+        padding-bottom: 0px;
+        flex-wrap: nowrap;
+        width: 1200px;
+        margin-bottom: 20px;
+        padding-top: 0px;
+        padding-left: 0px;
+        margin-top: 20px;
+        height: 100%;
     }
-    .news .body .right .news-item .date .date 
-    {
-            text-align:center;
-            flex-direction:row;
-            word-wrap:break-word;
-            display:inline-block;
-            font-size:16PX;
-            padding-top:0px;
+
+    .news .body .left {
+        padding-bottom: 0px;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        display: flex;
+        width: 400px;
+        box-sizing: border-box;
+        margin-bottom: 0px;
+        padding-top: 0px;
+        padding-left: 0px;
+        margin-top: 0px;
     }
-    .news .body .right .news-item .news-body 
-    {
-            padding-bottom:0px;
-            flex-wrap:nowrap;
-            flex-direction:column;
-            display:flex;
-            padding-right:0px;
-            width:90%;
-            margin-bottom:10px;
-            box-sizing:border-box;
-            padding-top:0px;
-            padding-left:10px;
-            margin-top:0px;
-            height:100%;
+
+    .news .body .left img {
+        width: 100%;
+        padding-top: 0px;
+        height: 280px;
     }
-    .news .body .right .news-item .news-body .title 
-    {
-            text-align:left;
-            flex-direction:row;
-            word-wrap:break-word;
-            display:inline-block;
-            padding-right:0px;
-            justify-content:flex-start;
-            padding-bottom:0px;
-            font-size:18PX;
-            margin-bottom:0px;
-            padding-top:10px;
-            padding-left:0px;
-            margin-top:0px;
-            height:40px;
+
+    .news .body .left .title {
+        text-align: left;
+        flex-direction: row;
+        word-wrap: break-word;
+        display: inline-block;
+        padding-right: 0px;
+        justify-content: flex-start;
+        padding-bottom: 0px;
+        font-size: 18PX;
+        margin-bottom: 0px;
+        padding-top: 10px;
+        padding-left: 0px;
+        margin-top: 0px;
+        height: 40px;
     }
-    .news .body .right .news-item .news-body .desc 
-    {
-            padding-bottom:0px;
-            color:#B5B5B5;
-            text-align:left;
-            flex-direction:row;
-            word-wrap:break-word;
-            display:inline-block;
-            padding-right:0px;
-            font-size:14PX;
-            padding-top:0px;
-            padding-left:0px;
-            margin-top:0px;
+
+    .news .body .left .desc {
+        padding-bottom: 0px;
+        color: #B5B5B5;
+        text-align: left;
+        flex-direction: row;
+        word-wrap: break-word;
+        display: inline-block;
+        padding-right: 0px;
+        font-size: 14PX;
+        padding-top: 0px;
+        padding-left: 0px;
+        margin-top: 0px;
     }
-    .news .more 
-    {
-            background-color:#FFFFFF;
-            align-items:center;
-            flex-direction:row;
-            display:flex;
-            padding-right:0px;
-            box-sizing:border-box;
-            justify-content:center;
-            padding-bottom:0px;
-            flex-wrap:nowrap;
-            width:100px;
-            margin-bottom:0px;
-            padding-top:0px;
-            padding-left:0px;
-            margin-top:0px;
-            height:48px;
+
+    .news .body .right {
+        padding-bottom: 0px;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        display: flex;
+        padding-right: 0px;
+        width: 800px;
+        margin-bottom: 0px;
+        box-sizing: border-box;
+        padding-top: 0px;
+        padding-left: 20px;
+        margin-top: 0px;
+        height: 100%;
     }
-@media (max-width: 768px){
-        .ms-banner 
-        {
-                flex-wrap:nowrap;
-                flex-direction:row;
-                display:flex;
-                width:100%;
-                box-sizing:border-box;
-                margin-top:0px;
-                height:unset;
-        }
-        .ms-banner .ms-vue-awesome-swiper 
-        {
-                background-color:#E8F4FD;
-                align-items:center;
-                flex-wrap:nowrap;
-                flex-direction:row;
-                display:flex;
-                width:100%;
-                box-sizing:border-box;
-                position:relative;
-                padding-left:0px;
-                justify-content:space-between;
-                margin-top:0px;
-                height:300px;
-        }
-        .ms-banner .ms-vue-awesome-swiper .ms-vue-awesome-swiper-bottom 
-        {
-                background-color:RGBA(63, 158, 255, .75);
-                align-items:center;
-                flex-direction:row;
-                bottom:0px;
-                display:flex;
-                box-sizing:border-box;
-                justify-content:flex-start;
-                flex-wrap:nowrap;
-                width:100%;
-                position:absolute;
-                padding-left:10px;
-                margin-top:0px;
-                height:40px;
-        }
-        .ms-banner .ms-vue-awesome-swiper .ms-vue-awesome-swiper-bottom .ms-vue-awesome-swiper-title 
-        {
-                color:#FFFFFF;
-                flex-direction:row;
-                word-wrap:break-word;
-                display:inline-block;
-                font-size:14px;
-                padding-left:0px;
-        }
-        .about 
-        {
-                align-items:center;
-                flex-wrap:nowrap;
-                flex-direction:column;
-                display:flex;
-                padding-right:0px;
-                width:100%;
-                box-sizing:border-box;
-                padding-left:0px;
-                justify-content:center;
-                margin-top:18px;
-                height:100%;
-        }
-        .about .body 
-        {
-                padding-bottom:0px;
-                align-items:center;
-                flex-wrap:nowrap;
-                flex-direction:column;
-                display:flex;
-                width:100%;
-                box-sizing:border-box;
-                margin-bottom:0px;
-                padding-top:0px;
-                margin-top:0px;
-                justify-content:flex-start;
-                height:100%;
-        }
-        .about .body .left 
-        {
-                align-items:center;
-                flex-wrap:nowrap;
-                flex-direction:column;
-                display:flex;
-                padding-right:0px;
-                width:90%;
-                box-sizing:border-box;
-                margin-bottom:10px;
-                padding-left:0px;
-                justify-content:center;
-        }
-        .about .body .left img 
-        {
-                width:100%;
-                margin-bottom:0px;
-                padding-top:0px;
-                height:200px;
-        }
-        .about .body .right 
-        {
-                flex-wrap:nowrap;
-                flex-direction:column;
-                display:flex;
-                padding-right:20px;
-                width:100%;
-                box-sizing:border-box;
-                margin-bottom:0px;
-                padding-left:20px;
-                margin-top:0px;
-                height:100%;
-        }
-        .about .body .right .title 
-        {
-                align-items:center;
-                flex-wrap:nowrap;
-                flex-direction:row;
-                display:flex;
-                padding-right:0px;
-                width:100%;
-                box-sizing:border-box;
-                padding-left:0px;
-                margin-top:0px;
-                height:40px;
-        }
-        .about .body .right .title span 
-        {
-                padding-bottom:0px;
-                flex-direction:row;
-                word-wrap:break-word;
-                display:inline-block;
-                padding-right:0px;
-                font-size:28PX;
-                padding-top:0px;
-                padding-left:0px;
-        }
-        .about .body .right .desc 
-        {
-                flex-wrap:nowrap;
-                flex-direction:row;
-                display:flex;
-                padding-right:0px;
-                width:100%;
-                box-sizing:border-box;
-                padding-left:0px;
-                height:100%;
-        }
-        .about .body .right .desc span 
-        {
-                padding-bottom:0px;
-                flex-direction:row;
-                word-wrap:break-word;
-                display:inline-block;
-                font-size:16PX;
-                padding-top:0px;
-                margin-top:20px;
-        }
-        .product 
-        {
-                background-color:#FAF9F9;
-                align-items:center;
-                flex-direction:column;
-                display:flex;
-                padding-right:0px;
-                box-sizing:border-box;
-                justify-content:center;
-                padding-bottom:40px;
-                flex-wrap:nowrap;
-                width:100%;
-                margin-bottom:0px;
-                padding-top:40px;
-                padding-left:0px;
-                margin-top:20px;
-                height:unset;
-        }
-        .product .title 
-        {
-                align-items:center;
-                flex-direction:row;
-                display:flex;
-                padding-right:0px;
-                box-sizing:border-box;
-                justify-content:center;
-                padding-bottom:0px;
-                flex-wrap:nowrap;
-                width:100%;
-                margin-bottom:0px;
-                padding-top:0px;
-                padding-left:0px;
-                margin-top:0px;
-                height:40px;
-        }
-        .product .title span 
-        {
-                padding-bottom:0px;
-                flex-direction:row;
-                word-wrap:break-word;
-                display:inline-block;
-                padding-right:0px;
-                font-size:28PX;
-                padding-top:0px;
-                padding-left:0px;
-        }
-        .product .body 
-        {
-                padding-bottom:0px;
-                align-items:center;
-                flex-wrap:nowrap;
-                flex-direction:column;
-                display:flex;
-                width:100%;
-                box-sizing:border-box;
-                margin-bottom:0px;
-                padding-top:0px;
-                margin-top:0px;
-                justify-content:center;
-                height:100%;
-        }
-        .product .body .prod 
-        {
-                background-color:#FFFFFF;
-                flex-direction:column;
-                display:flex;
-                padding-right:0px;
-                box-sizing:border-box;
-                padding-bottom:0px;
-                flex-wrap:nowrap;
-                width:90%;
-                margin-bottom:40px;
-                padding-top:0px;
-                padding-left:0px;
-                margin-top:0px;
-                height:100%;
-        }
-        .product .body .prod .pic 
-        {
-                padding-bottom:0px;
-                flex-wrap:nowrap;
-                flex-direction:row;
-                display:flex;
-                padding-right:0px;
-                width:100%;
-                box-sizing:border-box;
-                padding-top:0px;
-                padding-left:0px;
-                height:200px;
-        }
-        .product .body .prod .pic img 
-        {
-                padding-bottom:0px;
-                width:100%;
-                padding-top:0px;
-                margin-top:0px;
-                height:100%;
-        }
-        .product .body .prod .text 
-        {
-                padding-bottom:0px;
-                text-align:center;
-                flex-direction:row;
-                word-wrap:break-word;
-                display:inline-block;
-                padding-right:0px;
-                font-size:16PX;
-                padding-top:8px;
-                padding-left:0px;
-                margin-top:10px;
-                height:40px;
-        }
-        .product .more 
-        {
-                background-color:#FFFFFF;
-                align-items:center;
-                flex-direction:row;
-                display:flex;
-                padding-right:0px;
-                box-sizing:border-box;
-                justify-content:center;
-                padding-bottom:0px;
-                flex-wrap:nowrap;
-                width:100px;
-                margin-bottom:0px;
-                padding-top:0px;
-                padding-left:0px;
-                margin-top:0px;
-                height:48px;
-        }
-        .news 
-        {
-                align-items:center;
-                flex-direction:column;
-                display:flex;
-                padding-right:0px;
-                box-sizing:border-box;
-                justify-content:center;
-                padding-bottom:20px;
-                flex-wrap:nowrap;
-                width:100%;
-                margin-bottom:20px;
-                padding-top:20px;
-                padding-left:0px;
-                margin-top:20px;
-                height:unset;
-        }
-        .news .title 
-        {
-                align-items:center;
-                flex-direction:row;
-                display:flex;
-                padding-right:0px;
-                box-sizing:border-box;
-                justify-content:center;
-                padding-bottom:0px;
-                flex-wrap:nowrap;
-                width:100%;
-                margin-bottom:0px;
-                padding-top:0px;
-                padding-left:0px;
-                margin-top:0px;
-                height:40px;
-        }
-        .news .title span 
-        {
-                padding-bottom:0px;
-                flex-direction:row;
-                word-wrap:break-word;
-                display:inline-block;
-                padding-right:0px;
-                font-size:28PX;
-                padding-top:0px;
-                padding-left:0px;
-        }
-        .news .body 
-        {
-                align-items:flex-start;
-                flex-direction:column;
-                display:flex;
-                padding-right:0px;
-                box-sizing:border-box;
-                justify-content:space-between;
-                padding-bottom:0px;
-                flex-wrap:nowrap;
-                width:90%;
-                margin-bottom:20px;
-                padding-top:0px;
-                padding-left:0px;
-                margin-top:20px;
-                height:100%;
-        }
-        .news .body .left 
-        {
-                padding-bottom:0px;
-                flex-wrap:nowrap;
-                flex-direction:column;
-                display:flex;
-                width:100%;
-                box-sizing:border-box;
-                margin-bottom:10px;
-                padding-top:0px;
-                padding-left:0px;
-                margin-top:0px;
-        }
-        .news .body .left img 
-        {
-                padding-bottom:0px;
-                width:100%;
-                margin-bottom:0px;
-                padding-top:0px;
-                margin-top:0px;
-                height:100%;
-        }
-        .news .body .left .title 
-        {
-                padding-bottom:0px;
-                text-align:left;
-                flex-direction:row;
-                word-wrap:break-word;
-                display:inline-block;
-                padding-right:0px;
-                font-size:18PX;
-                padding-top:10px;
-                padding-left:0px;
-                margin-top:0px;
-                justify-content:flex-start;
-                height:40px;
-        }
-        .news .body .left .desc 
-        {
-                padding-bottom:0px;
-                color:#B5B5B5;
-                text-align:left;
-                flex-direction:row;
-                word-wrap:break-word;
-                display:inline-block;
-                padding-right:0px;
-                font-size:14PX;
-                padding-top:0px;
-                padding-left:0px;
-                margin-top:0px;
-        }
-        .news .body .right 
-        {
-                padding-bottom:0px;
-                flex-wrap:nowrap;
-                flex-direction:column;
-                display:flex;
-                padding-right:0px;
-                width:100%;
-                margin-bottom:0px;
-                box-sizing:border-box;
-                padding-top:0px;
-                padding-left:0px;
-                margin-top:0px;
-                height:100%;
-        }
-        .news .body .right .news-item 
-        {
-                padding-bottom:0px;
-                flex-wrap:nowrap;
-                flex-direction:row;
-                display:flex;
-                padding-right:0px;
-                width:100%;
-                margin-bottom:10px;
-                box-sizing:border-box;
-                padding-top:0px;
-                padding-left:0px;
-                margin-top:0px;
-                height:100px;
-        }
-        .news .body .right .news-item .date 
-        {
-                background-color:#EEEEEE;
-                align-items:center;
-                flex-direction:column;
-                display:flex;
-                padding-right:8px;
-                box-sizing:border-box;
-                justify-content:center;
-                padding-bottom:8px;
-                flex-wrap:nowrap;
-                width:100px;
-                margin-bottom:0px;
-                padding-top:8px;
-                padding-left:8px;
-                height:100%;
-        }
-        .news .body .right .news-item .date .day 
-        {
-                padding-bottom:0px;
-                text-align:center;
-                flex-direction:row;
-                word-wrap:break-word;
-                display:inline-block;
-                padding-right:0px;
-                font-size:28PX;
-                padding-top:14px;
-                padding-left:0px;
-                height:70%;
-        }
-        .news .body .right .news-item .date .date 
-        {
-                text-align:center;
-                flex-direction:row;
-                word-wrap:break-word;
-                display:inline-block;
-                font-size:16PX;
-                padding-top:0px;
-        }
-        .news .body .right .news-item .news-body 
-        {
-                padding-bottom:0px;
-                flex-wrap:nowrap;
-                flex-direction:column;
-                display:flex;
-                padding-right:0px;
-                width:90%;
-                margin-bottom:10px;
-                box-sizing:border-box;
-                padding-top:0px;
-                padding-left:10px;
-                margin-top:0px;
-                height:100%;
-        }
-        .news .body .right .news-item .news-body .title 
-        {
-                text-align:left;
-                flex-direction:row;
-                word-wrap:break-word;
-                display:inline-block;
-                padding-right:0px;
-                justify-content:flex-start;
-                padding-bottom:0px;
-                font-size:18PX;
-                margin-bottom:0px;
-                padding-top:10px;
-                padding-left:0px;
-                margin-top:0px;
-                height:40px;
-        }
-        .news .body .right .news-item .news-body .desc 
-        {
-         display: none;
-                padding-bottom:0px;
-                color:#B5B5B5;
-                text-align:left;
-                flex-direction:row;
-                word-wrap:break-word;
-                padding-right:0px;
-                font-size:14PX;
-                padding-top:0px;
-                padding-left:0px;
-                margin-top:0px;
-        }
-        .news .more 
-        {
-                background-color:#FFFFFF;
-                align-items:center;
-                flex-direction:row;
-                display:flex;
-                padding-right:0px;
-                box-sizing:border-box;
-                justify-content:center;
-                padding-bottom:0px;
-                flex-wrap:nowrap;
-                width:100px;
-                margin-bottom:0px;
-                padding-top:0px;
-                padding-left:0px;
-                margin-top:0px;
-                height:48px;
+
+    .news .body .right .news-item {
+        padding-bottom: 0px;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        display: flex;
+        padding-right: 0px;
+        width: 100%;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+        padding-top: 0px;
+        padding-left: 0px;
+        margin-top: 0px;
+        height: 100px;
+    }
+
+    .news .body .right .news-item .date {
+        background-color: #EEEEEE;
+        align-items: center;
+        flex-direction: column;
+        display: flex;
+        padding-right: 8px;
+        box-sizing: border-box;
+        justify-content: center;
+        padding-bottom: 8px;
+        flex-wrap: nowrap;
+        width: 100px;
+        margin-bottom: 0px;
+        padding-top: 8px;
+        padding-left: 8px;
+        height: 100%;
+    }
+
+    .news .body .right .news-item .date .day {
+        padding-bottom: 0px;
+        text-align: center;
+        flex-direction: row;
+        word-wrap: break-word;
+        display: inline-block;
+        padding-right: 0px;
+        font-size: 28PX;
+        padding-top: 14px;
+        padding-left: 0px;
+        height: 70%;
+    }
+
+    .news .body .right .news-item .date .date {
+        text-align: center;
+        flex-direction: row;
+        word-wrap: break-word;
+        display: inline-block;
+        font-size: 16PX;
+        padding-top: 0px;
+    }
+
+    .news .body .right .news-item .news-body {
+        padding-bottom: 0px;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        display: flex;
+        padding-right: 0px;
+        width: 90%;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+        padding-top: 0px;
+        padding-left: 10px;
+        margin-top: 0px;
+        height: 100%;
+    }
+
+    .news .body .right .news-item .news-body .title {
+        text-align: left;
+        flex-direction: row;
+        word-wrap: break-word;
+        display: inline-block;
+        padding-right: 0px;
+        justify-content: flex-start;
+        padding-bottom: 0px;
+        font-size: 18PX;
+        margin-bottom: 0px;
+        padding-top: 10px;
+        padding-left: 0px;
+        margin-top: 0px;
+        height: 40px;
+    }
+
+    .news .body .right .news-item .news-body .desc {
+        padding-bottom: 0px;
+        color: #B5B5B5;
+        text-align: left;
+        flex-direction: row;
+        word-wrap: break-word;
+        display: inline-block;
+        padding-right: 0px;
+        font-size: 14PX;
+        padding-top: 0px;
+        padding-left: 0px;
+        margin-top: 0px;
+    }
+
+    .news .more {
+        background-color: #FFFFFF;
+        align-items: center;
+        flex-direction: row;
+        display: flex;
+        padding-right: 0px;
+        box-sizing: border-box;
+        justify-content: center;
+        padding-bottom: 0px;
+        flex-wrap: nowrap;
+        width: 100px;
+        margin-bottom: 0px;
+        padding-top: 0px;
+        padding-left: 0px;
+        margin-top: 0px;
+        height: 48px;
+    }
+
+    @media (max-width: 768px) {
+        .ms-banner {
+            flex-wrap: nowrap;
+            flex-direction: row;
+            display: flex;
+            width: 100%;
+            box-sizing: border-box;
+            margin-top: 0px;
+            height: unset;
         }
 
-}</style>
- </body>
+        .ms-banner .ms-vue-awesome-swiper {
+            background-color: #E8F4FD;
+            align-items: center;
+            flex-wrap: nowrap;
+            flex-direction: row;
+            display: flex;
+            width: 100%;
+            box-sizing: border-box;
+            position: relative;
+            padding-left: 0px;
+            justify-content: space-between;
+            margin-top: 0px;
+            height: 300px;
+        }
+
+        .ms-banner .ms-vue-awesome-swiper .ms-vue-awesome-swiper-bottom {
+            background-color: RGBA(63, 158, 255, .75);
+            align-items: center;
+            flex-direction: row;
+            bottom: 0px;
+            display: flex;
+            box-sizing: border-box;
+            justify-content: flex-start;
+            flex-wrap: nowrap;
+            width: 100%;
+            position: absolute;
+            padding-left: 10px;
+            margin-top: 0px;
+            height: 40px;
+        }
+
+        .ms-banner .ms-vue-awesome-swiper .ms-vue-awesome-swiper-bottom .ms-vue-awesome-swiper-title {
+            color: #FFFFFF;
+            flex-direction: row;
+            word-wrap: break-word;
+            display: inline-block;
+            font-size: 14px;
+            padding-left: 0px;
+        }
+
+        .about {
+            align-items: center;
+            flex-wrap: nowrap;
+            flex-direction: column;
+            display: flex;
+            padding-right: 0px;
+            width: 100%;
+            box-sizing: border-box;
+            padding-left: 0px;
+            justify-content: center;
+            margin-top: 18px;
+            height: 100%;
+        }
+
+        .about .body {
+            padding-bottom: 0px;
+            align-items: center;
+            flex-wrap: nowrap;
+            flex-direction: column;
+            display: flex;
+            width: 100%;
+            box-sizing: border-box;
+            margin-bottom: 0px;
+            padding-top: 0px;
+            margin-top: 0px;
+            justify-content: flex-start;
+            height: 100%;
+        }
+
+        .about .body .left {
+            align-items: center;
+            flex-wrap: nowrap;
+            flex-direction: column;
+            display: flex;
+            padding-right: 0px;
+            width: 90%;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+            padding-left: 0px;
+            justify-content: center;
+        }
+
+        .about .body .left img {
+            width: 100%;
+            margin-bottom: 0px;
+            padding-top: 0px;
+            height: 200px;
+        }
+
+        .about .body .right {
+            flex-wrap: nowrap;
+            flex-direction: column;
+            display: flex;
+            padding-right: 20px;
+            width: 100%;
+            box-sizing: border-box;
+            margin-bottom: 0px;
+            padding-left: 20px;
+            margin-top: 0px;
+            height: 100%;
+        }
+
+        .about .body .right .title {
+            align-items: center;
+            flex-wrap: nowrap;
+            flex-direction: row;
+            display: flex;
+            padding-right: 0px;
+            width: 100%;
+            box-sizing: border-box;
+            padding-left: 0px;
+            margin-top: 0px;
+            height: 40px;
+        }
+
+        .about .body .right .title span {
+            padding-bottom: 0px;
+            flex-direction: row;
+            word-wrap: break-word;
+            display: inline-block;
+            padding-right: 0px;
+            font-size: 28PX;
+            padding-top: 0px;
+            padding-left: 0px;
+        }
+
+        .about .body .right .desc {
+            flex-wrap: nowrap;
+            flex-direction: row;
+            display: flex;
+            padding-right: 0px;
+            width: 100%;
+            box-sizing: border-box;
+            padding-left: 0px;
+            height: 100%;
+        }
+
+        .about .body .right .desc span {
+            padding-bottom: 0px;
+            flex-direction: row;
+            word-wrap: break-word;
+            display: inline-block;
+            font-size: 16PX;
+            padding-top: 0px;
+            margin-top: 20px;
+        }
+
+        .product {
+            background-color: #FAF9F9;
+            align-items: center;
+            flex-direction: column;
+            display: flex;
+            padding-right: 0px;
+            box-sizing: border-box;
+            justify-content: center;
+            padding-bottom: 40px;
+            flex-wrap: nowrap;
+            width: 100%;
+            margin-bottom: 0px;
+            padding-top: 40px;
+            padding-left: 0px;
+            margin-top: 20px;
+            height: unset;
+        }
+
+        .product .title {
+            align-items: center;
+            flex-direction: row;
+            display: flex;
+            padding-right: 0px;
+            box-sizing: border-box;
+            justify-content: center;
+            padding-bottom: 0px;
+            flex-wrap: nowrap;
+            width: 100%;
+            margin-bottom: 0px;
+            padding-top: 0px;
+            padding-left: 0px;
+            margin-top: 0px;
+            height: 40px;
+        }
+
+        .product .title span {
+            padding-bottom: 0px;
+            flex-direction: row;
+            word-wrap: break-word;
+            display: inline-block;
+            padding-right: 0px;
+            font-size: 28PX;
+            padding-top: 0px;
+            padding-left: 0px;
+        }
+
+        .product .body {
+            padding-bottom: 0px;
+            align-items: center;
+            flex-wrap: nowrap;
+            flex-direction: column;
+            display: flex;
+            width: 100%;
+            box-sizing: border-box;
+            margin-bottom: 0px;
+            padding-top: 0px;
+            margin-top: 0px;
+            justify-content: center;
+            height: 100%;
+        }
+
+        .product .body .prod {
+            background-color: #FFFFFF;
+            flex-direction: column;
+            display: flex;
+            padding-right: 0px;
+            box-sizing: border-box;
+            padding-bottom: 0px;
+            flex-wrap: nowrap;
+            width: 90%;
+            margin-bottom: 40px;
+            padding-top: 0px;
+            padding-left: 0px;
+            margin-top: 0px;
+            height: 100%;
+        }
+
+        .product .body .prod .pic {
+            padding-bottom: 0px;
+            flex-wrap: nowrap;
+            flex-direction: row;
+            display: flex;
+            padding-right: 0px;
+            width: 100%;
+            box-sizing: border-box;
+            padding-top: 0px;
+            padding-left: 0px;
+            height: 200px;
+        }
+
+        .product .body .prod .pic img {
+            padding-bottom: 0px;
+            width: 100%;
+            padding-top: 0px;
+            margin-top: 0px;
+            height: 100%;
+        }
+
+        .product .body .prod .text {
+            padding-bottom: 0px;
+            text-align: center;
+            flex-direction: row;
+            word-wrap: break-word;
+            display: inline-block;
+            padding-right: 0px;
+            font-size: 16PX;
+            padding-top: 8px;
+            padding-left: 0px;
+            margin-top: 10px;
+            height: 40px;
+        }
+
+        .product .more {
+            background-color: #FFFFFF;
+            align-items: center;
+            flex-direction: row;
+            display: flex;
+            padding-right: 0px;
+            box-sizing: border-box;
+            justify-content: center;
+            padding-bottom: 0px;
+            flex-wrap: nowrap;
+            width: 100px;
+            margin-bottom: 0px;
+            padding-top: 0px;
+            padding-left: 0px;
+            margin-top: 0px;
+            height: 48px;
+        }
+
+        .news {
+            align-items: center;
+            flex-direction: column;
+            display: flex;
+            padding-right: 0px;
+            box-sizing: border-box;
+            justify-content: center;
+            padding-bottom: 20px;
+            flex-wrap: nowrap;
+            width: 100%;
+            margin-bottom: 20px;
+            padding-top: 20px;
+            padding-left: 0px;
+            margin-top: 20px;
+            height: unset;
+        }
+
+        .news .title {
+            align-items: center;
+            flex-direction: row;
+            display: flex;
+            padding-right: 0px;
+            box-sizing: border-box;
+            justify-content: center;
+            padding-bottom: 0px;
+            flex-wrap: nowrap;
+            width: 100%;
+            margin-bottom: 0px;
+            padding-top: 0px;
+            padding-left: 0px;
+            margin-top: 0px;
+            height: 40px;
+        }
+
+        .news .title span {
+            padding-bottom: 0px;
+            flex-direction: row;
+            word-wrap: break-word;
+            display: inline-block;
+            padding-right: 0px;
+            font-size: 28PX;
+            padding-top: 0px;
+            padding-left: 0px;
+        }
+
+        .news .body {
+            align-items: flex-start;
+            flex-direction: column;
+            display: flex;
+            padding-right: 0px;
+            box-sizing: border-box;
+            justify-content: space-between;
+            padding-bottom: 0px;
+            flex-wrap: nowrap;
+            width: 90%;
+            margin-bottom: 20px;
+            padding-top: 0px;
+            padding-left: 0px;
+            margin-top: 20px;
+            height: 100%;
+        }
+
+        .news .body .left {
+            padding-bottom: 0px;
+            flex-wrap: nowrap;
+            flex-direction: column;
+            display: flex;
+            width: 100%;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+            padding-top: 0px;
+            padding-left: 0px;
+            margin-top: 0px;
+        }
+
+        .news .body .left img {
+            padding-bottom: 0px;
+            width: 100%;
+            margin-bottom: 0px;
+            padding-top: 0px;
+            margin-top: 0px;
+            height: 100%;
+        }
+
+        .news .body .left .title {
+            padding-bottom: 0px;
+            text-align: left;
+            flex-direction: row;
+            word-wrap: break-word;
+            display: inline-block;
+            padding-right: 0px;
+            font-size: 18PX;
+            padding-top: 10px;
+            padding-left: 0px;
+            margin-top: 0px;
+            justify-content: flex-start;
+            height: 40px;
+        }
+
+        .news .body .left .desc {
+            padding-bottom: 0px;
+            color: #B5B5B5;
+            text-align: left;
+            flex-direction: row;
+            word-wrap: break-word;
+            display: inline-block;
+            padding-right: 0px;
+            font-size: 14PX;
+            padding-top: 0px;
+            padding-left: 0px;
+            margin-top: 0px;
+        }
+
+        .news .body .right {
+            padding-bottom: 0px;
+            flex-wrap: nowrap;
+            flex-direction: column;
+            display: flex;
+            padding-right: 0px;
+            width: 100%;
+            margin-bottom: 0px;
+            box-sizing: border-box;
+            padding-top: 0px;
+            padding-left: 0px;
+            margin-top: 0px;
+            height: 100%;
+        }
+
+        .news .body .right .news-item {
+            padding-bottom: 0px;
+            flex-wrap: nowrap;
+            flex-direction: row;
+            display: flex;
+            padding-right: 0px;
+            width: 100%;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            padding-top: 0px;
+            padding-left: 0px;
+            margin-top: 0px;
+            height: 100px;
+        }
+
+        .news .body .right .news-item .date {
+            background-color: #EEEEEE;
+            align-items: center;
+            flex-direction: column;
+            display: flex;
+            padding-right: 8px;
+            box-sizing: border-box;
+            justify-content: center;
+            padding-bottom: 8px;
+            flex-wrap: nowrap;
+            width: 100px;
+            margin-bottom: 0px;
+            padding-top: 8px;
+            padding-left: 8px;
+            height: 100%;
+        }
+
+        .news .body .right .news-item .date .day {
+            padding-bottom: 0px;
+            text-align: center;
+            flex-direction: row;
+            word-wrap: break-word;
+            display: inline-block;
+            padding-right: 0px;
+            font-size: 28PX;
+            padding-top: 14px;
+            padding-left: 0px;
+            height: 70%;
+        }
+
+        .news .body .right .news-item .date .date {
+            text-align: center;
+            flex-direction: row;
+            word-wrap: break-word;
+            display: inline-block;
+            font-size: 16PX;
+            padding-top: 0px;
+        }
+
+        .news .body .right .news-item .news-body {
+            padding-bottom: 0px;
+            flex-wrap: nowrap;
+            flex-direction: column;
+            display: flex;
+            padding-right: 0px;
+            width: 90%;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            padding-top: 0px;
+            padding-left: 10px;
+            margin-top: 0px;
+            height: 100%;
+        }
+
+        .news .body .right .news-item .news-body .title {
+            text-align: left;
+            flex-direction: row;
+            word-wrap: break-word;
+            display: inline-block;
+            padding-right: 0px;
+            justify-content: flex-start;
+            padding-bottom: 0px;
+            font-size: 18PX;
+            margin-bottom: 0px;
+            padding-top: 10px;
+            padding-left: 0px;
+            margin-top: 0px;
+            height: 40px;
+        }
+
+        .news .body .right .news-item .news-body .desc {
+            display: none;
+            padding-bottom: 0px;
+            color: #B5B5B5;
+            text-align: left;
+            flex-direction: row;
+            word-wrap: break-word;
+            padding-right: 0px;
+            font-size: 14PX;
+            padding-top: 0px;
+            padding-left: 0px;
+            margin-top: 0px;
+        }
+
+        .news .more {
+            background-color: #FFFFFF;
+            align-items: center;
+            flex-direction: row;
+            display: flex;
+            padding-right: 0px;
+            box-sizing: border-box;
+            justify-content: center;
+            padding-bottom: 0px;
+            flex-wrap: nowrap;
+            width: 100px;
+            margin-bottom: 0px;
+            padding-top: 0px;
+            padding-left: 0px;
+            margin-top: 0px;
+            height: 48px;
+        }
+
+    }</style>
+</body>
 </html>
