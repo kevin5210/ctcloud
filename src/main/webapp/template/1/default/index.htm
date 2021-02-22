@@ -142,23 +142,28 @@ navigation: {nextEl: '.swiper-button-next',prevEl: '.swiper-button-prev'}
         <img title="" alt="" src="{ms:global.host/}/{@ms:file field.litpic/}"
              style="background-size: cover; background-position: center; width:100%;height: 100%">
         {/ms:arclist}
-        <div class="av-image-hotspot av-display-hotspot" data-avia-tooltip-position="top"
-             data-avia-tooltip-alignment="centered"
-             data-avia-tooltip-class="av-tt-default-width av-tt-pos-above av-tt-align-centered  av-mobile-fallback-active  main_color av-tt-hotspot"
-             data-avia-tooltip="<p>基于开放架构与技术实现</p>" style="top: 18.5%; left: 49.8%; ">
-            <div class="av-image-hotspot_inner" style="background-color: #b02b2c; color: #888888;">1</div>
-            <div class="av-image-hotspot-pulse" style="background-color:#b02b2c;"></div>
+        {ms:arclist flag='c' typeid='1362658871693762562' size=1}
+        <div id="vue" class="lab-image-hotspot lab-display-hotspot" style="top: 55.6%; left: 72.9%; ">
+            <div class="lab-image-hotspot_inner" style="background-color: #b02b2c; color: #888888;">1</div>
+            <div class="lab-image-hotspot-pulse" style="background-color:#b02b2c;"></div>
         </div>
+        <div id="flutter" class="lab-image-hotspot lab-display-hotspot" style="top: 70.8%; left: 27.7%;">
+            <div class="lab-image-hotspot_inner" style="background-color: #b02b2c; color: #888888;">1</div>
+            <div class="lab-image-hotspot-pulse" style="background-color:#b02b2c;"></div>
+        </div>
+        <div id="uni-app" class="lab-image-hotspot lab-display-hotspot" style="top: 76.7%; left: 50.2%; ">
+            <div class="lab-image-hotspot_inner" style="background-color: #b02b2c; color: #888888;">1</div>
+            <div class="lab-image-hotspot-pulse" style="background-color:#b02b2c;"></div>
+        </div>
+        <div class="lab-image-left-text">
+            <div class="title"><span>程天技术实验室</span><br><br></div>
+        </div>
+        {/ms:arclist}
     </div>
-    <div data-v-23dd05ae="" data-v-4156ae8b="" class="bg_content">
-        <!--<div data-v-23dd05ae="" class="riskivy-content">
-            <div data-v-23dd05ae="" class="detail-header"><h2 data-v-23dd05ae="" class="title">能力中心</h2>
-                <p data-v-23dd05ae="" class="tit-desc">致力于最前沿的安全技术研究与分享</p></div>
-        </div>-->
-        <div data-v-6cca36ea="" class="left-text">
-            <div data-v-6cca36ea="" class="title"><span data-v-6cca36ea="">程天集成平台</span><br data-v-6cca36ea=""><br
-                    data-v-6cca36ea=""><span data-v-6cca36ea="">让集成更简单·智能·安全</span></div>
-            <div data-v-6cca36ea="" class="descript">以智能云平台、APP应用技术为基础的智能数据分析产品体系，引领的新一代产品解决方案</div>
+    <div class="bg_content">
+        <div class="left-text">
+            <div class="title"><span>集成云平台</span><br><br><span>让集成更简单·智能·安全</span></div>
+            <div class="descript">以智能云平台、APP应用技术为基础的智能数据分析产品体系，引领的新一代产品解决方案</div>
         </div>
     </div>
     <#include "footer.htm" />
@@ -184,31 +189,30 @@ navigation: {nextEl: '.swiper-button-next',prevEl: '.swiper-button-prev'}
     })
 </script>
 <style>
-    .av-display-hotspot {
+    .lab-display-hotspot {
         -webkit-animation: avia_hotspot_appear 0.7s 1 cubic-bezier(0.175, 0.885, 0.320, 1.275);
         animation: avia_hotspot_appear 0.7s 1 cubic-bezier(0.175, 0.885, 0.320, 1.275);
         opacity: 1;
         visibility: visible;
     }
 
-    .av-image-hotspot {
-        height: 18px;
-        width: 18px;
+    .lab-image-hotspot {
+        height: 40px;
+        width: 40px;
         font-size: 10px;
         line-height: 18px;
         text-align: center;
         position: absolute;
         z-index: 1;
-        margin: -9px 0 0 -9px;
     }
 
 
-    .av-image-hotspot_inner {
+    .lab-image-hotspot_inner {
         overflow: hidden;
         text-indent: -200%;
     }
 
-    .av-image-hotspot_inner {
+    .lab-image-hotspot_inner {
         display: block;
         border-radius: 100px;
         position: absolute;
@@ -221,7 +225,7 @@ navigation: {nextEl: '.swiper-button-next',prevEl: '.swiper-button-prev'}
         text-decoration: none;
     }
 
-    .av-image-hotspot-pulse {
+    .lab-image-hotspot-pulse {
         display: block;
         background: #fff;
         border-radius: 100px;
@@ -234,6 +238,36 @@ navigation: {nextEl: '.swiper-button-next',prevEl: '.swiper-button-prev'}
         top: -11px;
         left: -11px;
         z-index: 1;
+    }
+
+    .lab-image-left-text {
+        margin-top: -725px;
+        display: block;
+        position: absolute;
+        left: 10%;
+        opacity: 1;
+        width: 550px;
+    }
+
+    .lab-image-left-text .title {
+        margin-bottom: 25px;
+    }
+
+    .lab-image-left-text .title span {
+        background: -webkit-gradient(linear, left top, right top, from(#00b3ff), to(#00ffec));
+        background: linear-gradient(90deg, #00b3ff, #00ffec);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 20px;
+        font-size: 50px;
+        font-weight: 800;
+    }
+
+    .lab-image-left-text .descript {
+        margin-bottom: 20px;
+        color: #000;
+        line-height: 30px;
+        font-weight: 400;
     }
 
     .header1 {
@@ -749,6 +783,7 @@ navigation: {nextEl: '.swiper-button-next',prevEl: '.swiper-button-prev'}
     }
 
     .lab {
+        position: relative;
         align-items: center;
         flex-direction: column;
         display: flex;
