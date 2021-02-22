@@ -10,6 +10,7 @@
   <meta name="app-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="keywords" content="{ms:global.keyword/}">
   <meta name="description" content="{ms:global.descrip/}">
+  <link rel="shortcut icon" href="http://www.roboct.com/wp-content/themes/ugo/images/favicon.ico" type="x-icon"/>
   <script type="text/javascript" src="{ms:global.host/}/static/plugins/vue/2.6.9/vue.min.js"></script>
   <link rel="stylesheet" href="{ms:global.host/}/static/plugins/minireset/0.0.2/minireset.min.css">
   <link rel="stylesheet" href="https://cdn.mingsoft.net/iconfont/iconfont.css">
@@ -35,6 +36,10 @@
  <body>
   <div id="app" v-cloak>
    <#include "nav.htm" />
+   <div class="ms-banner0">
+    <div style="background-image: url('{ms:global.host/}/upload/1/cms/content/1613808802371.png');background-size: cover; background-position: center; width:100%;height: 100%">
+    </div>
+   </div>
    <div class="news">
     <div class="body">
      <div class="left">
@@ -172,6 +177,7 @@ var app = new Vue({
             padding-left:0px;
             justify-content:center;
             height:100%;
+            position: relative;
     }
     .news .body .left
     {

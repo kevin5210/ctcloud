@@ -1,3 +1,24 @@
+.nav-item span {
+    display: block;
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    background: #c40e18;
+    top: 0.84rem;
+    left: 50%;
+    z-index: 30;
+}
+
+.ms-banner0 {
+    flex-wrap: nowrap;
+    flex-direction: row;
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 0px;
+    height: 530px;
+}
+
 .ms-nav {
     flex-wrap: nowrap;
     flex-direction: row;
@@ -121,7 +142,9 @@
 }
 
 .ms-nav .body .nav-item .sel{
-    color: #409EFF;
+    color: #63C9FE;
+    font-weight: bold;
+    font-size: x-large;
 }
 
 .ms-nav .body .nav-search {

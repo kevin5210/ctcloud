@@ -7,17 +7,7 @@
       </configuration>
     </facet>
     <facet type="Spring" name="Spring">
-      <configuration>
-        <fileset id="fileset" name="Spring Application Context" removed="false">
-          <file>file://$MODULE_DIR$/src/main/java/net/mingsoft/config/DruidConfig.java</file>
-          <file>file://$MODULE_DIR$/src/main/java/net/mingsoft/config/FreemarkerConfig.java</file>
-          <file>file://$MODULE_DIR$/src/main/java/net/mingsoft/MSApplication.java</file>
-          <file>file://$MODULE_DIR$/src/main/java/net/mingsoft/MSServletInitializer.java</file>
-          <file>file://$MODULE_DIR$/src/main/java/net/mingsoft/config/ShiroConfig.java</file>
-          <file>file://$MODULE_DIR$/src/main/java/net/mingsoft/config/SwaggerConfig.java</file>
-          <file>file://$MODULE_DIR$/src/main/java/net/mingsoft/config/WebConfig.java</file>
-        </fileset>
-      </configuration>
+      <configuration />
     </facet>
   </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">

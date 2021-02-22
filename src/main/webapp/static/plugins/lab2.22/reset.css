@@ -1,0 +1,133 @@
+@charset "utf-8";
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,input,textarea,p,th,td,button,footer,header,nav,section{margin: 0;padding: 0;}
+body, button, input, select, textarea{font-weight: normal;font-family: "Hiragino Sans GB", "Helvetica Neue", Helvetica, STHeiTi, "Microsoft Yahei", sans-serif;color: #252b3a;background-color: #fff;position: relative}
+h1, h2, h3, h4, h5, h6{font-weight: normal;font-size: 100%}
+textarea{resize: none}
+button, input{border-radius:0;-webkit-border-radius:0;outline: 0;border: 0;background:none}
+table{border-collapse: collapse;border-spacing: 0}
+th{text-align: inherit}
+ol, ul{list-style: none}
+fieldset,input, select, textarea{font-family: inherit;font-size: inherit;font-weight: inherit;outline: none}
+fieldset, hr, img{border: 0}
+/* a{text-decoration: none; color: inherit !important;} */
+a:hover{text-decoration: none}
+:focus, a, a:focus, button, input{outline: 0}
+em, i{font-style: normal}
+input::-webkit-input-placeholder,textarea::-webkit-input-placeholder{color: #A0A2A8;}
+.clearfix:before,.clearfix:after{content: "";display: table;}
+.clearfix:after{clear: both;}
+.clearfix {*zoom: 1;}
+.box-size{-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+
+/* 联系我们公用样式 */
+.float-sidebar {
+    position: fixed;
+    z-index: 98;
+    bottom: 20px;
+    right: 20px;
+}
+.float-sidebar .sub-inner .info-pc{
+    display:block;
+}
+.float-sidebar .sub-inner .info-mb{
+    display:none;
+}
+.float-sidebar .sub-inner.inner .title {
+    font-size: 14px;
+    color:#333;
+}
+.float-sidebar .sub-inner.inner .info {
+    font-size: 12px;
+}
+.sub-inner:hover .title{
+    color: #C7000B;
+}
+.sub-inner .info-pc{
+    color: #C7000B!important;
+}
+.sub-inner .info-pc span{
+    color: #333!important;
+}
+.float-bar-nav >.item.tel > p{
+    padding:0;
+}
+.float-bar-nav >.item.tel > p > a{
+    display:inline-block;
+    padding:10px 16px;
+}
+@media (max-width: 1023px){
+    .float-expand{
+        opacity: 1!important;
+        transform: scale(1)!important;
+        visibility: visible!important;
+    }
+    .sub-inner .info-mb{
+        color: #C7000B!important;
+    }
+    .sub-inner .info-mb span{
+        color: #333!important;
+    }
+    .float-sidebar .sub-inner .info-pc{
+        display:none;
+    }
+    .float-sidebar .sub-inner .info-mb{
+        display:block;
+    }
+    .float-sidebar .shown-btn {
+        display: none;
+    }
+    .float-sidebar {
+        right:20px;
+    }
+    .float-bar-nav .sub-nav-layer {
+        right:100%;
+        top:-145px;
+    }
+    .float-bar-nav >.item.tel {
+        border-radius:100%;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.10);
+    }
+
+    .to-top-btn{
+        display:none;
+    }
+}
+
+
+.footer-nav-menus dl dd.tk_logo{
+    width: 100px;
+    height: 38px;
+    margin-top: 8px;
+    background-image: url(../images/ictedu_logo01.png);
+    background-size: 100% 100%;
+
+}
+.footer-nav-menus dl dd.tk_logo:hover{
+    background-image: url(../images/ictedu_logo02.png);
+}
+.footer-nav-menus dl dd.tk_logo a{
+    display: inline-block;
+    width: 100px;
+    height: 38px;
+}
+
+.account-item:hover::after{
+    content: '';
+    background:#fff;
+}
+
+/*头部开发者样式*/
+.edu-developer-link {
+    position: relative;
+    right: -20px;
+    top: 15px;
+    color: #252b3a;
+    display: inline-block;
+}
+.edu-developer-link:hover{
+    color: #c7000b;
+}
+
+
+
+
