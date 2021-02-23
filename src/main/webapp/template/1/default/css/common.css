@@ -1,0 +1,19 @@
+@charset "utf-8";
+a{color:#333;text-decoration:none;}
+a:link,
+a:hover,
+a:visited{color:#333;text-decoration:none;}
+ul,li{margin:0;padding:0;list-style:none;}
+.auto{margin:0 auto;}
+.clearfix:after{
+    content:"";
+    display:block;
+    width:0;height:0;
+    visibility:hidden;
+    clear:both;
+}
+.clearfix{zoom:1;}
+.left{float:left;}
+.right{float:right;}
+#banner{padding-top:10px;position:relative;overflow:hidden;}
+#banner img{display:block;width:100%;}

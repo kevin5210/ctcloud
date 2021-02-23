@@ -17,6 +17,8 @@
   <link rel="stylesheet" href="{ms:global.host/}/static/plugins/animate/4.1.0/animate.min.css">
   <script src="{ms:global.host/}/static/plugins/element-ui/2.12.0/index.js"></script>
   <link rel="stylesheet" href="{ms:global.host/}/static/plugins/element-ui/2.12.0/index.css">
+     <link rel="stylesheet" href="{ms:global.host/}/{ms:global.style/}/css/common.css">
+     <link rel="stylesheet" href="{ms:global.host/}/{ms:global.style/}/css/main.css">
   <link rel="stylesheet" href="{ms:global.host/}/{ms:global.style/}/css/app.css">
   <link href="{ms:global.host/}/static/myvideo-js.min.css" rel="stylesheet">
   <script src="{ms:global.host/}/static/myvideo.min.js"></script>
@@ -91,37 +93,68 @@ navigation: {nextEl: '.swiper-button-next',prevEl: '.swiper-button-prev'}
             {/ms:arclist}
         </swiper>
     </div>
-    <div class="about" style="display: none">
-        {ms:arclist typeid='1329259260493766658'}
-        <div class="body">
-            <div class="left">
-                <img title="" alt="" src="{ms:global.host/}/{@ms:file field.litpic/}">
-            </div>
-            <div class="right">
-                <div class="title">
-                    <span> ${field.title} </span>
-                </div>
-                <div class="desc">
-                    <span> ${field.descrip} </span>
-                </div>
-            </div>
+    <div class="mainSection section0">
+        <div class="mainTitle wow bounceInDown" style="visibility: visible; animation-name: bounceInDown;">
+            <span class="title">我们的云产品</span>
         </div>
-        {/ms:arclist}
-    </div>
-    <div class="product">
-        <div class="title">
-            <span> 云平台 </span>
-        </div>
-        <div class="body">
-            {ms:arclist flag='c' typeid='1329257213283344385' orderby='sort'}
-            <div class="prod" style="text-align:center;">
+        <ul class="productList clearfix auto">
+            {ms:arclist flag='c' typeid='1329257213283344385' orderby='sort' order='asc'}
+            <li class="item wow bounceInDown" style="visibility: visible; animation-name: bounceInDown;">
                 <a href="${field.keyword}" target="_blank">
-                    <img class="pic" title="" alt="" src="{ms:global.host/}/{@ms:file field.litpic/}">
-                    <span>${field.title} </span></a>
-            </div>
-             {/ms:arclist}
-        </div>
-        <a href="{ms:global.url/}/product/index.html" class="more"> 更多产品 </a>
+                    <div class="con">
+                        <div class="img">
+                            <img src="{ms:global.host/}/{@ms:file field.litpic/}" alt="">
+                        </div>
+                        <div class="demo">
+                            <div class="bottom">
+                                <span class="icon icon${field.hit}"></span>
+                                <div class="name">${field.title}</div>
+                                <p class="details">
+                                    ${field.descrip}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            {/ms:arclist}
+            <li class="item wow bounceInUp" style="visibility: visible; animation-name: bounceInUp;">
+                <a href="http://www.roboct.com/" target="_blank">
+                    <div class="con wow bounceInUp" style="visibility: visible; animation-name: bounceInUp;">
+                        <div class="img">
+                            <img src="{ms:global.host/}/{ms:global.style/}/images/product5.jpg" alt="">
+                        </div>
+                        <div class="demo">
+                            <div class="bottom">
+                                <span class="icon icon5"></span>
+                                <div class="name">企业文化</div>
+                                <p class="details">
+                                    解决问题 信任彼此 与时俱进
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="item wow bounceInUp" style="visibility: visible; animation-name: bounceInUp;">
+                <a href="{ms:global.url/}/product/index.html">
+                    <div class="con wow bounceInUp" style="visibility: visible; animation-name: bounceInUp;">
+                        <div class="img">
+                            <img src="{ms:global.host/}/{ms:global.style/}/images/product6.jpg" alt="">
+                        </div>
+                        <div class="demo">
+                            <div class="bottom">
+                                <span class="icon icon6"></span>
+                                <div class="name">更多产品</div>
+                                <p class="details">
+                                    最全面、最现代、最安全的云平台产品。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ul>
     </div>
 
    <div class="product-app">
