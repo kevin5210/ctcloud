@@ -1,45 +1,54 @@
 <html>
-<head>
-    <meta charset="utf-8">
-    <title>{ms:global.name/}</title>
-    <meta http-equiv="content-type" content="text/html">
-    <meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
-    <meta name="viewport"
-          content="initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,width=device-width">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="app-mobile-web-app-capable" content="yes">
-    <meta name="app-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="keywords" content="{ms:global.keyword/}">
-    <meta name="description" content="{ms:global.descrip/}">
-    <link rel="shortcut icon" href="http://www.roboct.com/wp-content/themes/ugo/images/favicon.ico" type="x-icon"/>
-    <script type="text/javascript" src="{ms:global.host/}/static/plugins/vue/2.6.9/vue.min.js"></script>
-    <link rel="stylesheet" href="{ms:global.host/}/static/plugins/minireset/0.0.2/minireset.min.css">
-    <link rel="stylesheet" href="https://cdn.mingsoft.net/iconfont/iconfont.css">
-    <link rel="stylesheet" href="{ms:global.host/}/static/plugins/animate/4.1.0/animate.min.css">
-    <script src="{ms:global.host/}/static/plugins/element-ui/2.12.0/index.js"></script>
-    <link rel="stylesheet" href="{ms:global.host/}/static/plugins/element-ui/2.12.0/index.css">
-    <link rel="stylesheet" href="{ms:global.host/}/{ms:global.style/}/css/app.css">
-    <!--网络请求框架-->
-    <script src="{ms:global.host/}/static/plugins/axios/0.18.0/axios.min.js"></script>
-    <script src="{ms:global.host/}/static/plugins/qs/6.6.0/qs.min.js"></script>
-    <script src="{ms:global.host/}/static/plugins/ms/1.0.0/ms.js"></script>
-    <script src="{ms:global.host/}/static/plugins/ms/1.0.0/ms.http.js"></script>
-    <script src="{ms:global.host/}/static/plugins/ms/1.0.0/ms.util.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@4.5.1/dist/js/swiper.min.js"></script>
-    <script>
-        SwiperClass = Swiper
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/vue-awesome-swiper@4.1.1/dist/vue-awesome-swiper.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@5.4.5/css/swiper.min.css">
-    <script>
-        Vue.use(VueAwesomeSwiper)
-    </script>
-    <style>
-        :root {
+ <head>
+  <meta charset="utf-8">
+  <title>{ms:global.name/}</title>
+  <meta http-equiv="content-type" content="text/html">
+  <meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
+  <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,width=device-width">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="app-mobile-web-app-capable" content="yes">
+  <meta name="app-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="keywords" content="{ms:global.keyword/}">
+  <meta name="description" content="{ms:global.descrip/}">
+  <link rel="shortcut icon" href="http://www.roboct.com/wp-content/themes/ugo/images/favicon.ico" type="x-icon"/>
+  <script type="text/javascript" src="{ms:global.host/}/static/plugins/vue/2.6.9/vue.min.js"></script>
+  <link rel="stylesheet" href="{ms:global.host/}/static/plugins/minireset/0.0.2/minireset.min.css">
+  <link rel="stylesheet" href="https://cdn.mingsoft.net/iconfont/iconfont.css">
+  <link rel="stylesheet" href="{ms:global.host/}/static/plugins/animate/4.1.0/animate.min.css">
+  <script src="{ms:global.host/}/static/plugins/element-ui/2.12.0/index.js"></script>
+  <link rel="stylesheet" href="{ms:global.host/}/static/plugins/element-ui/2.12.0/index.css">
+  <link rel="stylesheet" href="{ms:global.host/}/{ms:global.style/}/css/app.css">
+  <link href="{ms:global.host/}/static/myvideo-js.min.css" rel="stylesheet">
+  <script src="{ms:global.host/}/static/myvideo.min.js"></script>
 
-        --swiper-theme-color:$ {
-            component . config . color . value
-        }
+  <link href="{ms:global.host/}/static/plugins/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="{ms:global.host/}/static/css/common.css" rel="stylesheet" type="text/css">
+  <link href="{ms:global.host/}/static/css/style.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="{ms:global.host/}/static/plugins/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="{ms:global.host/}/static/plugins/bootstrap/js/bootstrap.js"></script>
+  <link rel="stylesheet" href="{ms:global.host/}/static/plugins/modal-video/css/modal-video.min.css">
+  <script src="{ms:global.host/}/static/plugins/modal-video/js/my-jquery-modal-video.min.js"></script>
+
+  <!--网络请求框架-->
+  <script src="{ms:global.host/}/static/plugins/axios/0.18.0/axios.min.js"></script>
+  <script src="{ms:global.host/}/static/plugins/qs/6.6.0/qs.min.js"></script>
+  <script src="{ms:global.host/}/static/plugins/ms/1.0.0/ms.js"></script>
+  <script src="{ms:global.host/}/static/plugins/ms/1.0.0/ms.http.js"></script>
+  <script src="{ms:global.host/}/static/plugins/ms/1.0.0/ms.util.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@4.5.1/dist/js/swiper.min.js"></script>
+  <script>
+SwiperClass = Swiper
+</script>
+  <script src="https://cdn.jsdelivr.net/npm/vue-awesome-swiper@4.1.1/dist/vue-awesome-swiper.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@5.4.5/css/swiper.min.css">
+  <script>
+Vue.use(VueAwesomeSwiper)
+</script>
+  <style>
+:root {
+    --swiper-theme-color:$ {
+        component.config.color.value
+    }
 
         ;
         }
@@ -82,7 +91,7 @@ navigation: {nextEl: '.swiper-button-next',prevEl: '.swiper-button-prev'}
             {/ms:arclist}
         </swiper>
     </div>
-  <!--  <div class="about" style="display: none">
+    <div class="about" style="display: none">
         {ms:arclist typeid='1329259260493766658'}
         <div class="body">
             <div class="left">
@@ -98,7 +107,7 @@ navigation: {nextEl: '.swiper-button-next',prevEl: '.swiper-button-prev'}
             </div>
         </div>
         {/ms:arclist}
-    </div>-->
+    </div>
     <div class="product">
         <div class="title">
             <span> 云平台 </span>
@@ -106,36 +115,48 @@ navigation: {nextEl: '.swiper-button-next',prevEl: '.swiper-button-prev'}
         <div class="body">
             {ms:arclist flag='c' typeid='1329257213283344385' orderby='sort'}
             <div class="prod" style="text-align:center;">
-                <a href="{ms:global.url/}${field.link}">
+                <a href="${field.keyword}" target="_blank">
                     <img class="pic" title="" alt="" src="{ms:global.host/}/{@ms:file field.litpic/}">
                     <span>${field.title} </span></a>
             </div>
-            <!--<div class="prod">
-             <div class="pic">
-              <img title="" alt="" src="{ms:global.host/}/{@ms:file field.litpic/}">
-             </div>
-             <a href="{ms:global.url/}${field.link}" class="text"> ${field.title} </a>
-            </div>--> {/ms:arclist}
+             {/ms:arclist}
         </div>
         <a href="{ms:global.url/}/product/index.html" class="more"> 更多产品 </a>
     </div>
 
-    <div class="product-app">
-        <div class="title">
-            <span> APP应用 </span>
-        </div>
-        <div class="body">
-            {ms:arclist flag='c' typeid='1362337793902518273'}
-            <div class="prod" style="margin:0 auto; ">
-                ${field.content}
-            </div>
-            <div style="float: right; width:45%">
-                集控中心平台APP 描述
-            </div>
-            {/ms:arclist}
-        </div>
-        <a href="{ms:global.url/}/product/index.html" class="more" style="background-color: #F2F2F2"> 更多产品 </a>
+   <div class="product-app">
+    <div class="title">
+     <span> APP应用 </span>
     </div>
+       <div class="body">
+           <div class="index-case">
+               <div>
+                   <div id="carousel-example-generic-case" class="carousel slide" data-ride="carousel">
+                       <div class="carousel-inner" style="height: 380px;">
+                           <div class="item active">
+                               <div style="width:fit-content;margin:auto;">
+                                   {ms:arclist  typeid='1362337793902518273' orderby='sort'}
+                                   <div class="index-case-a">
+                                       <div class="pos-rel">
+                                           <p class="index-case-a-bg"></p>
+                                           <a href="#" class="js-video-button" data-channel="video" data-video-url="${field.keyword}"><span>${field.title}</span></a>
+                                           <img class="lazy" src="{ms:global.host/}/{@ms:file field.litpic/}"
+                                                data-original="{ms:global.host/}/{@ms:file field.litpic/}"
+                                                style="display: inline-block;"></div>
+                                   </div>
+                                   {/ms:arclist}
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+
+       </div>
+
+       <a href="{ms:global.url/}/product/index.html" class="more" style="background-color: #F2F2F2"> 更多产品 </a>
+    </div>
+   </div>
 
     <div class="lab">
         {ms:arclist flag='c' typeid='1362658871693762562'}
@@ -187,6 +208,13 @@ navigation: {nextEl: '.swiper-button-next',prevEl: '.swiper-button-prev'}
         created() {
         }
     })
+
+    $(".js-video-button").modalVideo({
+			s:{
+				controls:0,
+				nocookie: true
+			}
+		});
 </script>
 <style>
     .lab-display-hotspot {
@@ -578,21 +606,37 @@ navigation: {nextEl: '.swiper-button-next',prevEl: '.swiper-button-prev'}
         margin-top: 40px;
         height: 100%;
     }
+    .product .body .prod
+    {
+            background-color:#FFFFFF;
+            flex-direction:column;
+            display:flex;
+            padding-right:20px;
+            box-sizing:border-box;
+            padding-bottom:20px;
+            flex-wrap:nowrap;
+            width:32%;
+            margin-bottom:20px;
+            padding-top:20px;
+            padding-left:20px;
+            margin-top:0px;
+            height:100%;
+    }
 
-    .product .body .prod {
-        background-color: #FFFFFF;
-        flex-direction: column;
-        display: flex;
-        padding-right: 20px;
-        box-sizing: border-box;
-        padding-bottom: 20px;
-        flex-wrap: nowrap;
-        width: 32%;
-        margin-bottom: 20px;
-        padding-top: 20px;
-        padding-left: 20px;
-        margin-top: 0px;
-        height: 100%;
+    .product-app .body .prod-app
+    {
+            background-color:#FFFFFF;
+            flex-direction:column;
+            display:flex;
+            box-sizing:border-box;
+            padding-bottom:20px;
+            flex-wrap:nowrap;
+            width:50%;
+            margin-bottom:20px;
+            margin-top:0px;
+            height:100%;
+            text-align:center;
+            align-items:center;
     }
 
     .product .body .prod .pic {
@@ -651,6 +695,7 @@ navigation: {nextEl: '.swiper-button-next',prevEl: '.swiper-button-prev'}
     }
 
     .product-app {
+        background-color: #FAF9F9;
         align-items: center;
         flex-direction: column;
         display: flex;
@@ -663,8 +708,6 @@ navigation: {nextEl: '.swiper-button-next',prevEl: '.swiper-button-prev'}
         margin-bottom: 0px;
         padding-top: 40px;
         padding-left: 0px;
-        margin-top: 2px;
-        background-color: #E3F4FA
     }
 
     .product-app .title {
@@ -696,19 +739,8 @@ navigation: {nextEl: '.swiper-button-next',prevEl: '.swiper-button-prev'}
     }
 
     .product-app .body {
-        flex-direction: row;
         display: flex;
-        padding-right: 0px;
-        box-sizing: border-box;
-        justify-content: space-between;
-        padding-bottom: 0px;
-        flex-wrap: wrap;
-        width: 1200px;
-        margin-bottom: 40px;
-        padding-top: 0px;
-        padding-left: 0px;
-        margin-top: 40px;
-        height: 100%;
+
     }
 
     .product-app .body .prod {
