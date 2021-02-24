@@ -1,19 +1,19 @@
-html,body{
+/*html,body{
     min-width: 1180px;
-    /*overflow-x: hidden;*/
-}
+    !*overflow-x: hidden;*!
+}*/
 
 .clearfix:before,.clearfix:after{content: "";display: table;}
 .clearfix:after{clear: both;}
 .clearfix {*zoom: 1;}
 .poster-content-box{
-    padding-top: 96px;
+    padding-top: 200px;
     color: #fff;
     max-width: 1180px;
     margin: 0 auto;
 }
 #content1 .wrapper-top{
-    background: url("../../images/1613808802372.png") center -100px no-repeat;
+    background: url("../images/1613808802372.png") center -100px no-repeat;
     min-height: 892px;
     width: 100%;
     min-width: 1180px;
