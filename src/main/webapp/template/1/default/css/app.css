@@ -122,7 +122,7 @@
     flex-direction: row;
     display: flex;
     padding-right: 40px;
-    width: 50%;
+    width: 100%;
     box-sizing: border-box;
     padding-left: 40px;
     justify-content: space-between;

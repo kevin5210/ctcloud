@@ -38011,7 +38011,7 @@ main.error-page .error-detail {
 }
 
 .product-page .basecase {
-    padding: 260px 0 50px 0
+    padding: 60px 0 50px 0
 }
 
 .product-page .basecase p {
@@ -42563,10 +42563,10 @@ ul.ul_overline li {
     margin-bottom: 0.5rem
 }
 
-* {
+/** {
     padding: 0;
     margin: 0
-}
+}*/
 
 #TB_window {
     font: 12px Arial, Helvetica, sans-serif;
