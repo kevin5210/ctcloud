@@ -1,7 +1,7 @@
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/ctcloud?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&autoReconnect=true&allowMultiQueries=true&useSSL=false&serverTimezone=GMT%2B8
+    url: jdbc:mysql://122.9.40.128:3306/ctcloud?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&autoReconnect=true&allowMultiQueries=true&useSSL=false&serverTimezone=GMT%2B8
     username: root
-    password: rootroot
+    password: cttc123456
     filters: wall,mergeStat
     type: com.alibaba.druid.pool.DruidDataSource
