@@ -169,6 +169,17 @@ navigation: {nextEl: '.swiper-button-next',prevEl: '.swiper-button-prev'}
                            <div class="item active">
                                <div style="width:fit-content;margin:auto;">
                                    {ms:arclist  typeid='1362337793902518273' orderby='sort'}
+
+                                   <#if field.title == "无人机APP">
+                                   <div class="index-case-a" style="width:480px">
+                                       <div class="pos-rel">
+                                           <p class="index-case-a-bg"></p>
+                                           <a href="#" class="js-video-button" data-channel="video" data-video-url="${field.keyword}"><span>${field.title}</span></a>
+                                           <img class="lazy" src="{ms:global.host/}/{@ms:file field.litpic/}"
+                                                data-original="{ms:global.host/}/{@ms:file field.litpic/}"
+                                                style="display: inline-block;"></div>
+                                   </div>
+                                   <#else>
                                    <div class="index-case-a">
                                        <div class="pos-rel">
                                            <p class="index-case-a-bg"></p>
@@ -177,6 +188,16 @@ navigation: {nextEl: '.swiper-button-next',prevEl: '.swiper-button-prev'}
                                                 data-original="{ms:global.host/}/{@ms:file field.litpic/}"
                                                 style="display: inline-block;"></div>
                                    </div>
+                                   </#if>
+
+                                   <!--<div class="index-case-a">
+                                       <div class="pos-rel">
+                                           <p class="index-case-a-bg"></p>
+                                           <a href="#" class="js-video-button" data-channel="video" data-video-url="${field.keyword}"><span>${field.title}</span></a>
+                                           <img class="lazy" src="{ms:global.host/}/{@ms:file field.litpic/}"
+                                                data-original="{ms:global.host/}/{@ms:file field.litpic/}"
+                                                style="display: inline-block;"></div>
+                                   </div>-->
                                    {/ms:arclist}
                                </div>
                            </div>

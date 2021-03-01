@@ -14,12 +14,12 @@
   <script type="text/javascript" src="{ms:global.host/}/static/plugins/vue/2.6.9/vue.min.js"></script>
   <link rel="stylesheet" href="{ms:global.host/}/static/plugins/minireset/0.0.2/minireset.min.css">
   <link rel="stylesheet" href="https://cdn.mingsoft.net/iconfont/iconfont.css">
-  <link rel="stylesheet" href="{ms:global.host/}/static/plugins/animate/4.1.0/animate.min.css">
   <script src="{ms:global.host/}/static/plugins/element-ui/2.12.0/index.js"></script>
   <link rel="stylesheet" href="{ms:global.host/}/static/plugins/element-ui/2.12.0/index.css">
   <link rel="stylesheet" href="{ms:global.host/}/static/css/cttcApp.css">
   <link rel="stylesheet" href="{ms:global.host/}/static/css/product.css">
   <link rel="stylesheet" href="{ms:global.host/}/static/css/productReset.css">
+  <link rel="stylesheet" href="{ms:global.host/}/static/plugins/bootstrap/css/bootstrap.css">
 
   <link rel="stylesheet" href="{ms:global.host/}/{ms:global.style/}/css/app.css">
   <!--网络请求框架-->
@@ -28,6 +28,11 @@
   <script src="{ms:global.host/}/static/plugins/ms/1.0.0/ms.js"></script>
   <script src="{ms:global.host/}/static/plugins/ms/1.0.0/ms.http.js"></script>
   <script src="{ms:global.host/}/static/plugins/ms/1.0.0/ms.util.js"></script>
+
+  <script src="{ms:global.host/}/static/plugins/jquery/3.2.1/jquery-3.2.1.min.js"></script>
+  <link href="https://cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+  <script src="https://cdn.bootcss.com/wow/1.1.2/wow.min.js"></script>
+  <script src="{ms:global.host/}/static/global.js"></script>
   <script>
         ms.base = "";
     </script>
@@ -55,65 +60,62 @@
      </div>
     </div>
    </div>
-   <div class="news">
-    <div class="body">
-     <div class="left">
-     {ms:channel type='parent'}
-     <span class="title"> ${field.typetitle}</span>
-     {/ms:channel}
-     <#assign typetitle=field.typetitle>
-     <#if field.typeleaf>
-     {ms:channel type='level'}
-     <a href="{ms:global.url/}${field.typelink}" class="<#if typetitle==field.typetitle>sub-title-sel<#else>sub-title</#if>"> ${field.typetitle} </a>
-     {/ms:channel}
-     <#else>
-     {ms:channel type='son'}
-     <a href="{ms:global.url/}${field.typelink}" class="<#if typetitle==field.typetitle>sub-title-sel<#else>sub-title</#if>"> ${field.typetitle} </a>
-     {/ms:channel}
-    </#if>
-    </div>
-     <div class="right">
-      <div class="ms-channel-path">
-       <span class="ms-channel-path-label"> 当前位置： </span>
-       <a href="/" class="ms-channel-path-index"> 首页 </a> {ms:channel type="path"}
-       <i class="iconfont icon-youjiantou"></i>
-       <a href="{ms:global.url/}${field.typelink}" class="ms-channel-path-link"> ${field.typetitle} </a> {/ms:channel}
-      </div>
-      <div class="right-body">
-       {ms:arclist size=10 ispaging=true}
-       <div class="news-item">
-        <div class="pic">
-         <img title="" alt="" src="{ms:global.host/}/{@ms:file field.litpic/}">
-        </div>
-        <div class="news-content">
-         <a href="{ms:global.url/}${field.link}" class="title"> ${field.title} </a>
-         <span class="desc"> ${field.descrip} </span>
-         <div class="news-footer">
-          <span class="label"> 发布时间 </span>
-          <span class="v"> ${field.date?string("yyyy-MM-dd")} </span>
-         </div>
-        </div>
+
+<!-- app content start -->
+   <#assign sort=1>
+   {ms:arclist typeid='1362337793902518273' size=10}
+   <#assign sort++>
+   <#if sort%2 == 0>
+   <br>
+   <section class="bg-gray-50 p-t-30 p-b-30" id="intro">
+    <div class="container">
+     <div class="row align-items-md-center" style="display: flex;">
+      <div class="col-md-6">
+       <div style="width:240px;margin:auto;">
+        <img class="wow fadeInLeft img-fluid animated" src="{ms:global.host/}/{@ms:file field.litpic/}" alt="Image" data-wow-duration="0.8s" data-wow-delay="0.5s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.5s; animation-name: none;">
        </div>
-       {/ms:arclist}
-
       </div>
-
-      <div class="page">
-       <el-pagination
-               background
-               @current-change="handleCurrentChange"
-               :page-size="pageSize"
-               :current-page.sync="pageCur"
-               layout="prev, pager, next, jumper"
-               :total="contentCount"> </el-pagination>
-
+      <div class="col-md-6 m-t-60" style="padding: 50px;background-color: aliceblue;border-left: 10px solid seagreen;border-radius: 10px;">
+       <h3 class="section-heading m-b-25">${field.title}</h3>
+       <p class="type-gray-1 m-b-40">
+        ${field.descrip}
+       </p>
+       <a class="au-btn au-btn-pill au-btn-icon" href="#">
+        <span class="btn-text">观看演示视频</span>
+        <i class="btn-icon fa fa-chevron-right"></i>
+       </a>
       </div>
-
      </div>
-
-
-
     </div>
+   </section>
+   <#else>
+   <br>
+   <section class="bg-gray-50 p-t-30 p-b-30" id="intro">
+    <div class="container">
+     <div class="row align-items-md-center" style="display: flex;">
+
+      <div class="col-md-6 m-t-60" style="padding: 50px;background-color: aliceblue;border-left: 10px solid seagreen;border-radius: 10px;">
+       <h3 class="section-heading m-b-25">${field.id}</h3>
+       <p class="type-gray-1 m-b-40">
+        ${field.descrip}
+       </p>
+       <a class="au-btn au-btn-pill au-btn-icon" href="#">
+        <span class="btn-text">观看演示视频</span>
+        <i class="btn-icon fa fa-chevron-right"></i>
+       </a>
+      </div>
+      <div class="col-md-6">
+       <div style="width:240px;margin:auto;">
+        <img class="wow fadeInRight img-fluid animated" src="{ms:global.host/}/{@ms:file field.litpic/}" alt="Image" data-wow-duration="0.8s" data-wow-delay="0.5s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.5s; animation-name: none;">
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+  </#if>
+   {/ms:arclist}
+<!-- app content end -->
+
    </div>
    <#include "footer.htm" />
   </div>
