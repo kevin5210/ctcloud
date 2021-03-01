@@ -1,23 +1,7 @@
 let lab_head = $("#lab_head").height();//1026
-let lab_effect = $("#lab_effect").height();//855
-let lab_drawn = $("#lab_drawn").height();//1590;
-let lab_chip = $("#lab_chip").height();//3000;
-let lab_previous = lab_head+lab_effect+lab_drawn;
-let lab_scrollHeight = 0;//div增加，高度随之增加
-if (document.body && document.body.scrollHeight)
-{
-    lab_scrollHeight = document.body.scrollHeight;
-}
-if (document.documentElement && document.documentElement.scrollHeight)
-{
-    lab_scrollHeight = document.documentElement.scrollHeight;
-}
 let interval1 = lab_head + 40;
-let interval2 = lab_effect + 45;
-let interval3 = lab_scrollHeight-lab_chip;//5736-3000
-let intervals = interval1+interval2+lab_chip;
-
-let drawn_compare = lab_head+lab_effect;
+let intervals = interval1;
+let drawn_compare = lab_head;
 
 
 function labDrawn(){

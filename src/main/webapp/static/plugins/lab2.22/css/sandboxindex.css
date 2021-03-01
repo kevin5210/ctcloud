@@ -12,7 +12,7 @@
     max-width: 1180px;
     margin: 0 auto;
 }
-#content1 .wrapper-top{
+#lab_head .wrapper-top{
     background: url("../images/1613808802372.png") center -100px no-repeat;
     min-height: 892px;
     width: 100%;
@@ -421,11 +421,12 @@
     color:#C7000B;
     text-align: right;
 }
-#content1 {
+#lab_head {
     background: #F3F3F3;
 }
-#content1 .wrapper-top {
-    background-color: white;
+#lab_head .wrapper-top {
+    /*background-color: white;*/
+    background-color: #000;
 }
 .wrapper-sandbox-testlist .more_p {
     padding-bottom: 20px;

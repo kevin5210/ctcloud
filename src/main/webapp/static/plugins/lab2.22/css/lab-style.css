@@ -38260,7 +38260,7 @@ p.answer_content {
     color: #1a1a1a
 }
 
-p.answer_content1 {
+p.answer_lab_head {
     margin-top: 0;
     margin-bottom: 2em;
     color: #1a1a1a
@@ -38397,7 +38397,7 @@ p.thanks_content {
     color: #1a1a1a
 }
 
-p.thanks_content1 {
+p.thanks_lab_head {
     font-weight: 400;
     margin-bottom: 3em;
     font-size: 1.5em;

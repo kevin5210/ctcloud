@@ -1,0 +1,114 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>{ms:global.name/}</title>
+    <meta http-equiv="content-type" content="text/html">
+    <meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
+    <meta name="viewport"
+          content="initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,width=device-width">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="app-mobile-web-app-capable" content="yes">
+    <meta name="app-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="keywords" content="{ms:global.keyword/}">
+    <meta name="description" content="{ms:global.descrip/}">
+    <link rel="shortcut icon" href="http://www.roboct.com/wp-content/themes/ugo/images/favicon.ico" type="x-icon"/>
+
+    <link href="{ms:global.host/}/static/plugins/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{ms:global.host/}/static/plugins/lab2.22/css/sandboxindex.css">
+    <link rel="stylesheet" href="{ms:global.host/}/{ms:global.style/}/css/app.css">
+    <link rel="stylesheet" href="{ms:global.host/}/static/plugins/lab2.25/css/about.css">
+
+    <script type="text/javascript" src="{ms:global.host/}/static/plugins/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="{ms:global.host/}/static/plugins/vue/2.6.9/vue.min.js"></script>
+    <!--网络请求框架-->
+    <script src="{ms:global.host/}/static/plugins/axios/0.18.0/axios.min.js"></script>
+    <script src="{ms:global.host/}/static/plugins/qs/6.6.0/qs.min.js"></script>
+    <script src="{ms:global.host/}/static/plugins/ms/1.0.0/ms.js"></script>
+    <script src="{ms:global.host/}/static/plugins/ms/1.0.0/ms.http.js"></script>
+    <script src="{ms:global.host/}/static/plugins/ms/1.0.0/ms.util.js"></script>
+
+    <script>
+        ms.base = "";
+    </script>
+</head>
+<body>
+<div id="app" v-cloak>
+    <#include "nav.htm" />
+    <div id="lab_head">
+        <div class="wrapper-top">
+            <div class="poster-content-box">
+                <div class="pc_poster-content-box">
+                    <h1 class="left-sandbox">新技术实验室</h1>
+                    <p class="sandbox-poster-text">
+                        全新技术上线 让用户眼前一亮
+                    </p>
+                    <div class="sandbox-btn-group">
+                        <!--<a class="sandbox-btn" href="testList.html">全部实验列表</a>-->
+                        <!-- <a class="action" target="_blank"></a> -->
+                        <!--<a class="action" target="_blank" data-url="https://edu.huaweicloud.com/activity/10minslabs.html" href="https://edu.huaweicloud.com/activity/10minslabs.html" style="display: inline-block;">10分钟轻松体验云服务</a></div>-->
+                        <div class="sandbox-test">
+                            <ul>
+                                <li data-title="使用Flutter实现3D动画"><a href="{ms:global.host/}/html/web/gywm/flutter/index.html">
+                                    <div class="sandbox-test-img">
+                                        <div class="bgimg bgimg00"
+                                             style="background-image:url({ms:global.host/}/upload/1/cms/content/1613808802382.png);cursor: pointer"></div>
+                                        <div class="img-shadow"></div>
+                                    </div>
+                                </a><a href="{ms:global.host/}/html/web/gywm/flutter/index.html"><span class="sandbox-test-title">使用Flutter实现3D动画</span></a>
+                                </li>
+                                <li data-title="uni-app实现购物平台"><a href="{ms:global.host/}/html/web/gywm/uniapp/index.html">
+                                    <div class="sandbox-test-img">
+                                        <div class="bgimg bgimg01"
+                                             style="background-image:url({ms:global.host/}/upload/1/cms/content/1613808802381.png);cursor: pointer"></div>
+                                        <div class="img-shadow"></div>
+                                    </div>
+                                </a><a href="{ms:global.host/}/html/web/gywm/uniapp/index.html"><span class="sandbox-test-title">uni-app实现购物平台</span></a>
+                                </li>
+                                <li data-title="Vue特效展示"><a href="{ms:global.host/}/html/web/gywm/vue/index.html">
+                                    <div class="sandbox-test-img">
+                                        <div class="bgimg bgimg02"
+                                             style="background-image:url({ms:global.host/}/upload/1/cms/content/1613808802380.png);cursor: pointer"></div>
+                                        <div class="img-shadow"></div>
+                                    </div>
+                                </a><a href="{ms:global.host/}/html/web/gywm/vue/index.html"><span class="sandbox-test-title">Vue特效展示</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="sandbox-video pc_sandbox-video">
+                            <div class="video-con">
+                                <img id="movie" src="{ms:global.host/}/upload/1/cms/content/1613808802400.png" alt="">
+                                <!--<div id="cover">
+                                    <div class="video-btn"><img src="img/sanjiaoright.png"></div>
+                                </div>-->
+                            </div>
+                            <div class="right-text">
+                                <h3 class="right-text-title"><a href="{ms:global.url/}/gywm/demo/index.html" class="item" target="_blank">Flutter实现3D动画</a></h3>
+                                <p class="right-text-desc">
+                                    Flutter实现3D动画。Flutter实现3D动画。Flutter实现3D动画。Flutter实现3D动画。</p>
+                                <a class="guide"
+                                   data-url="#"
+                                   href="javascript:;">Flutter技术3D动画展示 ↓↓↓</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="lab_effect" >
+        <section id="effect-section">
+            <h2>
+                Flutter实现3D动画
+            </h2>
+            <div class="video-container show will-change" style="transform: matrix(1, 0, 0, 1, 0, 0);">
+                <figure class="image-hero-startframe"></figure>
+                <figure class="image-hero-endframe"></figure>
+                <video src="{ms:global.host/}/static/plugins/lab2.25/video/first.mp4" muted playsinline autoplay loop></video>
+            </div>
+
+        </section>
+    </div>
+    <#include "footer.htm" />
+</div>
+</body>
+</html>

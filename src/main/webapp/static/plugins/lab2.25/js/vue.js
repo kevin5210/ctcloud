@@ -1,8 +1,6 @@
 let lab_head = $("#lab_head").height();//1026
-let lab_effect = $("#lab_effect").height();//855
-let lab_drawn = $("#lab_drawn").height();//1590;
 let lab_chip = $("#lab_chip").height();//3000;
-let lab_previous = lab_head+lab_effect+lab_drawn;
+let lab_previous = lab_head;
 let lab_scrollHeight = 0;//div增加，高度随之增加
 if (document.body && document.body.scrollHeight)
 {
@@ -12,58 +10,9 @@ if (document.documentElement && document.documentElement.scrollHeight)
 {
     lab_scrollHeight = document.documentElement.scrollHeight;
 }
-let interval1 = lab_head + 40;
-let interval2 = lab_effect + 45;
-let interval3 = lab_scrollHeight-lab_chip;//5736-3000
-let intervals = interval1+interval2+lab_chip;
-
-let drawn_compare = lab_head+lab_effect;
+let interval3 = lab_scrollHeight-lab_chip;//
 
 
-function labDrawn(){
-    const h2 = document.querySelector('#lab_drawn h2');
-    const rows = document.querySelectorAll('#ui ul li');
-    let scrollTop = 0;
-
-    document.addEventListener('scroll', (e) => {
-        const htmlElement = document.documentElement;
-        const bodyElement = document.body;
-        let scrollHeight = 0;
-        let clientHeight = 0;
-        if (bodyElement && bodyElement.scrollTop)
-        {
-            scrollTop = bodyElement.scrollTop;
-            scrollHeight = bodyElement.scrollHeight;
-            clientHeight = bodyElement.clientHeight;
-        }
-        if (htmlElement && htmlElement.scrollTop && htmlElement.scrollHeight && htmlElement.clientHeight)
-        {
-            scrollTop = htmlElement.scrollTop;
-            scrollHeight = htmlElement.scrollHeight;
-            clientHeight = htmlElement.clientHeight;
-        }
-        let scrolled = (scrollTop) / ((scrollHeight-intervals) - clientHeight);
-        //console.log("scrollTop:"+scrollTop+";scrollHeight:"+scrollHeight+";clientHeight:"+clientHeight+";scrolled:"+scrolled);
-        h2.style.setProperty('--percentage', scrolled*100+'%');
-        if(scrollTop >= drawn_compare){
-            let scrolled = (scrollTop-drawn_compare) / ((scrollHeight-intervals) - clientHeight);
-            //console.log("scrollTop:"+scrollTop+";scrollHeight:"+scrollHeight+";clientHeight:"+clientHeight+";scrolled:"+scrolled);
-            h2.style.setProperty('--percentage', scrolled*100+'%');
-            let total =  1 / rows.length;
-            //console.log("total:"+total);
-            for (let [index, row] of rows.entries()) {
-                let start = total * index;
-                let end = total * (index + 1);
-                let progress = (scrolled - start) / (end - start);
-                //console.log("index:"+index+">>>scrolled:"+scrolled+">>>start:"+start+">>>end:"+end+">>>progress0:"+progress);
-                if (progress >= 1) progress = 1;
-                if (progress <= 0) progress = 0;
-                row.style.setProperty('--progress', progress);
-            }
-        }
-
-    })
-}
 
 function labChip(){
     window.addEventListener('scroll', (e) => {
