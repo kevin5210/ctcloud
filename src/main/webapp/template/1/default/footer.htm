@@ -22,5 +22,35 @@
    </div>
   </div>-->
   <span class="copyright"> <el-link href="http://www.roboct.com/" type="primary" target="_blank">© 哈尔滨程天科技发展有限公司</el-link> 2021 All Rights Reserved. Powered by CT-TC </span>
+  <a href="#home" id="toTop" class="scroll" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
  </div>
+ <script type="text/javascript" src="{ms:global.host/}/static/plugins/app1.0/js/move-top.js"></script>
+ <script type="text/javascript" src="{ms:global.host/}/static/plugins/app1.0/js/easing.js"></script>
+ <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+ <script type="text/javascript">
+  jQuery(document).ready(function($) {
+   $(".scroll").click(function(event){
+    event.preventDefault();
+    //$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+    $("html,body").animate({scrollTop:0},500);
+    //$("html,body").animate({scrollTop:$(document).height()},1000);
+   });
+  });
+ </script>
+ <script type="text/javascript">
+  $(document).ready(function() {
+   /*
+   var defaults = {
+         containerID: 'toTop', // fading element id
+       containerHoverID: 'toTopHover', // fading element hover id
+       scrollSpeed: 1200,
+       easingType: 'linear'
+    };
+   */
+
+   $().UItoTop({ easingType: 'easeOutQuart' });
+
+  });
+ </script>
 </div>

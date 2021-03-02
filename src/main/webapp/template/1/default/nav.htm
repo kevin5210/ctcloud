@@ -7,18 +7,6 @@
                                                                       src="{ms:global.host/}/{@ms:file global.logo/}"
                                                                       class="logo-pic"></a>
         </div>
-        <div @click="switchShow([&quot;1605172743000_96378&quot;]);" class="nav-h5">
-            <i class="iconfont icon-caidan nav-h5-icon"></i>
-            <div id="key_1605172743000_96378" class="nav-h5-body" style="display: none">
-                <a href="{ms:global.host/}" class="nav-h5-item"> 首页 </a>
-                {ms:channel flag='nav' type='top'}
-                <a href="<#if field.type==3>{ms:global.url/}${field.typeurl}<#else>{ms:global.url/}${field.typelink}</#if>"
-                   class="nav-h5-item <#if typeid==field.typeid || (ids?has_content && ids?index_of('${field.typeid}') gt -1)> sel</#if>">
-                    ${field.typetitle}
-                </a>
-                {/ms:channel}
-            </div>
-        </div>
         <div class="nav-item">
             <a href="{ms:global.host/}" class="item"> 首页 </a>
             {ms:channel flag='nav' type='top'}
@@ -27,8 +15,7 @@
                 ${field.typetitle}
             </a>
             {/ms:channel}
-            <a href="http://www.roboct.com/" class="item" target="_blank"> 公司官网 </a>
-            <a href="http://www.roboct.com/archives/category/case" class="item" target="_blank"> 程天项目 </a>
+            <a href="http://www.roboct.com/products" class="item" target="_blank"> 公司产品 </a>
         </div>
         <div class="nav-search" >
             <!--搜索-start-->
