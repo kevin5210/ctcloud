@@ -26,7 +26,7 @@
   <link rel="stylesheet" href="{ms:global.host/}/static/plugins/modal-video/css/modal-video.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@5.4.5/css/swiper.min.css">
   <link rel="stylesheet" href="{ms:global.host/}/static/plugins/app1.0/css/style.css">
-     <link rel="stylesheet" href="{ms:global.host/}/static/plugins/tooltip/css/tooltip.css">
+  <link rel="stylesheet" href="{ms:global.host/}/static/plugins/tooltip/css/tooltip.css">
 
   <script type="text/javascript" src="{ms:global.host/}/static/plugins/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="{ms:global.host/}/static/plugins/bootstrap/js/bootstrap.js"></script>
@@ -240,10 +240,8 @@ navigation: {nextEl: '.swiper-button-next',prevEl: '.swiper-button-prev'}
             <div class="title"><span>新技术实验室</span><br><br></div>
         </div>
         <div class="content" style="height:94%; width: 96%; overflow: hidden; position: absolute;">
-
-            <p style="color: white;">代码已经精简到了极致！</p>
             <a href="{ms:global.host/}/html/web/gywm/vue/index.html" onmouseover="tooltip.pop(this, '#sub1', {position:1, offsetX:-20, effect:'slide'})" style="cursor: pointer"><div class="point" style="top: 38%; left: 48%; "><span class="lab-title">Vue.js</span></div></a>
-            <a href="{ms:global.host/}/html/web/gywm/flutter/index.html" onmouseover="tooltip.pop(this, '#sub2', {position:1, offsetX:-20, effect:'slide', sticky: true})" style="cursor: pointer"><div class="point point2" style="top: 65%; left: 29%; "><span class="lab-title">Flutter</span></div></a>
+            <a href="{ms:global.host/}/html/web/gywm/flutter/index.html" onmouseover="tooltip.pop(this, '#sub2', {position:1, offsetX:-20, effect:'slide'})" style="cursor: pointer"><div class="point point2" style="top: 65%; left: 29%; "><span class="lab-title">Flutter</span></div></a>
             <a href="{ms:global.host/}/html/web/gywm/uniapp/index.html" onmouseover="tooltip.pop(this, '#sub3', {position:1, offsetX:-20, effect:'slide'})" style="cursor: pointer"><div class="point point3" style="top: 74%; left:54%; "><span class="lab-title">uniapp</span></div></a>
             <!--<div class="point point4" style="top: 35%; left: 10%; "></div>-->
         </div>
@@ -253,29 +251,26 @@ navigation: {nextEl: '.swiper-button-next',prevEl: '.swiper-button-prev'}
 
             <div id="sub1">
                 <div class="column">
-                    <a href="#">Vue特效展示</a><br />
-                    <a href="#">Vue数据可视化</a><br />
+                    <a href="#" class="sub-font">Vue数据可视化效果</a><br />
                 </div>
-                <div class="column">
-                    <img src="{ms:global.host/}/static/images/flutter1.gif" style="width:150px;height:320px;" alt="" />
+                <div class="column column-img">
+                    <img src="{ms:global.host/}/static/images/lab-vue.jpg" class="vue-img" alt="" />
                 </div>
             </div>
             <div id="sub2">
                 <div class="column">
-                    <a href="#">Flutter 实现酷炫的3D效果</a><br />
-                    <a href="#">3D球控件</a><br />
+                    <a href="#" class="sub-font">Flutter酷炫3D球控件</a><br />
                 </div>
-                <div class="column">
-                    <img src="{ms:global.host/}/static/images/flutter1.gif" style="width:150px;height:320px;" alt="" />
+                <div class="column column-img">
+                    <img src="{ms:global.host/}/static/images/lab-flutter.gif" class="flutter-img" alt="" />
                 </div>
             </div>
             <div id="sub3">
                 <div class="column">
-                    <a href="#">uni-app实现购物平台</a><br />
-                    <a href="#">购物平台</a><br />
+                    <a href="#" class="sub-font">uni-app实现购物平台</a><br />
                 </div>
-                <div class="column">
-                    <img src="{ms:global.host/}/static/images/flutter1.gif" style="width:150px;height:320px;" alt="" />
+                <div class="column column-img">
+                    <img src="{ms:global.host/}/static/images/lab-uni-app.gif" class="uni-app-img" alt="" />
                 </div>
             </div>
         </div>
@@ -329,7 +324,7 @@ navigation: {nextEl: '.swiper-button-next',prevEl: '.swiper-button-prev'}
         background-color: rgba(241, 34, 30, .9);}
     .point2,.point2::before,.point2::after{
         /* 设置颜色 */
-        background-color: rgba(252, 145, 189, .9);}
+        background-color: rgba(216, 46, 85, .9);}
     .point3,.point3::before,.point3::after{
         /* 设置颜色 */
         background-color:  rgba(216, 46, 85, .9);}
@@ -375,6 +370,35 @@ navigation: {nextEl: '.swiper-button-next',prevEl: '.swiper-button-prev'}
         background-repeat: no-repeat;
         cursor: pointer;
     }
+
+    .column{
+        text-align:center;
+    }
+
+    .sub-font{
+        font-size: large;
+    }
+
+    .column-img{
+        margin-top: 20px;
+    }
+
+    .vue-img{
+        width:350px;
+        height:200px;
+    }
+
+    .flutter-img{
+        width:150px;
+        height:320px;
+    }
+
+    .uni-app-img{
+        width:200px;
+        height:340px;
+    }
+
+
 </style>
 <style>
     .lab-display-hotspot {
