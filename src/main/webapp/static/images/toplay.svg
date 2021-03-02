@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="70px" height="69px" viewBox="0 0 70 69" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>编组 4</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="92.9082961%" y1="75.8454568%" x2="6.59412202%" y2="16.685652%" id="linearGradient-1">
+            <stop stop-color="#000000" offset="0%"></stop>
+            <stop stop-color="#0F2B51" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="页面1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="方案二-第一屏显示" transform="translate(-678.000000, -1413.000000)">
+            <g id="编组-9" transform="translate(360.000000, 1247.000000)">
+                <g id="编组-4" transform="translate(319.000000, 167.000000)">
+                    <ellipse id="椭圆形" fill="url(#linearGradient-1)" opacity="0.651436942" cx="34" cy="34" rx="34" ry="33.6263736"></ellipse>
+                    <g id="视频播放" transform="translate(23.955556, 21.791209)" fill="#FFFFFF" fill-rule="nonzero">
+                        <path d="M21.4275919,8.82908999 L7.95638678,0.494111079 C5.85945391,-0.806382062 3,0.612337753 3,2.97687076 L3,19.7059419 C3,22.0704749 5.79591052,23.4891947 7.95638678,22.1887016 L21.4275919,13.7946093 C23.3338945,12.6123428 23.3338945,10.0113565 21.4275919,8.82908999 Z" id="路径"></path>
+                    </g>
+                    <ellipse id="椭圆形" stroke="#FFFFFF" stroke-width="0.8" cx="34" cy="33.6263736" rx="34" ry="33.6263736"></ellipse>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

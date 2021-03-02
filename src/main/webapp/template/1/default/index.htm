@@ -168,16 +168,16 @@ navigation: {nextEl: '.swiper-button-next',prevEl: '.swiper-button-prev'}
            <div class="index-case">
                <div>
                    <div id="carousel-example-generic-case" class="carousel slide" data-ride="carousel">
-                       <div class="carousel-inner" style="height: 380px;">
+                       <div class="carousel-inner" style="height: 500px;">
                            <div class="item active">
                                <div style="width:fit-content;margin:auto;">
-                                   {ms:arclist  typeid='1362337793902518273' orderby='sort'}
+                                   {ms:arclist  typeid='1362337793902518273' orderby='sort' order='asc'}
 
-                                   <#if field.title == "无人机APP">
-                                   <div class="index-case-a" style="width:480px">
+                                   <#if field.id == "1364051333925154817">
+                                   <div class="index-case-a" style="width:664px">
                                        <div class="pos-rel">
                                            <p class="index-case-a-bg"></p>
-                                           <a href="#" class="js-video-button" data-channel="video" data-video-url="${field.keyword}"><span>${field.title}</span></a>
+                                           <a href="#" class="js-video-button video-item-fly" data-channel="video" data-video-url="${field.keyword}"><span>${field.descrip}</span></a>
                                            <img class="lazy" src="{ms:global.host/}/{@ms:file field.litpic/}"
                                                 data-original="{ms:global.host/}/{@ms:file field.litpic/}"
                                                 style="display: inline-block;"></div>
@@ -186,7 +186,7 @@ navigation: {nextEl: '.swiper-button-next',prevEl: '.swiper-button-prev'}
                                    <div class="index-case-a">
                                        <div class="pos-rel">
                                            <p class="index-case-a-bg"></p>
-                                           <a href="#" class="js-video-button" data-channel="video" data-video-url="${field.keyword}"><span>${field.title}</span></a>
+                                           <a href="#" class="js-video-button video-item" data-channel="video" data-video-url="${field.keyword}"><span>${field.descrip}</span></a>
                                            <img class="lazy" src="{ms:global.host/}/{@ms:file field.litpic/}"
                                                 data-original="{ms:global.host/}/{@ms:file field.litpic/}"
                                                 style="display: inline-block;"></div>
@@ -221,6 +221,7 @@ navigation: {nextEl: '.swiper-button-next',prevEl: '.swiper-button-prev'}
              style="background-size: cover; background-position: center; width:100%;height: 100%">
         {/ms:arclist}
         {ms:arclist flag='c' typeid='1362658871693762562' size=1}
+        <!-- 实验室图片上图标效果备用
         <a href="{ms:global.host/}/html/web/gywm/vue/index.html" style="cursor: pointer"><div id="vue" class="lab-image-hotspot lab-display-hotspot" style="top: 55.6%; left: 72.9%; ">
             <div class="lab-image-hotspot_inner" style="background-color: #b02b2c; color: #888888;">1</div>
             <div class="lab-image-hotspot-pulse" style="background-color:#b02b2c;"></div>
@@ -232,9 +233,17 @@ navigation: {nextEl: '.swiper-button-next',prevEl: '.swiper-button-prev'}
             <a href="{ms:global.host/}/html/web/gywm/uniapp/index.html" style="cursor: pointer"><div id="uni-app" class="lab-image-hotspot lab-display-hotspot" style="top: 76.7%; left: 50.2%; ">
         <div class="lab-image-hotspot_inner" style="background-color: #b02b2c; color: #888888;">1</div>
             <div class="lab-image-hotspot-pulse" style="background-color:#b02b2c;"></div>
-        </div></a>
+        </div></a>-->
         <div class="lab-image-left-text">
             <div class="title"><span>新技术实验室</span><br><br></div>
+        </div>
+        <div class="content" style="height:94%; width: 96%; overflow: hidden; position: absolute;">
+
+            <p style="color: white;">代码已经精简到了极致！</p>
+            <a href="{ms:global.host/}/html/web/gywm/vue/index.html" style="cursor: pointer"><div class="point" style="top: 38%; left: 48%; "><span class="lab-title">Vue.js</span></div></a>
+            <a href="{ms:global.host/}/html/web/gywm/flutter/index.html" style="cursor: pointer"><div class="point point2" style="top: 65%; left: 29%; "><span class="lab-title">Flutter</span></div></a>
+            <a href="{ms:global.host/}/html/web/gywm/uniapp/index.html" style="cursor: pointer"><div class="point point3" style="top: 74%; left:54%; "><span class="lab-title">uniapp</span></div></a>
+            <!--<div class="point point4" style="top: 35%; left: 10%; "></div>-->
         </div>
         {/ms:arclist}
     </div>
@@ -274,6 +283,66 @@ navigation: {nextEl: '.swiper-button-next',prevEl: '.swiper-button-prev'}
 			}
 		});
 </script>
+<style>
+    .point,.point::before,.point::after{position: absolute;width: 60px; height: 60px; border-radius: 50%;content: ''; }
+    .point::before{animation: scale 2s infinite; }
+    .point::after{animation: scale2 2s infinite; }
+    @keyframes scale{0%{ transform: scale(1); opacity:.9}100%{ transform: scale(2); opacity: 0;}}
+    @keyframes scale2{0%{ transform: scale(1);opacity:.9;}100%{ transform: scale(4);opacity:0;}}
+
+
+    .point,.point::before,.point::after{
+        /* 设置颜色 */
+        background-color: rgba(241, 34, 30, .9);}
+    .point2,.point2::before,.point2::after{
+        /* 设置颜色 */
+        background-color: rgba(252, 145, 189, .9);}
+    .point3,.point3::before,.point3::after{
+        /* 设置颜色 */
+        background-color:  rgba(216, 46, 85, .9);}
+    /*.point4,.point4::before,.point4::after{
+        !* 设置颜色 *!
+        background-color:  rgba(135, 229, 8, .9);}*/
+    .point span {
+        font-size: large;
+        margin-left: 3px;
+        margin-top: -2px;
+        color: white;
+        font-weight: bold;
+        padding-top: 16px;
+        position: absolute;
+    }
+</style>
+<style>
+    .index-case-a .video-item::after {
+        position: absolute;
+        content: '';
+        display: inline-block;
+        top: 42%;
+        left: 34%;
+        width: 67px;
+        height: 67px;
+        background-image: url({ms:global.host/}/static/images/toplay.svg);
+        background-size: 90%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        cursor: pointer;
+    }
+    .index-case-a .video-item-fly::after {
+        position: absolute;
+        content: '';
+        display: inline-block;
+        top: 42%;
+        left: 41%;
+        width: 67px;
+        height: 67px;
+        background-image: url({ms:global.host/}/static/images/toplay.svg);
+        background-size: 90%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        cursor: pointer;
+    }
+</style>
 <style>
     .lab-display-hotspot {
         -webkit-animation: avia_hotspot_appear 0.7s 1 cubic-bezier(0.175, 0.885, 0.320, 1.275);
