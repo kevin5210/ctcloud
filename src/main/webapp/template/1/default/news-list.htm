@@ -22,6 +22,9 @@
   <link rel="stylesheet" href="{ms:global.host/}/static/plugins/bootstrap/css/bootstrap.css">
   <link rel="stylesheet" href="{ms:global.host/}/static/plugins/app1.0/css/style.css">
   <link rel="stylesheet" href="{ms:global.host/}/{ms:global.style/}/css/app.css">
+  <link rel="stylesheet" href="{ms:global.host/}/static/plugins/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="{ms:global.host/}/static/plugins/modal-video/css/modal-video.min.css">
+
   <!--网络请求框架-->
   <script src="{ms:global.host/}/static/plugins/axios/0.18.0/axios.min.js"></script>
   <script src="{ms:global.host/}/static/plugins/qs/6.6.0/qs.min.js"></script>
@@ -33,6 +36,8 @@
   <link href="https://cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
   <script src="https://cdn.bootcss.com/wow/1.1.2/wow.min.js"></script>
   <script src="{ms:global.host/}/static/global.js"></script>
+  <script type="text/javascript" src="{ms:global.host/}/static/plugins/modal-video/js/my-jquery-modal-video.min.js"></script>
+
   <script>
         ms.base = "";
     </script>
@@ -104,18 +109,42 @@
        </div>
       </#if>
       </div>
-      <div class="col-md-6 m-t-60" style="padding: 50px;background-color: aliceblue;border-left: 10px solid seagreen;border-radius: 10px;">
+      <div class="col-md-6 m-t-60" style="padding: 50px;background-color: aliceblue;border-right: 10px solid seagreen;border-radius: 10px;">
        <h3 class="section-heading m-b-25">${field.title}</h3>
        <p class="type-gray-1 m-b-40">
         ${field.descrip}
+
+        <div class="col">
+           <ul class="v-list">
+            <li class="iconbox iconbox-style-2 iconbox-style-2-with-text iconbox-style-2-with-text-lg iconbox-style-2-with-text-right">
+             <a class="iconbox-item-title" href="#">
+              <span class="iconbox-text">MODERN DESIGN</span>
+              <i class="iconbox-icon fa fa-trophy"></i>
+             </a>
+         <p class="collapse show iconbox-item-text">这是一个描述</p>
+         </li>
+         <li class="iconbox iconbox-style-2 iconbox-style-2-with-text iconbox-style-2-with-text-lg iconbox-style-2-with-text-right">
+          <a class="iconbox-item-title" href="#">
+           <span class="iconbox-text">RESPONSIVE DESIGN</span>
+           <i class="iconbox-icon fa fa-tablet"></i>
+          </a>
+          <p class="collapse show iconbox-item-text">这是一个描述</p>
+         </li>
+         <li class="iconbox iconbox-style-2 iconbox-style-2-with-text iconbox-style-2-with-text-lg iconbox-style-2-with-text-right">
+          <a class="iconbox-item-title" href="#">
+           <span class="iconbox-text">LAYOUT FLEXIBLE</span>
+           <i class="iconbox-icon fa fa-crop"></i>
+          </a>
+          <p class="collapse show iconbox-item-text">这是一个描述</p>
+         </li>
+         </ul>
+        </div>
        </p>
-       <a class="au-btn au-btn-pill au-btn-icon" href="#">
-        <span class="btn-text">观看演示视频</span>
-        <i class="btn-icon fa fa-chevron-right"></i>
-       </a>
+        <a href="#" class="js-video-button video-item au-btn au-btn-pill au-btn-icon" data-channel="video" data-video-url="{ms:global.host/}${field.keyword}"><span class="btn-text">观看演示视频</span>
+         <i class="btn-icon fa fa-chevron-right"></i>
+        </a>
       </div>
      </div>
-    </div>
    </section>
    <#else>
    <br>
@@ -127,11 +156,37 @@
        <h3 class="section-heading m-b-25">${field.title}</h3>
        <p class="type-gray-1 m-b-40">
         ${field.descrip}
+
+        <div class="col">
+           <ul class="v-list">
+            <li class="iconbox iconbox-style-2 iconbox-style-2-with-text iconbox-style-2-with-text-lg">
+             <a class="iconbox-item-title" href="#">
+              <i class="iconbox-icon fa fa-codepen"></i>
+              <span class="iconbox-text">UNILIMITED ELEMENTS</span>
+             </a>
+         <p class="collapse show iconbox-item-text">这是一个描述</p>
+         </li>
+         <li class="iconbox iconbox-style-2 iconbox-style-2-with-text iconbox-style-2-with-text-lg">
+          <a class="iconbox-item-title" href="#">
+           <i class="iconbox-icon fa fa-pencil"></i>
+           <span class="iconbox-text">COLOR SCHEMES</span>
+          </a>
+          <p class="collapse show iconbox-item-text">这是一个描述</p>
+         </li>
+         <li class="iconbox iconbox-style-2 iconbox-style-2-with-text iconbox-style-2-with-text-lg">
+          <a class="iconbox-item-title" href="#">
+           <i class="iconbox-icon fa fa-heart"></i>
+           <span class="iconbox-text">FRIENDLY SUPPORT</span>
+          </a>
+          <p class="collapse show iconbox-item-text">这是一个描述</p>
+         </li>
+         </ul>
+        </div>
+
        </p>
-       <a class="au-btn au-btn-pill au-btn-icon" href="#">
-        <span class="btn-text">观看演示视频</span>
-        <i class="btn-icon fa fa-chevron-right"></i>
-       </a>
+      <a href="#" class="js-video-button video-item au-btn au-btn-pill au-btn-icon" data-channel="video" data-video-url="{ms:global.host/}${field.keyword}"><span class="btn-text">观看演示视频</span>
+       <i class="btn-icon fa fa-chevron-right"></i>
+      </a>
       </div>
       <div class="col-md-6">
        <#if field.id == "1364051333925154817">
@@ -190,6 +245,13 @@ var app = new Vue({
     created(){
     }
 })
+
+$(".js-video-button").modalVideo({
+			s:{
+				controls:0,
+				nocookie: true
+			}
+		});
 </script>
   <style>
     body {
