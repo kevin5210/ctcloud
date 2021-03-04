@@ -778,6 +778,7 @@
   transition: all 0.3s ease;
   border: 2px solid #555;
   cursor: pointer;
+  margin-left: 30%;
 }
 
 .au-btn:focus {

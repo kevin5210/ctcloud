@@ -1,228 +1,436 @@
 <html style="font-size: 71.1458px;">
- <head>
-  <meta charset="utf-8">
-  <title>{ms:global.name/}</title>
-  <meta http-equiv="content-type" content="text/html">
-  <meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
-  <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,width=device-width">
-  <meta name="format-detection" content="telephone=no">
-  <meta name="app-mobile-web-app-capable" content="yes">
-  <meta name="app-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="keywords" content="{ms:global.keyword/}">
-  <meta name="description" content="{ms:global.descrip/}">
-  <link rel="shortcut icon" href="http://www.roboct.com/wp-content/themes/ugo/images/favicon.ico" type="x-icon"/>
-  <script type="text/javascript" src="{ms:global.host/}/static/plugins/vue/2.6.9/vue.min.js"></script>
-  <link rel="stylesheet" href="{ms:global.host/}/static/plugins/minireset/0.0.2/minireset.min.css">
-  <link rel="stylesheet" href="https://cdn.mingsoft.net/iconfont/iconfont.css">
-  <script src="{ms:global.host/}/static/plugins/element-ui/2.12.0/index.js"></script>
-  <link rel="stylesheet" href="{ms:global.host/}/static/plugins/element-ui/2.12.0/index.css">
-  <link rel="stylesheet" href="{ms:global.host/}/static/css/cttcApp.css">
-  <link rel="stylesheet" href="{ms:global.host/}/static/css/product.css">
-  <link rel="stylesheet" href="{ms:global.host/}/static/css/productReset.css">
-  <link rel="stylesheet" href="{ms:global.host/}/static/plugins/bootstrap/css/bootstrap.css">
-  <link rel="stylesheet" href="{ms:global.host/}/static/plugins/app1.0/css/style.css">
-  <link rel="stylesheet" href="{ms:global.host/}/{ms:global.style/}/css/app.css">
-  <link rel="stylesheet" href="{ms:global.host/}/static/plugins/font-awesome/css/font-awesome.min.css">
-  <link rel="stylesheet" href="{ms:global.host/}/static/plugins/modal-video/css/modal-video.min.css">
+<head>
+ <meta charset="utf-8">
+ <title>demo云平台</title>
+ <meta http-equiv="content-type" content="text/html">
+ <meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
+ <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,width=device-width">
+ <meta name="format-detection" content="telephone=no">
+ <meta name="app-mobile-web-app-capable" content="yes">
+ <meta name="app-mobile-web-app-status-bar-style" content="black-translucent">
+ <meta name="keywords" content="demo云平台">
+ <meta name="description" content="demo云平台">
+ <link rel="shortcut icon" href="http://www.roboct.com/wp-content/themes/ugo/images/favicon.ico" type="x-icon"/>
+ <script type="text/javascript" src="{ms:global.host/}/static/plugins/vue/2.6.9/vue.min.js"></script>
+ <link rel="stylesheet" href="{ms:global.host/}/static/plugins/minireset/0.0.2/minireset.min.css">
+ <link rel="stylesheet" href="https://cdn.mingsoft.net/iconfont/iconfont.css">
+ <script src="{ms:global.host/}/static/plugins/element-ui/2.12.0/index.js"></script>
+ <link rel="stylesheet" href="{ms:global.host/}/static/plugins/element-ui/2.12.0/index.css">
+ <link rel="stylesheet" href="{ms:global.host/}/static/css/cttcApp.css">
+ <link rel="stylesheet" href="{ms:global.host/}/static/css/product.css">
+ <link rel="stylesheet" href="{ms:global.host/}/static/css/productReset.css">
+ <link rel="stylesheet" href="{ms:global.host/}/static/plugins/bootstrap/css/bootstrap.css">
+ <link rel="stylesheet" href="{ms:global.host/}/static/plugins/app1.0/css/style.css">
+ <link rel="stylesheet" href="{ms:global.host/}/template/1/default/css/app.css">
+ <link rel="stylesheet" href="{ms:global.host/}/static/plugins/font-awesome/css/font-awesome.min.css">
+ <!--网络请求框架-->
+ <script src="{ms:global.host/}/static/plugins/axios/0.18.0/axios.min.js"></script>
+ <script src="{ms:global.host/}/static/plugins/qs/6.6.0/qs.min.js"></script>
+ <script src="{ms:global.host/}/static/plugins/ms/1.0.0/ms.js"></script>
+ <script src="{ms:global.host/}/static/plugins/ms/1.0.0/ms.http.js"></script>
+ <script src="{ms:global.host/}/static/plugins/ms/1.0.0/ms.util.js"></script>
 
-  <!--网络请求框架-->
-  <script src="{ms:global.host/}/static/plugins/axios/0.18.0/axios.min.js"></script>
-  <script src="{ms:global.host/}/static/plugins/qs/6.6.0/qs.min.js"></script>
-  <script src="{ms:global.host/}/static/plugins/ms/1.0.0/ms.js"></script>
-  <script src="{ms:global.host/}/static/plugins/ms/1.0.0/ms.http.js"></script>
-  <script src="{ms:global.host/}/static/plugins/ms/1.0.0/ms.util.js"></script>
-
-  <script src="{ms:global.host/}/static/plugins/jquery/3.2.1/jquery-3.2.1.min.js"></script>
-  <link href="https://cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
-  <script src="https://cdn.bootcss.com/wow/1.1.2/wow.min.js"></script>
-  <script src="{ms:global.host/}/static/global.js"></script>
-  <script type="text/javascript" src="{ms:global.host/}/static/plugins/modal-video/js/my-jquery-modal-video.min.js"></script>
-
-  <script>
+ <script src="{ms:global.host/}/static/plugins/jquery/3.2.1/jquery-3.2.1.min.js"></script>
+ <link href="https://cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+ <script src="https://cdn.bootcss.com/wow/1.1.2/wow.min.js"></script>
+ <script src="{ms:global.host/}/static/global.js"></script>
+ <script>
         ms.base = "";
     </script>
-  <style>
+ <style>
         [v-cloak]{
             display: none;
         }
     </style>
- </head>
- <body>
-  <div id="app" v-cloak>
-   <#include "nav.htm" />
-   <!-- 与云平台一样的背景风格，暂时去掉
+</head>
+<body>
+<div id="app" v-cloak>
+ <div class="ms-nav header">
+  <div class="body">
+   <div class="logo">
+    <a href="{ms:global.host/}" style="cursor: pointer;"><img title="" alt=""
+                                                                             src="{ms:global.host/}//upload/1/appLogo/1613714116165.png"
+                                                                             class="logo-pic"></a>
+   </div>
+   <div class="nav-item">
+    <a href="{ms:global.host/}" class="item"> 首页 </a>
+    <a href="{ms:global.host/}/html/web/product/index.html"
+       class="item">
+     云平台
+    </a>
+    <a href="{ms:global.host/}/html/web/news/index.html"
+       class="item sel">
+     APP产品
+    </a>
+    <a href="{ms:global.host/}/html/web/gywm/lxwm/index.html"
+       class="item">
+     新技术实验室
+    </a>
+    <a href="http://www.roboct.com/products" class="item" target="_blank"> 合作伙伴 </a>
+   </div>
+   <div class="nav-search" >
+    <!--搜索-start-->
+    <!-- <form id="searchDataForm" action="{ms:global.host/}/mcms/search.do" method="post" class="ms-search-input">
+         <div class="ms-search-input-div">
+             &lt;!&ndash;输入框 - start &ndash;&gt;
+             <input class="ms-input" name="content_title" placeholder="输入搜索关键字">
+             &lt;!&ndash;输入框 -end &ndash;&gt;
+         </div>
+         <div class="ms-search-button" onclick="document.getElementById('searchDataForm').submit();">
+             <i class="iconfont icon-fangdajing"></i>
+         </div>
+     </form>-->
+    <!--搜索-end-->
+   </div>
+  </div>
+ </div>   <!-- 与云平台一样的背景风格，暂时去掉
    <div class="ms-banner0">
     <div style="background-image: url('{ms:global.host/}/upload/1/cms/content/1613808802371.png');background-size: cover; background-position: center; width:100%;height: 100%">
     </div>
    </div>-->
-   <!--<div class="yiyun-container-banner">
-    <img class="banner-bg pcd" src="{ms:global.host/}/upload/1/cms/content/1613808802371.png" alt="">
-    <div class="banner-count">
-     <div class="banner-count-box">
-      <div class="banner-count-box-left">
-       <p>光子APP应用</p>
-       <p>创新带来改变，优化你的生活<br>提供全行业APP应用解决方案</p>
-      </div>
-     </div>
-    </div>
-   </div>-->
-   <!--start-banner-->
-   <div class="banner" style="">
-    <div class="container">
-     <div class="banner-top">
-      <h1>光子APP产品</h1>
-      <p>创新带来改变，优化你的生活，提供全行业APP应用解决方案</p>
-     </div>
-     <div class="banner-bottom">
-      <div class="col-md-4 banner-left">
-       <a href="#">科技创新</a>
-      </div>
-      <div class="col-md-4 banner-middle">
-       <img src="{ms:global.host/}/static/plugins/app1.0/images/iphone.png" alt="" />
-      </div>
-      <div class="col-md-4 banner-right">
-       <a href="#">产品展示</a>
-      </div>
-      <div class="clearfix"></div>
-     </div>
+ <!--<div class="yiyun-container-banner">
+  <img class="banner-bg pcd" src="{ms:global.host/}/upload/1/cms/content/1613808802371.png" alt="">
+  <div class="banner-count">
+   <div class="banner-count-box">
+    <div class="banner-count-box-left">
+     <p>光子APP应用</p>
+     <p>创新带来改变，优化你的生活<br>提供全行业APP应用解决方案</p>
     </div>
    </div>
-   <!--start-banner-->
+  </div>
+ </div>-->
+ <!--start-banner-->
+ <div class="banner" style="">
+  <div class="container">
+   <div class="banner-top">
+    <h1>光子APP产品</h1>
+    <p>创新带来改变，优化你的生活，提供全行业APP应用解决方案</p>
+   </div>
+   <div class="banner-bottom">
+    <div class="col-md-4 banner-left">
+     <a href="#">科技创新</a>
+    </div>
+    <div class="col-md-4 banner-middle">
+     <img src="{ms:global.host/}/static/plugins/app1.0/images/iphone.png" alt="" />
+    </div>
+    <div class="col-md-4 banner-right">
+     <a href="#">产品展示</a>
+    </div>
+    <div class="clearfix"></div>
+   </div>
+  </div>
+ </div>
+ <!--start-banner-->
 
-<!-- app content start -->
-   <#assign sort=1>
-   {ms:arclist typeid='1362337793902518273' size=10  orderby='sort' order='asc'}
-   <#assign sort++>
-   <#if sort%2 == 0>
-   <br>
-   <section class="bg-gray-50 p-t-30 p-b-30" id="intro2">
-    <div class="container">
-     <div class="row align-items-md-center" style="display: flex;">
-      <div class="col-md-6">
-       <#if field.id == "1364051333925154817">
-       <div style="width:664px;margin:auto;">
-        <img class="wow fadeInLeft img-fluid animated" src="{ms:global.host/}/{@ms:file field.litpic/}" alt="Image" data-wow-duration="0.8s" data-wow-delay="0.5s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.5s; animation-name: none;">
-       </div>
-       <#else>
-       <div style="width:240px;margin:auto;">
-        <img class="wow fadeInLeft img-fluid animated" src="{ms:global.host/}/{@ms:file field.litpic/}" alt="Image" data-wow-duration="0.8s" data-wow-delay="0.5s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.5s; animation-name: none;">
-       </div>
-      </#if>
-      </div>
-      <div class="col-md-6 m-t-60" style="padding: 50px;background-color: aliceblue;border-right: 10px solid seagreen;border-radius: 10px;">
-       <h3 class="section-heading m-b-25">${field.title}</h3>
-       <p class="type-gray-1 m-b-40">
-        ${field.descrip}
-
-        <div class="col">
-           <ul class="v-list">
-            <li class="iconbox iconbox-style-2 iconbox-style-2-with-text iconbox-style-2-with-text-lg iconbox-style-2-with-text-right">
-             <a class="iconbox-item-title" href="#">
-              <span class="iconbox-text">MODERN DESIGN</span>
-              <i class="iconbox-icon fa fa-trophy"></i>
-             </a>
-         <p class="collapse show iconbox-item-text">这是一个描述</p>
-         </li>
-         <li class="iconbox iconbox-style-2 iconbox-style-2-with-text iconbox-style-2-with-text-lg iconbox-style-2-with-text-right">
-          <a class="iconbox-item-title" href="#">
-           <span class="iconbox-text">RESPONSIVE DESIGN</span>
-           <i class="iconbox-icon fa fa-tablet"></i>
-          </a>
-          <p class="collapse show iconbox-item-text">这是一个描述</p>
-         </li>
-         <li class="iconbox iconbox-style-2 iconbox-style-2-with-text iconbox-style-2-with-text-lg iconbox-style-2-with-text-right">
-          <a class="iconbox-item-title" href="#">
-           <span class="iconbox-text">LAYOUT FLEXIBLE</span>
-           <i class="iconbox-icon fa fa-crop"></i>
-          </a>
-          <p class="collapse show iconbox-item-text">这是一个描述</p>
-         </li>
-         </ul>
-        </div>
-       </p>
-        <a href="#" class="js-video-button video-item au-btn au-btn-pill au-btn-icon" data-channel="video" data-video-url="{ms:global.host/}${field.keyword}"><span class="btn-text">观看演示视频</span>
-         <i class="btn-icon fa fa-chevron-right"></i>
-        </a>
-      </div>
-     </div>
-   </section>
-   <#else>
-   <br>
-   <section class="bg-gray-50 p-t-30 p-b-30" id="intro">
-    <div class="container">
-     <div class="row align-items-md-center" style="display: flex;">
-
-      <div class="col-md-6 m-t-60" style="padding: 50px;background-color: aliceblue;border-left: 10px solid seagreen;border-radius: 10px;">
-       <h3 class="section-heading m-b-25">${field.title}</h3>
-       <p class="type-gray-1 m-b-40">
-        ${field.descrip}
-
-        <div class="col">
-           <ul class="v-list">
-            <li class="iconbox iconbox-style-2 iconbox-style-2-with-text iconbox-style-2-with-text-lg">
-             <a class="iconbox-item-title" href="#">
-              <i class="iconbox-icon fa fa-codepen"></i>
-              <span class="iconbox-text">UNILIMITED ELEMENTS</span>
-             </a>
-         <p class="collapse show iconbox-item-text">这是一个描述</p>
-         </li>
-         <li class="iconbox iconbox-style-2 iconbox-style-2-with-text iconbox-style-2-with-text-lg">
-          <a class="iconbox-item-title" href="#">
-           <i class="iconbox-icon fa fa-pencil"></i>
-           <span class="iconbox-text">COLOR SCHEMES</span>
-          </a>
-          <p class="collapse show iconbox-item-text">这是一个描述</p>
-         </li>
-         <li class="iconbox iconbox-style-2 iconbox-style-2-with-text iconbox-style-2-with-text-lg">
-          <a class="iconbox-item-title" href="#">
-           <i class="iconbox-icon fa fa-heart"></i>
-           <span class="iconbox-text">FRIENDLY SUPPORT</span>
-          </a>
-          <p class="collapse show iconbox-item-text">这是一个描述</p>
-         </li>
-         </ul>
-        </div>
-
-       </p>
-      <a href="#" class="js-video-button video-item au-btn au-btn-pill au-btn-icon" data-channel="video" data-video-url="{ms:global.host/}${field.keyword}"><span class="btn-text">观看演示视频</span>
-       <i class="btn-icon fa fa-chevron-right"></i>
-      </a>
-      </div>
-      <div class="col-md-6">
-       <#if field.id == "1364051333925154817">
-       <div style="width:664px;margin:auto;">
-        <img class="wow fadeInRight img-fluid animated" src="{ms:global.host/}/{@ms:file field.litpic/}" alt="Image" data-wow-duration="0.8s" data-wow-delay="0.5s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.5s; animation-name: none;">
-       </div>
-       <#else>
-       <div style="width:240px;margin:auto;">
-        <img class="wow fadeInRight img-fluid animated" src="{ms:global.host/}/{@ms:file field.litpic/}" alt="Image" data-wow-duration="0.8s" data-wow-delay="0.5s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.5s; animation-name: none;">
-       </div>
-      </#if>
-      </div>
+ <!-- app content start -->
+ <br>
+ <section class="bg-gray-50 p-t-30 p-b-30" id="intro2">
+  <div class="container">
+   <div class="row align-items-md-center" style="display: flex;">
+    <div class="col-md-6">
+     <div style="width:240px;margin:auto;">
+      <img class="wow fadeInLeft img-fluid animated" src="{ms:global.host/}//upload/1/cms/content/1613716365107.png" alt="Image" data-wow-duration="0.8s" data-wow-delay="0.5s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.5s; animation-name: none;">
      </div>
     </div>
-   </section>
-  </#if>
-   {/ms:arclist}
+    <div class="col-md-6 m-t-60" style="padding: 50px;background-color: aliceblue;border-right: 10px solid seagreen;border-radius: 10px;">
+     <h3 class="section-heading m-b-25">集控中心平台APP</h3>
+     <p class="type-gray-1 m-b-40">
+      峰谷储能APP，用于展示设备运行状态、运行数据和工艺流程
+
+      <div class="col">
+       <ul class="v-list">
+        <li class="iconbox iconbox-style-2 iconbox-style-2-with-text iconbox-style-2-with-text-lg iconbox-style-2-with-text-right">
+         <a class="iconbox-item-title" href="#">
+          <span class="iconbox-text">数据采集与交互</span>
+          <i class="iconbox-icon fa fa-trophy"></i>
+         </a>
+     <p class="collapse show iconbox-item-text">APP与云平台交互，实时数据采集，动态展示设备运行状态</p>
+     </li>
+     <li class="iconbox iconbox-style-2 iconbox-style-2-with-text iconbox-style-2-with-text-lg iconbox-style-2-with-text-right">
+      <a class="iconbox-item-title" href="#">
+       <span class="iconbox-text">数据可视化动态呈现</span>
+       <i class="iconbox-icon fa fa-tablet"></i>
+      </a>
+      <p class="collapse show iconbox-item-text">轻量级解决方案实现灵活的数据可视化，数据展示，数据融合，以图表形式现场项目分布、设备在线情况统计、电量统计</p>
+     </li>
+     <li class="iconbox iconbox-style-2 iconbox-style-2-with-text iconbox-style-2-with-text-lg iconbox-style-2-with-text-right">
+      <a class="iconbox-item-title" href="#">
+       <span class="iconbox-text">全新技术架构</span>
+       <i class="iconbox-icon fa fa-crop"></i>
+      </a>
+      <p class="collapse show iconbox-item-text">Flutter技术架构融合，一次编译，Android/iOS多端运行</p>
+     </li>
+     </ul>
+    </div>
+
+    </p>
+    <a class="au-btn au-btn-pill au-btn-icon" href="#">
+     <span class="btn-text">观看演示视频</span>
+     <!--<i class="btn-icon fa fa-chevron-right"></i>-->
+    </a>
+   </div>
+  </div>
+ </section>
+ <br>
+ <section class="bg-gray-50 p-t-30 p-b-30" id="intro">
+  <div class="container">
+   <div class="row align-items-md-center" style="display: flex;">
+
+    <div class="col-md-6 m-t-60" style="padding: 50px;background-color: aliceblue;border-left: 10px solid seagreen;border-radius: 10px;">
+     <h3 class="section-heading m-b-25">无人机APP</h3>
+     <p class="type-gray-1 m-b-40">
+      无人机APP，实现无人机按照任务规划路线智能飞行和自动取样
+
+      <div class="col">
+       <ul class="v-list">
+        <li class="iconbox iconbox-style-2 iconbox-style-2-with-text iconbox-style-2-with-text-lg">
+         <a class="iconbox-item-title" href="#">
+          <i class="iconbox-icon fa fa-codepen"></i>
+          <span class="iconbox-text">无人机智能控制</span>
+         </a>
+     <p class="collapse show iconbox-item-text">在使用APP之前，需要智能连接相关设备，用户只需打开手机无线或蓝牙，手机便会自动连接无人机设备，方便用户在APP上完成各种操作</p>
+     </li>
+     <li class="iconbox iconbox-style-2 iconbox-style-2-with-text iconbox-style-2-with-text-lg">
+      <a class="iconbox-item-title" href="#">
+       <i class="iconbox-icon fa fa-pencil"></i>
+       <span class="iconbox-text">规划路线，自动取水</span>
+      </a>
+      <p class="collapse show iconbox-item-text">无人机按照任务规划路线智能飞行和自动取样，实时监测飞行任务中的每一个航点信息，支持源路径返航，搭载微波雷达扫描障碍物实现智能避障</p>
+     </li>
+     <li class="iconbox iconbox-style-2 iconbox-style-2-with-text iconbox-style-2-with-text-lg">
+      <a class="iconbox-item-title" href="#">
+       <i class="iconbox-icon fa fa-heart"></i>
+       <span class="iconbox-text">操作简单，界面流畅</span>
+      </a>
+      <p class="collapse show iconbox-item-text">APP界面清晰，直观，具有美图，支持飞行拍摄，可指定飞前计划、飞行路径，可随时确定飞行无人机的位置，也可对其进行导航；可以查看各类飞行数据，诸如飞行高度、坐标、轨迹等</p>
+     </li>
+     </ul>
+    </div>
+
+    </p>
+    <a class="au-btn au-btn-pill au-btn-icon" href="#">
+     <span class="btn-text">观看演示视频</span>
+     <!--<i class="btn-icon fa fa-chevron-right"></i>-->
+    </a>
+   </div>
+   <div class="col-md-6">
+    <div style="width:664px;margin:auto;">
+     <img class="wow fadeInRight img-fluid animated" src="{ms:global.host/}//upload/1/cms/content/1614050150365.jpg" alt="Image" data-wow-duration="0.8s" data-wow-delay="0.5s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.5s; animation-name: none;">
+    </div>
+   </div>
+  </div>
+</div>
+</section>
+<br>
+<section class="bg-gray-50 p-t-30 p-b-30" id="intro2">
+ <div class="container">
+  <div class="row align-items-md-center" style="display: flex;">
+   <div class="col-md-6">
+    <div style="width:240px;margin:auto;">
+     <img class="wow fadeInLeft img-fluid animated" src="{ms:global.host/}//upload/1/cms/content/1614050108691.jpg" alt="Image" data-wow-duration="0.8s" data-wow-delay="0.5s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.5s; animation-name: none;">
+    </div>
+   </div>
+   <div class="col-md-6 m-t-60" style="padding: 50px;background-color: aliceblue;border-right: 10px solid seagreen;border-radius: 10px;">
+    <h3 class="section-heading m-b-25">动作识别APP</h3>
+    <p class="type-gray-1 m-b-40">
+     动作识别APP，实现半身人体关键点识别并匹配给定模型动作进行打分
+
+     <div class="col">
+      <ul class="v-list">
+       <li class="iconbox iconbox-style-2 iconbox-style-2-with-text iconbox-style-2-with-text-lg iconbox-style-2-with-text-right">
+        <a class="iconbox-item-title" href="#">
+         <span class="iconbox-text">动态识别</span>
+         <i class="iconbox-icon fa fa-trophy"></i>
+        </a>
+    <p class="collapse show iconbox-item-text">通过智能动作识别应用程序，用户可以通过 AI 跟踪动作来确定他们动作是否正确。利用最新的机器学习技术，使用户可以实时获取有关其身体运动的反馈，获得更愉悦的互动体验</p>
+    </li>
+    <li class="iconbox iconbox-style-2 iconbox-style-2-with-text iconbox-style-2-with-text-lg iconbox-style-2-with-text-right">
+     <a class="iconbox-item-title" href="#">
+      <span class="iconbox-text">患者康复训练打分</span>
+      <i class="iconbox-icon fa fa-tablet"></i>
+     </a>
+     <p class="collapse show iconbox-item-text">支持患者在各种场景情况下，使用自己的手机，按照动作识别APP动作视频教程进行康复训练，APP智能识别动作是否标准，并对用户进行动作打分</p>
+    </li>
+    <li class="iconbox iconbox-style-2 iconbox-style-2-with-text iconbox-style-2-with-text-lg iconbox-style-2-with-text-right">
+     <a class="iconbox-item-title" href="#">
+      <span class="iconbox-text">专业评估</span>
+      <i class="iconbox-icon fa fa-crop"></i>
+     </a>
+     <p class="collapse show iconbox-item-text">APP提供专业的评估报告，根据用户训练数据康复师做出详细的人工评估报告，结合我们的医疗器械进行康复治疗</p>
+    </li>
+    </ul>
+   </div>
+
+   </p>
+   <a class="au-btn au-btn-pill au-btn-icon" href="#">
+    <span class="btn-text">观看演示视频</span>
+    <!--<i class="btn-icon fa fa-chevron-right"></i>-->
+   </a>
+  </div>
+ </div>
+</section>
+<br>
+<section class="bg-gray-50 p-t-30 p-b-30" id="intro">
+ <div class="container">
+  <div class="row align-items-md-center" style="display: flex;">
+
+   <div class="col-md-6 m-t-60" style="padding: 50px;background-color: aliceblue;border-left: 10px solid seagreen;border-radius: 10px;">
+    <h3 class="section-heading m-b-25">趣味游戏APP</h3>
+    <p class="type-gray-1 m-b-40">
+     趣味游戏APP，用于辅助患者康复训练的应用
+
+     <div class="col">
+      <ul class="v-list">
+       <li class="iconbox iconbox-style-2 iconbox-style-2-with-text iconbox-style-2-with-text-lg">
+        <a class="iconbox-item-title" href="#">
+         <i class="iconbox-icon fa fa-codepen"></i>
+         <span class="iconbox-text">康复训练模式</span>
+        </a>
+    <p class="collapse show iconbox-item-text">训练致力于助推在线损伤恢复新模式，在居家环境中就可以进行康复训练，成为服务于医院、患者和社会用户的重要信息化支撑平台</p>
+    </li>
+    <li class="iconbox iconbox-style-2 iconbox-style-2-with-text iconbox-style-2-with-text-lg">
+     <a class="iconbox-item-title" href="#">
+      <i class="iconbox-icon fa fa-pencil"></i>
+      <span class="iconbox-text">提高患者能动性</span>
+     </a>
+     <p class="collapse show iconbox-item-text">在打地鼠过程中，锻炼手部和胳膊以及大脑的协调性，提高手部康复训练锻炼能动力。在游戏中设定打到不同地鼠有不同的奖赏，进行积分榜排行，支持患者之间挑战</p>
+    </li>
+    <li class="iconbox iconbox-style-2 iconbox-style-2-with-text iconbox-style-2-with-text-lg">
+     <a class="iconbox-item-title" href="#">
+      <i class="iconbox-icon fa fa-heart"></i>
+      <span class="iconbox-text">趣味性</span>
+     </a>
+     <p class="collapse show iconbox-item-text">在日常反复而又枯燥的长期锻炼中增加一些趣味性，可以增加患者的康复信心</p>
+    </li>
+    </ul>
+   </div>
+
+   </p>
+   <a class="au-btn au-btn-pill au-btn-icon" href="#">
+    <span class="btn-text">观看演示视频</span>
+    <!--<i class="btn-icon fa fa-chevron-right"></i>-->
+   </a>
+  </div>
+  <div class="col-md-6">
+   <div style="width:240px;margin:auto;">
+    <img class="wow fadeInRight img-fluid animated" src="{ms:global.host/}//upload/1/cms/content/1614050181957.jpg" alt="Image" data-wow-duration="0.8s" data-wow-delay="0.5s" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.5s; animation-name: none;">
+   </div>
+  </div>
+ </div>
+ </div>
+</section>
 <!-- app content end -->
 
+</div>
+<div class="ms-footer">
+ <div class="body">
+  <!--<div class="top">
+   <div class="top-left" style="display:none">
+         <div class="foot-nav">
+     <a href="{ms:global.host/}/html/web/product/index.html" class="nav-item"> 云平台 </a>
+     <div>
+      <a href="{ms:global.host/}/html/web/product/kycp/index.html" class="item"> 开源产品 </a>
+     </div>
+     <div>
+      <a href="{ms:global.host/}/html/web/product/hycp/index.html" class="item"> 行业产品 </a>
+     </div>
+     <div>
+      <a href="{ms:global.host/}/html/web/product/ptcp/index.html" class="item"> 平台产品 </a>
+     </div>
+    </div>     <div class="foot-nav">
+     <a href="{ms:global.host/}/html/web/news/index.html" class="nav-item"> APP产品 </a>
+     <div>
+      <a href="{ms:global.host/}/html/web/news/gsdt/index.html" class="item"> 公司动态 </a>
+     </div>
+     <div>
+      <a href="{ms:global.host/}/html/web/news/hydt/index.html" class="item"> 行业动态 </a>
+     </div>
+     <div>
+      <a href="{ms:global.host/}/html/web/news/app/index.html" class="item"> APP应用 </a>
+     </div>
+    </div>     <div class="foot-nav">
+     <a href="{ms:global.host/}/html/web/gywm/index.html" class="nav-item"> 新技术实验室 </a>
+     <div>
+      <a href="{ms:global.host/}/html/web/gywm/lxwm/index.html" class="item"> 联系我们 </a>
+     </div>
+     <div>
+      <a href="{ms:global.host/}/html/web/gywm/gsjs/index.html" class="item"> 公司介绍 </a>
+     </div>
+     <div>
+      <a href="{ms:global.host/}/html/web/product/sys/index.html" class="item"> 新技术实验室 </a>
+     </div>
+     <div>
+      <a href="{ms:global.host/}/html/web/gywm/demo/index.html" class="item"> demo </a>
+     </div>
+     <div>
+      <a href="{ms:global.host/}/html/web/gywm/flutter/index.html" class="item"> Fullter技术实验 </a>
+     </div>
+     <div>
+      <a href="{ms:global.host/}/html/web/gywm/uniapp/index.html" class="item"> uniapp技术实验 </a>
+     </div>
+     <div>
+      <a href="{ms:global.host/}/html/web/gywm/vue/index.html" class="item"> Vue技术实验 </a>
+     </div>
+    </div>
    </div>
-   <#include "footer.htm" />
-  </div>
-  <script>
+   <div class="top-right" style="display:none">
+    <div class="qr">
+     <img title="" alt="" src="{ms:global.host/}/template/1/default/images/ctwb.png" class="pic">
+     <span class="text"> 微博 </span>
+    </div>
+    <div class="qr">
+     <img title="" alt="" src="{ms:global.host/}/template/1/default/images/ctwx.jpg" class="pic">
+     <span class="text"> 公众号 </span>
+    </div>
+   </div>
+  </div>-->
+  <span class="copyright"> <el-link href="http://www.roboct.com/" type="primary" target="_blank">© 哈尔滨光子科技有限公司</el-link> 2021 All Rights Reserved. Powered by GZ </span>
+  <a href="#home" id="toTop" class="scroll" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+ </div>
+ <script type="text/javascript" src="{ms:global.host/}/static/plugins/app1.0/js/move-top.js"></script>
+ <script type="text/javascript" src="{ms:global.host/}/static/plugins/app1.0/js/easing.js"></script>
+ <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+ <script type="text/javascript">
+  jQuery(document).ready(function($) {
+   $(".scroll").click(function(event){
+    event.preventDefault();
+    //$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+    $("html,body").animate({scrollTop:0},500);
+    //$("html,body").animate({scrollTop:$(document).height()},1000);
+   });
+  });
+ </script>
+ <script type="text/javascript">
+  $(document).ready(function() {
+   /*
+   var defaults = {
+         containerID: 'toTop', // fading element id
+       containerHoverID: 'toTopHover', // fading element hover id
+       scrollSpeed: 1200,
+       easingType: 'linear'
+    };
+   */
+
+   $().UItoTop({ easingType: 'easeOutQuart' });
+
+  });
+ </script>
+</div>  </div>
+<script>
 var app = new Vue({
     el: '#app',
     watch:{
     },
     data: {
      //当前页数
-     pageCur: ${(page.cur)!1},
+     pageCur: 1,
      //每页文章条数
-     pageSize: ${(page.size)!20},
+     pageSize: 20,
      //页数总数
-     pageTotal: ${(page.total)!0},
+     pageTotal: 1,
      //内容总数
-     contentCount: ${(page.rcount)!0}
+     contentCount: 10
     },
     methods: {
      switchShow:function(arr){
@@ -236,24 +444,17 @@ var app = new Vue({
      },
      handleCurrentChange:function(val) {
       if(val==1) {
-       location.href = "{ms:global.url/}/${field.categoryPath}/index.html";
+       location.href = "{ms:global.host/}/html/web//news/index.html";
       } else {
-       location.href = "{ms:global.url/}/${field.categoryPath}/list-" + val + ".html";
+       location.href = "{ms:global.host/}/html/web//news/list-" + val + ".html";
       }
      }
     },
     created(){
     }
 })
-
-$(".js-video-button").modalVideo({
-			s:{
-				controls:0,
-				nocookie: true
-			}
-		});
 </script>
-  <style>
+<style>
     body {
         background-color:#fff;
         box-sizing:border-box;
@@ -804,5 +1005,5 @@ $(".js-video-button").modalVideo({
         }
 
 }</style>
- </body>
+</body>
 </html>
