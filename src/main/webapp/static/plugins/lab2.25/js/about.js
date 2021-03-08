@@ -2,14 +2,21 @@ let lab_head = $("#lab_head").height();//头部背景高度1026
 let lab_effect = $("#lab_effect").height();//flutter1高度
 let lab_show = $("#lab_show").height();//;flutter2高度
 let lab_drawn = $("#lab_drawn").height();//uni-app渐入特效高度
+let lab_shop = $("#lab_shop").height();//vue透视;
 let lab_chip = $("#lab_chip").height();//vue透视;
 
 
 /*加入flutter2特效调整参数*/
-let head_effect = lab_head+lab_effect; //头部和flutter1动画特效高度
-let head_effect_show = lab_head+lab_effect+lab_show; //头部、flutter1动画特效高度和flutter2插件高度
-let head_effect_show_drawn = lab_head+lab_effect+lab_show+lab_drawn;//头部、flutter1动画特效高度、flutter2插件高度和uni-app渐入特效高度
-let head_effect_show_chip = lab_head+lab_effect+lab_show+lab_chip;//头部、flutter1动画特效高度、flutter2插件高度和vue透视高度
+let head_effect = lab_head+lab_effect; //头部 + flutter1动画特效高度
+let head_effect_show = lab_head+lab_effect+lab_show; //头部 + flutter1动画特效高度 + flutter2插件高度
+let head_effect_show_drawn = lab_head+lab_effect+lab_show+lab_drawn;//头部 + flutter1动画特效高度 + flutter2插件高度 + uni-app渐入特效高度
+let head_effect_show_chip = lab_head+lab_effect+lab_show+lab_chip;//头部 + flutter1动画特效高度 + flutter2插件高度 + vue透视高度
+
+let head_effect_show_shop = lab_head+lab_effect+lab_show+lab_shop; //头部 + flutter1动画特效高度 + flutter2插件高度
+let head_effect_show_drawn_shop = lab_head+lab_effect+lab_show+lab_drawn+lab_shop;//头部 + flutter1动画特效高度 + flutter2插件高度 + uni-app渐入特效高度 + unishop高度
+let head_effect_show_chip_shop = lab_head+lab_effect+lab_show+lab_chip+lab_shop;//头部 + flutter1动画特效高度 + flutter2插件高度 + vue透视高度 + unishop高度
+
+let lab_offset = 600;//lab_chip动画效果偏移量
 
 /**
  * uni-app渐入特效
@@ -36,11 +43,11 @@ function labDrawn(){
             scrollHeight = htmlElement.scrollHeight;
             clientHeight = htmlElement.clientHeight;
         }
-        let scrolled = (scrollTop-lab_head) / ((scrollHeight-head_effect_show_chip) - clientHeight);
+        let scrolled = (scrollTop-head_effect) / ((scrollHeight-head_effect_show_chip_shop) - clientHeight);
         //console.log("scrollTop:"+scrollTop+";scrollHeight:"+scrollHeight+";clientHeight:"+clientHeight+";scrolled:"+scrolled);
         h2.style.setProperty('--percentage', scrolled*100+'%');
         if(scrollTop >= head_effect_show){
-            let scrolled = (scrollTop-head_effect_show) / ((scrollHeight-head_effect_show_chip) - clientHeight);
+            let scrolled = (scrollTop-head_effect_show) / ((scrollHeight-head_effect_show_chip_shop) - clientHeight);
             /* h2.style.setProperty('--percentage', scrolled*100+'%');*/
             let total =  1 / rows.length;
             //console.log("total:"+total);
@@ -76,7 +83,7 @@ function labChip(){
             scrollHeight = htmlElement.scrollHeight;
             clientHeight = htmlElement.clientHeight;
         }
-        let scrolled = (scrollTop-head_effect_show_drawn) / (lab_chip - clientHeight);
+        let scrolled = (scrollTop-head_effect_show_drawn_shop-lab_offset) / (lab_chip - clientHeight);
         //let scrolled = document.documentElement.scrollTop / (document.documentElement.scrollHeight - document.documentElement.clientHeight)
         //console.log("scrollTop:"+scrollTop+";scrollHeight:"+scrollHeight+";clientHeight:"+clientHeight+";scrolled:"+scrolled);
         let $h1 = document.querySelector('#the-h1')
