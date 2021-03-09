@@ -7,29 +7,32 @@
                                                                       src="{ms:global.host/}/{@ms:file global.logo/}"
                                                                       class="logo-pic"></a>
         </div>
-        <div class="nav-item">
-            <a href="{ms:global.host/}" class="item"> 首页 </a>
-            {ms:channel flag='nav' type='top'}
-            <a href="<#if field.type==3>{ms:global.url/}${field.typeurl}<#else>{ms:global.url/}${field.typelink}</#if>"
-               class="item<#if typeid==field.typeid || (ids?has_content && ids?index_of('${field.typeid}') gt -1)> sel</#if>">
-                ${field.typetitle}
-            </a>
-            {/ms:channel}
-            <a href="http://www.roboct.com/products" class="item" target="_blank"> 合作伙伴 </a>
+        <div class="nav-div">
+
+            <ul class="nav-ul">
+                {ms:channel flag='nav' type='top' orderby="sort"}
+                <#if field.id == "1368841949766762497">
+                    <li class="item-li">
+                        <a href="{ms:global.url/}${field.typelink}" class="item<#if typeid==field.typeid || (ids?has_content && ids?index_of('${field.typeid}') gt -1)> li-selected</#if>">
+                            ${field.typetitle}
+                        </a>
+                    </li>
+                <#else>
+                    <li class="item-li">
+                        <a href="<#if field.type==3>{ms:global.url/}${field.typeurl}<#else>{ms:global.url/}${field.typelink}</#if>"
+                           class="item<#if typeid==field.typeid || (ids?has_content && ids?index_of('${field.typeid}') gt -1)> li-selected</#if>">
+                            ${field.typetitle}
+                        </a>
+                    </li>
+                </#if>
+                {/ms:channel}
+                <li class="item-li">
+                    <a href="http://www.roboct.com/products" class="item" target="_blank"> 合作伙伴 </a>
+                </li>
+            </ul>
+
         </div>
         <div class="nav-search" >
-            <!--搜索-start-->
-           <!-- <form id="searchDataForm" action="{ms:global.host/}/mcms/search.do" method="post" class="ms-search-input">
-                <div class="ms-search-input-div">
-                    &lt;!&ndash;输入框 - start &ndash;&gt;
-                    <input class="ms-input" name="content_title" placeholder="输入搜索关键字">
-                    &lt;!&ndash;输入框 -end &ndash;&gt;
-                </div>
-                <div class="ms-search-button" onclick="document.getElementById('searchDataForm').submit();">
-                    <i class="iconfont icon-fangdajing"></i>
-                </div>
-            </form>-->
-            <!--搜索-end-->
         </div>
     </div>
 </div>
