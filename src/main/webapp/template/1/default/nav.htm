@@ -11,28 +11,19 @@
 
             <ul class="nav-ul">
                 {ms:channel flag='nav' type='top' orderby="sort"}
-                <#if field.id == "1368841949766762497">
-                    <li class="item-li">
-                        <a href="{ms:global.url/}${field.typelink}" class="item<#if typeid==field.typeid || (ids?has_content && ids?index_of('${field.typeid}') gt -1)> li-selected</#if>">
-                            ${field.typetitle}
-                        </a>
-                    </li>
-                <#else>
-                    <li class="item-li">
-                        <a href="<#if field.type==3>{ms:global.url/}${field.typeurl}<#else>{ms:global.url/}${field.typelink}</#if>"
-                           class="item<#if typeid==field.typeid || (ids?has_content && ids?index_of('${field.typeid}') gt -1)> li-selected</#if>">
-                            ${field.typetitle}
-                        </a>
-                    </li>
-                </#if>
+                <li class="item-li">
+                    <a href="<#if field.type==3>{ms:global.url/}${field.typeurl}<#else>{ms:global.url/}${field.typelink}</#if>"
+                       class="item<#if typeid==field.typeid || (ids?has_content && ids?index_of('${field.typeid}') gt -1)> li-selected</#if>">
+                        ${field.typetitle}
+                    </a>
+                </li>
                 {/ms:channel}
                 <li class="item-li">
-                    <a href="http://www.roboct.com/products" class="item" target="_blank"> 合作伙伴 </a>
+                    <a href="http://www.roboct.com/" class="item" target="_blank"> 合作伙伴 </a>
                 </li>
             </ul>
-
         </div>
-        <div class="nav-search" >
+        <div class="nav-search">
         </div>
     </div>
 </div>
