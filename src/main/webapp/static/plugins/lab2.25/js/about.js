@@ -2,7 +2,7 @@ let lab_head = $("#lab_head").height();//头部背景高度1026
 let lab_effect = $("#lab_effect").height();//flutter1高度
 let lab_show = $("#lab_show").height();//;flutter2高度
 let lab_drawn = $("#lab_drawn").height();//uni-app渐入特效高度
-let lab_shop = $("#lab_shop").height();//vue透视;
+let lab_shop = $("#lab_shop").height();//uni-app商城;
 let lab_chip = $("#lab_chip").height();//vue透视;
 
 
@@ -13,8 +13,8 @@ let head_effect_show_drawn = lab_head+lab_effect+lab_show+lab_drawn;//头部 + f
 let head_effect_show_chip = lab_head+lab_effect+lab_show+lab_chip;//头部 + flutter1动画特效高度 + flutter2插件高度 + vue透视高度
 
 let head_effect_show_shop = lab_head+lab_effect+lab_show+lab_shop; //头部 + flutter1动画特效高度 + flutter2插件高度
-let head_effect_show_drawn_shop = lab_head+lab_effect+lab_show+lab_drawn+lab_shop;//头部 + flutter1动画特效高度 + flutter2插件高度 + uni-app渐入特效高度 + unishop高度
-let head_effect_show_chip_shop = lab_head+lab_effect+lab_show+lab_chip+lab_shop;//头部 + flutter1动画特效高度 + flutter2插件高度 + vue透视高度 + unishop高度
+let head_effect_show_drawn_shop = lab_head+lab_effect+lab_show+lab_drawn+lab_shop;//头部 + flutter1动画特效高度 + flutter2插件高度 + uni-app渐入特效高度 + uni-app商城高度
+let head_effect_show_chip_shop = lab_head+lab_effect+lab_show+lab_chip+lab_shop;//头部 + flutter1动画特效高度 + flutter2插件高度 + vue透视高度 + uni-app商城高度
 
 let lab_offset = 600;//lab_chip动画效果偏移量
 

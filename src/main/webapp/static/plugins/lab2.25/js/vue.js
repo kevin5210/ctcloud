@@ -1,19 +1,11 @@
 let lab_head = $("#lab_head").height();//1026
 let lab_chip = $("#lab_chip").height();//3000;
-let lab_previous = lab_head;
-let lab_scrollHeight = 0;//div增加，高度随之增加
-if (document.body && document.body.scrollHeight)
-{
-    lab_scrollHeight = document.body.scrollHeight;
-}
-if (document.documentElement && document.documentElement.scrollHeight)
-{
-    lab_scrollHeight = document.documentElement.scrollHeight;
-}
-let interval3 = lab_scrollHeight-lab_chip;//
 
 
-
+/**
+ * 监听滚动条事件
+ * 透视打开轮播视频
+ */
 function labChip(){
     window.addEventListener('scroll', (e) => {
         const htmlElement = document.documentElement;
@@ -32,9 +24,7 @@ function labChip(){
             scrollHeight = htmlElement.scrollHeight;
             clientHeight = htmlElement.clientHeight;
         }
-        let scrolled = (scrollTop-lab_previous) / ((scrollHeight-interval3) - clientHeight);
-        //let scrolled = document.documentElement.scrollTop / (document.documentElement.scrollHeight - document.documentElement.clientHeight)
-        //console.log("scrollTop:"+scrollTop+";scrollHeight:"+scrollHeight+";clientHeight:"+clientHeight+";scrolled:"+scrolled);
+        let scrolled = (scrollTop-lab_head) / (lab_chip - clientHeight);
         let $h1 = document.querySelector('#the-h1')
         let $theChip = document.querySelector('#the-chip')
         let $A13 = document.querySelector('#A13')

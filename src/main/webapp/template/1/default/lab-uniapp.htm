@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="{ms:global.host/}/{ms:global.style/}/css/app.css">
     <link rel="stylesheet" href="{ms:global.host/}/static/plugins/lab2.25/css/about.css">
     <link rel="stylesheet" href="{ms:global.host/}/static/plugins/app1.0/css/style.css">
+    <link rel="stylesheet" href="{ms:global.host/}/v/iphone-12-pro/e/built/styles/main.built.css">
+    <link rel="stylesheet" href="{ms:global.host/}/v/iphone-12-pro/e/built/styles/overview.built.css">
 
     <script type="text/javascript" src="{ms:global.host/}/static/plugins/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="{ms:global.host/}/static/plugins/vue/2.6.9/vue.min.js"></script>
@@ -35,72 +37,10 @@
 <body>
 <div id="app" v-cloak>
     <#include "nav.htm" />
-    <div id="lab_head">
-        <div class="wrapper-top">
-            <div class="poster-content-box">
-                <div class="pc_poster-content-box">
-                    <h1 class="left-sandbox">新技术实验室</h1>
-                    <p class="sandbox-poster-text">
-                        全新技术上线 让用户眼前一亮
-                    </p>
-                    <div class="sandbox-btn-group">
-                        <!--<a class="sandbox-btn" href="testList.html">全部实验列表</a>-->
-                        <!-- <a class="action" target="_blank"></a> -->
-                        <!--<a class="action" target="_blank" data-url="https://edu.huaweicloud.com/activity/10minslabs.html" href="https://edu.huaweicloud.com/activity/10minslabs.html" style="display: inline-block;">10分钟轻松体验云服务</a></div>-->
-                        <div class="sandbox-test">
-                            <ul>
-                                <li data-title="使用Flutter实现3D动画"><a href="{ms:global.host/}/html/web/gywm/flutter/index.html">
-                                    <div class="sandbox-test-img">
-                                        <div class="bgimg bgimg00"
-                                             style="background-image:url({ms:global.host/}/upload/1/cms/content/1613808802382.png);cursor: pointer"></div>
-                                        <div class="img-shadow"></div>
-                                    </div>
-                                </a><a href="{ms:global.host/}/html/web/gywm/flutter/index.html"><span class="sandbox-test-title">使用Flutter实现3D动画</span></a>
-                                </li>
-                                <li data-title="uni-app实现购物平台"><a href="{ms:global.host/}/html/web/gywm/uniapp/index.html">
-                                    <div class="sandbox-test-img">
-                                        <div class="bgimg bgimg01"
-                                             style="background-image:url({ms:global.host/}/upload/1/cms/content/1613808802381.png);cursor: pointer"></div>
-                                        <div class="img-shadow"></div>
-                                    </div>
-                                </a><a href="{ms:global.host/}/html/web/gywm/uniapp/index.html"><span class="sandbox-test-title">uni-app实现购物平台</span></a>
-                                </li>
-                                <li data-title="Vue特效展示"><a href="{ms:global.host/}/html/web/gywm/vue/index.html">
-                                    <div class="sandbox-test-img">
-                                        <div class="bgimg bgimg02"
-                                             style="background-image:url({ms:global.host/}/upload/1/cms/content/1613808802380.png);cursor: pointer"></div>
-                                        <div class="img-shadow"></div>
-                                    </div>
-                                </a><a href="{ms:global.host/}/html/web/gywm/vue/index.html"><span class="sandbox-test-title">Vue特效展示</span></a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="sandbox-video pc_sandbox-video">
-                            <div class="video-con">
-                                <img id="movie" src="{ms:global.host/}/upload/1/cms/content/1613808802400.png" alt="">
-                                <!--<div id="cover">
-                                    <div class="video-btn"><img src="img/sanjiaoright.png"></div>
-                                </div>-->
-                            </div>
-                            <div class="right-text">
-                                <h3 class="right-text-title">uni-app 跨平台技术，开发一次，编译到多个平台</h3>
-                                <p class="right-text-desc">
-                                    支持Android/iOS/H5/微信小程序/支付宝小程序<br></p>
-                                <a class="guide"
-                                   data-url="#"
-                                   href="javascript:;">电商购物平台展示 ↓↓↓</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <#include "lab-head.htm" />
     <div id="lab_drawn" >
         <h2>
-            uni-app 跨平台技术，开发一次，编译到多个平台<br>
-            支持Android/iOS/H5/微信小程序/支付宝小程序<br>
-            电商购物平台展示
+            uni-app电商购物平台
         </h2>
         <div id="iphone">
             <div id="hardware"></div>
@@ -108,30 +48,88 @@
                 <img src="{ms:global.host/}/static/plugins/lab2.25/images/iphone12-5g_top_ui.jpg" class="top-ui" alt="">
                 <ul>
                     <li>
-                        <img src="{ms:global.host/}/static/plugins/lab2.25/images/iphone12-5g_show_01.jpg" />
+                        <img src="{ms:global.host/}/static/plugins/lab2.25/images/44444.png" />
                     </li>
                     <li>
-                        <img src="{ms:global.host/}/static/plugins/lab2.25/images/iphone12-5g_show_02.jpg" />
+                        <img src="{ms:global.host/}/static/plugins/lab2.25/images/55555.png" />
                     </li>
                     <li>
-                        <img src="{ms:global.host/}/static/plugins/lab2.25/images/iphone12-5g_show_03.jpg" />
+                        <img src="{ms:global.host/}/static/plugins/lab2.25/images/66666.png" />
                     </li>
                     <li>
-                        <img src="{ms:global.host/}/static/plugins/lab2.25/images/iphone12-5g_show_04.jpg" />
+                        <img src="{ms:global.host/}/static/plugins/lab2.25/images/77777.png" />
                     </li>
                     <li>
-                        <img src="{ms:global.host/}/static/plugins/lab2.25/images/iphone12-5g_show_05.jpg" />
+                        <img src="{ms:global.host/}/static/plugins/lab2.25/images/88888.png" />
                     </li>
                     <li>
-                        <img src="{ms:global.host/}/static/plugins/lab2.25/images/iphone12-5g_show_06.jpg" />
+                        <img src="{ms:global.host/}/static/plugins/lab2.25/images/99999.png" />
                     </li>
-                    <li>
-                        <img src="{ms:global.host/}/static/plugins/lab2.25/images/iphone12-5g_show_07.jpg" />
-                    </li>
+                    <!-- <li>
+                         <img src="{ms:global.host/}/static/plugins/lab2.25/images/111.png" />
+                     </li>-->
                 </ul>
             </div>
         </div>
     </div>
+    <section id="lab_shop" class="main section section-ios" data-anim-scroll-group="iOS" data-component-list="iOS14" data-analytics-section-engagement="name:ios14">
+        <div class="intro-wallpaper-container intro-visible" style="position: initial;">
+            <div class="section-content">
+                <div class="copy-container" style="padding-top: 0px">
+                    <h2 class="section-header-headline typography-section-headline intro-copy eyebrow" data-focus-expression="{&quot;expression&quot;: &quot;a0t&quot;, &quot;anchors&quot;: [&quot;.timeline-intro&quot;]}" tabindex="-1" style="transform: matrix(1, 0, 0, 1, 0, 39.5062); opacity: 1;">uni-app购物平台</h2>
+                    <p class="large-12 large-centered small-12 text-zoom-12 typography-section-headline intro-copy headline centerall" style="transform: matrix(1, 0, 0, 1, 0, 39.5062); opacity: 1;">商城类APP和小程序</p>
+                    <!-- large width alt -->
+                    <p class="large-7 large-centered medium-8 typography-section-body intro-copy copy" data-focus-expression="{&quot;expression&quot;: &quot;a0t&quot;, &quot;anchors&quot;: [&quot;.timeline-intro&quot;]}" tabindex="-1" style="transform: matrix(1, 0, 0, 1, 0, 39.5062); opacity: 1;">uni-app可实现一套应用，多端运行。</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-container">
+            <div class="sticky-content" style="margin-top: 200px">
+                <div class="overflow-container">
+                    <div class="phone-lockup-container" style="--ios-phone-lockup-padding-L:62px;">
+                        <div class="phone-lockup large-4 medium-5 small-12 side-phone-left">
+                            <figure class="image-side-phone-left" style="transform: matrix(1, 0, 0, 1, 0, 0);border-radius:27px;background-image:url('{ms:global.host/}/v/iphone-12-pro/e/images/overview/ios/uniapp-shop1.gif')"></figure>
+                            <div class="content-wrapper">
+                                <p class="typography-caption-alt content-copy" data-focus-expression="{&quot;expression&quot;: &quot;a0b&quot;, &quot;anchors&quot;: [&quot;.timeline-callouts&quot;]}" tabindex="-1" style="transform: matrix(1, 0, 0, 1, 0, 0); opacity: 1;"><span class="highlight">首页</span> 购物平台首页产品展示页，展示各种商品、特价产品、推荐等。</p>
+                            </div>
+                        </div>
+                        <div class="phone-lockup large-4 medium-5 small-12 center-phone">
+                            <figure class="image-center-phone-static" style="transform: matrix(1, 0, 0, 1, 0, 0);border-radius:27px;background-image:url('{ms:global.host/}/v/iphone-12-pro/e/images/overview/ios/uniapp-shop2.gif')"></figure>
+                            <div class="content-wrapper">
+                                <p class="typography-caption-alt content-copy" data-focus-expression="{&quot;expression&quot;: &quot;a0b&quot;, &quot;anchors&quot;: [&quot;.timeline-callouts&quot;]}" tabindex="-1" style="transform: matrix(1, 0, 0, 1, 0, 0); opacity: 1;"><span class="highlight">分类</span> 根据类别显示商品图片、详情、价格，可直接加入购物车。</p>
+                            </div>
+                        </div>
+                        <div class="phone-lockup large-4 medium-5 small-12 side-phone-right">
+                            <figure class="image-side-phone-right" style="transform: matrix(1, 0, 0, 1, 0, 0);border-radius:27px;background-image:url('{ms:global.host/}/v/iphone-12-pro/e/images/overview/ios/uniapp-shop3.gif')"></figure>
+                            <div class="content-wrapper">
+                                <p class="typography-caption-alt content-copy" data-focus-expression="{&quot;expression&quot;: &quot;a0b&quot;, &quot;anchors&quot;: [&quot;.timeline-callouts&quot;]}" tabindex="-1" style="transform: matrix(1, 0, 0, 1, 0, 0); opacity: 1;"><span class="highlight">购物车</span> 用户选择产品的购物车，快快选择你心意的商品。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-container">
+            <div class="sticky-content">
+                <div class="overflow-container">
+                    <div class="phone-lockup-container" style="--ios-phone-lockup-padding-L:62px;">
+                        <div class="phone-lockup large-4 medium-5 small-12 side-phone-left">
+                            <figure class="image-side-phone-left" style="transform: matrix(1, 0, 0, 1, 0, 0);border-radius:27px;background-image:url('{ms:global.host/}/v/iphone-12-pro/e/images/overview/ios/uniapp-shop4.gif')"></figure>
+                            <div class="content-wrapper">
+                                <p class="typography-caption-alt content-copy" data-focus-expression="{&quot;expression&quot;: &quot;a0b&quot;, &quot;anchors&quot;: [&quot;.timeline-callouts&quot;]}" tabindex="-1" style="transform: matrix(1, 0, 0, 1, 0, 0); opacity: 1;"><span class="highlight">支付</span> 购物车结算单元，将产品采购到家。</p>
+                            </div>
+                        </div>
+                        <div class="phone-lockup large-4 medium-5 small-12 side-phone-right">
+                            <figure class="image-side-phone-right" style="transform: matrix(1, 0, 0, 1, 0, 0);border-radius:27px;background-image:url('{ms:global.host/}/v/iphone-12-pro/e/images/overview/ios/uniapp-shop5.gif')"></figure>
+                            <div class="content-wrapper">
+                                <p class="typography-caption-alt content-copy" data-focus-expression="{&quot;expression&quot;: &quot;a0b&quot;, &quot;anchors&quot;: [&quot;.timeline-callouts&quot;]}" tabindex="-1" style="transform: matrix(1, 0, 0, 1, 0, 0); opacity: 1;"><span class="highlight">我的</span> 是个人信息显示模块，可以查看个人信息、订单信息、物流信息等。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <script src="{ms:global.host/}/static/plugins/lab2.25/js/uniapp.js"></script>
     <script>
         $(function() {

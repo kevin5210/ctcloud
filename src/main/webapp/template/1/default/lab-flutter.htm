@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="{ms:global.host/}/{ms:global.style/}/css/app.css">
     <link rel="stylesheet" href="{ms:global.host/}/static/plugins/lab2.25/css/about.css">
     <link rel="stylesheet" href="{ms:global.host/}/static/plugins/app1.0/css/style.css">
+    <link rel="stylesheet" href="{ms:global.host/}/v/iphone-12-pro/e/built/styles/main.built.css">
+    <link rel="stylesheet" href="{ms:global.host/}/v/iphone-12-pro/e/built/styles/overview.built.css">
 
     <script type="text/javascript" src="{ms:global.host/}/static/plugins/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="{ms:global.host/}/static/plugins/vue/2.6.9/vue.min.js"></script>
@@ -31,84 +33,78 @@
     <script>
         ms.base = "";
     </script>
+    <style>
+        .notice_rig:after {
+            content: "";
+            position: absolute;
+            z-index: 1;
+            top: 0px;
+            right: 0;
+            pointer-events: none;
+            background-image: linear-gradient(to bottom, rgb(0, 0, 0), rgba(64, 126, 180, 0), rgb(0, 0, 0) 100%);
+            height: 743px;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
 <div id="app" v-cloak>
     <#include "nav.htm" />
-    <div id="lab_head">
-        <div class="wrapper-top">
-            <div class="poster-content-box">
-                <div class="pc_poster-content-box">
-                    <h1 class="left-sandbox">新技术实验室</h1>
-                    <p class="sandbox-poster-text">
-                        全新技术上线 让用户眼前一亮
-                    </p>
-                    <div class="sandbox-btn-group">
-                        <!--<a class="sandbox-btn" href="testList.html">全部实验列表</a>-->
-                        <!-- <a class="action" target="_blank"></a> -->
-                        <!--<a class="action" target="_blank" data-url="https://edu.huaweicloud.com/activity/10minslabs.html" href="https://edu.huaweicloud.com/activity/10minslabs.html" style="display: inline-block;">10分钟轻松体验云服务</a></div>-->
-                        <div class="sandbox-test">
-                            <ul>
-                                <li data-title="使用Flutter实现3D动画"><a href="{ms:global.host/}/html/web/gywm/flutter/index.html">
-                                    <div class="sandbox-test-img">
-                                        <div class="bgimg bgimg00"
-                                             style="background-image:url({ms:global.host/}/upload/1/cms/content/1613808802382.png);cursor: pointer"></div>
-                                        <div class="img-shadow"></div>
-                                    </div>
-                                </a><a href="{ms:global.host/}/html/web/gywm/flutter/index.html"><span class="sandbox-test-title">使用Flutter实现3D动画</span></a>
-                                </li>
-                                <li data-title="uni-app实现购物平台"><a href="{ms:global.host/}/html/web/gywm/uniapp/index.html">
-                                    <div class="sandbox-test-img">
-                                        <div class="bgimg bgimg01"
-                                             style="background-image:url({ms:global.host/}/upload/1/cms/content/1613808802381.png);cursor: pointer"></div>
-                                        <div class="img-shadow"></div>
-                                    </div>
-                                </a><a href="{ms:global.host/}/html/web/gywm/uniapp/index.html"><span class="sandbox-test-title">uni-app实现购物平台</span></a>
-                                </li>
-                                <li data-title="Vue特效展示"><a href="{ms:global.host/}/html/web/gywm/vue/index.html">
-                                    <div class="sandbox-test-img">
-                                        <div class="bgimg bgimg02"
-                                             style="background-image:url({ms:global.host/}/upload/1/cms/content/1613808802380.png);cursor: pointer"></div>
-                                        <div class="img-shadow"></div>
-                                    </div>
-                                </a><a href="{ms:global.host/}/html/web/gywm/vue/index.html"><span class="sandbox-test-title">Vue特效展示</span></a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="sandbox-video pc_sandbox-video">
-                            <div class="video-con">
-                                <img id="movie" src="{ms:global.host/}/upload/1/cms/content/1613808802400.png" alt="">
-                                <!--<div id="cover">
-                                    <div class="video-btn"><img src="img/sanjiaoright.png"></div>
-                                </div>-->
-                            </div>
-                            <div class="right-text">
-                                <h3 class="right-text-title">Flutter实现3D动画</h3>
-                                <p class="right-text-desc">
-                                    Flutter实现3D动画。Flutter实现3D动画。Flutter实现3D动画。Flutter实现3D动画。</p>
-                                <a class="guide"
-                                   data-url="#"
-                                   href="javascript:;">Flutter技术3D动画展示 ↓↓↓</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <#include "lab-head.htm" />
     <div id="lab_effect" >
         <section id="effect-section">
             <h2>
                 Flutter实现3D动画
             </h2>
-            <div class="video-container show will-change" style="transform: matrix(1, 0, 0, 1, 0, 0);">
+            <div class="video-container show will-change notice_rig" style="transform: matrix(1, 0, 0, 1, 0, 0);">
                 <figure class="image-hero-startframe"></figure>
                 <figure class="image-hero-endframe"></figure>
-                <video src="{ms:global.host/}/static/plugins/lab2.25/video/first.mp4" muted playsinline autoplay loop></video>
+                <video src="{ms:global.host/}/static/plugins/lab2.25/video/flutter2.mp4" muted playsinline autoplay loop></video>
             </div>
 
         </section>
     </div>
+    <section id="lab_show" class="main section section-ios" data-anim-scroll-group="iOS" data-component-list="iOS14" data-analytics-section-engagement="name:ios14">
+        <div class="intro-wallpaper-container intro-visible" style="position: initial;">
+            <div class="section-content">
+                <div class="copy-container" style="padding-top: 0px">
+                    <h2 class="section-header-headline typography-section-headline intro-copy eyebrow" data-focus-expression="{&quot;expression&quot;: &quot;a0t&quot;, &quot;anchors&quot;: [&quot;.timeline-intro&quot;]}" tabindex="-1" style="transform: matrix(1, 0, 0, 1, 0, 39.5062); opacity: 1;">Flutter插件</h2>
+                    <p class="large-12 large-centered small-12 text-zoom-12 typography-section-headline intro-copy headline centerall" style="transform: matrix(1, 0, 0, 1, 0, 39.5062); opacity: 1;">各种特效，<br class="small">即插即用</p>
+                    <!-- large width alt -->
+                    <p class="large-7 large-centered medium-8 typography-section-body intro-copy copy" data-focus-expression="{&quot;expression&quot;: &quot;a0t&quot;, &quot;anchors&quot;: [&quot;.timeline-intro&quot;]}" tabindex="-1" style="transform: matrix(1, 0, 0, 1, 0, 39.5062); opacity: 1;">Flutter插件实验室有各种插件，可满足您项目所需。</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-container">
+            <div class="sticky-content" style="margin-top: 200px">
+                <div class="overflow-container">
+                    <div class="phone-lockup-container" style="--ios-phone-lockup-padding-L:62px;">
+                        <div class="phone-lockup large-4 medium-5 small-12 side-phone-left">
+                            <figure class="image-side-phone-left" style="transform: matrix(1, 0, 0, 1, 0, 0);border-radius:27px;background-image:url('{ms:global.host/}/v/iphone-12-pro/e/images/overview/ios/flutter-plugin1.gif')"></figure>
+                            <div class="content-wrapper">
+                                <p class="typography-caption-alt content-copy" data-focus-expression="{&quot;expression&quot;: &quot;a0b&quot;, &quot;anchors&quot;: [&quot;.timeline-callouts&quot;]}" tabindex="-1" style="transform: matrix(1, 0, 0, 1, 0, 0); opacity: 1;"><span class="highlight">Flutter go</span> 一站式搞定多种常用小组件，开箱即查。</p>
+                            </div>
+                        </div>
+                        <div class="phone-lockup large-4 medium-5 small-12 center-phone">
+                            <figure class="image-center-phone-static" style="transform: matrix(1, 0, 0, 1, 0, 0);border-radius:35px;background-image:url('{ms:global.host/}/v/iphone-12-pro/e/images/overview/ios/flutter-plugin2.gif')"></figure>
+                            <div class="content-wrapper">
+                                <p class="typography-caption-alt content-copy" data-focus-expression="{&quot;expression&quot;: &quot;a0b&quot;, &quot;anchors&quot;: [&quot;.timeline-callouts&quot;]}" tabindex="-1" style="transform: matrix(1, 0, 0, 1, 0, 0); opacity: 1;"><span class="highlight">丰富组件</span> 丰富的Components组件，使你在APP中自由使用各种特效。</p>
+                            </div>
+                        </div>
+                        <div class="phone-lockup large-4 medium-5 small-12 side-phone-right">
+                            <figure class="image-side-phone-right" style="transform: matrix(1, 0, 0, 1, 0, 0);border-radius:30px;background-image:url('{ms:global.host/}/v/iphone-12-pro/e/images/overview/ios/flutter-plugin3.gif')"></figure>
+                            <div class="content-wrapper">
+                                <p class="typography-caption-alt content-copy" data-focus-expression="{&quot;expression&quot;: &quot;a0b&quot;, &quot;anchors&quot;: [&quot;.timeline-callouts&quot;]}" tabindex="-1" style="transform: matrix(1, 0, 0, 1, 0, 0); opacity: 1;"><span class="highlight">滑动插件</span> 可实现图片和内容随手移动，展示更丰富内容。</p>
+                            </div>
+                        </div>
+                        <!-- <div class="typography-section-body ios-cta">
+                             <a href="/ios/ios-14/" data-analytics-title="learn more about ios 14" class="icon-wrapper" data-focus-expression="{&quot;expression&quot;: &quot;a0b + css(&#45;&#45;ios-space-required) + 20vh&quot;, &quot;tabindex&quot;: 0, &quot;anchors&quot;: [&quot;.timeline-callouts&quot;]}" tabindex="0"><span class="icon-copy">进一步了解 Flutter&nbsp;</span></a>
+                         </div>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <#include "footer.htm" />
 </div>
 </body>
