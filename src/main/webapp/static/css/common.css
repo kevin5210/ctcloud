@@ -17,9 +17,9 @@ q:before,q:after {content:''}
 abbr,acronym { border:0}
 button{ outline: none !important;}
 img{ max-width: 100%; vertical-align:middle; border:none; display:inline-block;}
-a{ color: #575757; text-decoration: none; outline:none;}
+/*a{ color: #575757; text-decoration: none; outline:none;}
 a:hover{color: cornflowerblue !important;text-decoration: none;}
-a:focus{outline:none; text-decoration: none;}
+a:focus{outline:none; text-decoration: none;}*/
 .clear{clear: both; width: 100%; line-height: 0; overflow: hidden;}
 /*.form-group input{ border-radius: 0;}*/
 .ellipsis{ overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
