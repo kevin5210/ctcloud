@@ -440,7 +440,7 @@
     width: 100%;
     height: 80px;
     color: #fff;
-    background-image: linear-gradient(rgba(0, 0, 0, .5), transparent);
+    background-image: linear-gradient(rgba(0, 0, 0, .9), transparent);
 }
 
 @media (max-width: 768px) {
@@ -844,13 +844,15 @@
         font-size: 16px;
     }
     .ms-nav .body .nav-div .nav-ul .item-li a:hover{
-         color: #d9f54a;
+         /*color: #d9f54a;*/
+        color: #fff;
     }
     .ms-nav .body .nav-div .nav-ul .item-li .item{
          display: inline-block;
     }
     .ms-nav .body .nav-div .nav-ul .item-li .li-selected{
-         color: #d9f54a;
+         /*color: #d9f54a;*/
+         color: #01FFFF;
          border-bottom: 2px solid;
 
     }
