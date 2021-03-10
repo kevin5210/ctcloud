@@ -1,6 +1,6 @@
 let lab_head = $("#lab_head").height();//1026
 let lab_chip = $("#lab_chip").height();//3000;
-
+let lab_boom = $("#lab_boom").height();//vue倒计时特效;
 
 /**
  * 监听滚动条事件
@@ -24,7 +24,7 @@ function labChip(){
             scrollHeight = htmlElement.scrollHeight;
             clientHeight = htmlElement.clientHeight;
         }
-        let scrolled = (scrollTop-lab_head) / (lab_chip - clientHeight);
+        let scrolled = (scrollTop-lab_head-lab_boom) / (lab_chip - clientHeight);
         let $h1 = document.querySelector('#the-h1')
         let $theChip = document.querySelector('#the-chip')
         let $A13 = document.querySelector('#A13')

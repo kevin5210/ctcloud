@@ -38,12 +38,25 @@
 <div id="app" v-cloak>
     <#include "nav.htm" />
     <#include "lab-head.htm" />
+    <div id="lab_boom" class="lab-init">
+        <section id="boom-section" class="lab-section">
+            <h2>
+                Vue.js实现倒计时动画
+            </h2>
+            <div class="video-container show will-change notice_rig" style="transform: matrix(1, 0, 0, 1, 0, 0);">
+                <figure class="image-hero-startframe"></figure>
+                <figure class="image-hero-endframe"></figure>
+                <video src="{ms:global.host/}/static/plugins/lab2.25/video/vue-countdown.mp4" muted playsinline autoplay loop></video>
+            </div>
+
+        </section>
+    </div>
     <div id="lab_chip" >
         <section id="chip-section">
-            <video src="{ms:global.host/}/static/plugins/lab2.25/video/large.mp4" muted playsinline autoplay loop></video>
+            <video src="{ms:global.host/}/static/plugins/lab2.25/video/vue-visualized.mp4" muted playsinline autoplay loop></video>
             <h1 id="the-h1">
                 <b>Vue.js</b> 渐进式 JavaScript 框架<br>
-                CTTC-BI数据可视化
+                BI数据可视化
             </h1>
             <div id="the-chip">
                 <svg viewBox="0 0 1000 1000" id="A13">

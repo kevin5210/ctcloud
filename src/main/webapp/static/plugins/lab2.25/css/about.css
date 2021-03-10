@@ -265,3 +265,15 @@
     transition: opacity 1s ease-in;
     opacity: 1;
 }
+
+.notice_rig:after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 0px;
+    right: 0;
+    pointer-events: none;
+    background-image: linear-gradient(to bottom, rgb(0, 0, 0), transparent, rgb(0, 0, 0) 100%);
+    height: 743px;
+    width: 100%;
+}
