@@ -20,7 +20,7 @@ let head_effect_show_chip_shop = lab_head+lab_effect+lab_show+lab_chip+lab_shop;
 let head_effect_show_drawn_shop_boom = lab_head+lab_effect+lab_show+lab_drawn+lab_shop+lab_boom;//头部 + flutter1动画特效高度 + flutter2插件高度 + uni-app渐入特效高度 + uni-app商城高度+vue倒计时特效
 let head_effect_show_chip_shop_boom = lab_head+lab_effect+lab_show+lab_chip+lab_shop+lab_boom;//头部 + flutter1动画特效高度 + flutter2插件高度 + vue透视高度 + uni-app商城高度+vue倒计时特效
 
-let lab_offset = 900;//lab_chip动画效果偏移量
+let lab_offset = 700;//lab_chip动画效果偏移量
 
 /**
  * uni-app渐入特效
