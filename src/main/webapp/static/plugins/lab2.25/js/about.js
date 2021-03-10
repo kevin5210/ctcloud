@@ -4,6 +4,7 @@ let lab_show = $("#lab_show").height();//;flutter2高度
 let lab_drawn = $("#lab_drawn").height();//uni-app渐入特效高度
 let lab_shop = $("#lab_shop").height();//uni-app商城;
 let lab_chip = $("#lab_chip").height();//vue透视;
+let lab_boom = $("#lab_boom").height();//vue倒计时特效;
 
 
 /*加入flutter2特效调整参数*/
@@ -15,6 +16,9 @@ let head_effect_show_chip = lab_head+lab_effect+lab_show+lab_chip;//头部 + flu
 let head_effect_show_shop = lab_head+lab_effect+lab_show+lab_shop; //头部 + flutter1动画特效高度 + flutter2插件高度
 let head_effect_show_drawn_shop = lab_head+lab_effect+lab_show+lab_drawn+lab_shop;//头部 + flutter1动画特效高度 + flutter2插件高度 + uni-app渐入特效高度 + uni-app商城高度
 let head_effect_show_chip_shop = lab_head+lab_effect+lab_show+lab_chip+lab_shop;//头部 + flutter1动画特效高度 + flutter2插件高度 + vue透视高度 + uni-app商城高度
+
+let head_effect_show_drawn_shop_boom = lab_head+lab_effect+lab_show+lab_drawn+lab_shop+lab_boom;//头部 + flutter1动画特效高度 + flutter2插件高度 + uni-app渐入特效高度 + uni-app商城高度+vue倒计时特效
+let head_effect_show_chip_shop_boom = lab_head+lab_effect+lab_show+lab_chip+lab_shop+lab_boom;//头部 + flutter1动画特效高度 + flutter2插件高度 + vue透视高度 + uni-app商城高度+vue倒计时特效
 
 let lab_offset = 600;//lab_chip动画效果偏移量
 
@@ -43,11 +47,11 @@ function labDrawn(){
             scrollHeight = htmlElement.scrollHeight;
             clientHeight = htmlElement.clientHeight;
         }
-        let scrolled = (scrollTop-head_effect) / ((scrollHeight-head_effect_show_chip_shop) - clientHeight);
+        let scrolled = (scrollTop-head_effect) / ((scrollHeight-head_effect_show_chip_shop_boom) - clientHeight);
         //console.log("scrollTop:"+scrollTop+";scrollHeight:"+scrollHeight+";clientHeight:"+clientHeight+";scrolled:"+scrolled);
         h2.style.setProperty('--percentage', scrolled*100+'%');
         if(scrollTop >= head_effect_show){
-            let scrolled = (scrollTop-head_effect_show) / ((scrollHeight-head_effect_show_chip_shop) - clientHeight);
+            let scrolled = (scrollTop-head_effect_show) / ((scrollHeight-head_effect_show_chip_shop_boom) - clientHeight);
             /* h2.style.setProperty('--percentage', scrolled*100+'%');*/
             let total =  1 / rows.length;
             //console.log("total:"+total);
@@ -83,7 +87,7 @@ function labChip(){
             scrollHeight = htmlElement.scrollHeight;
             clientHeight = htmlElement.clientHeight;
         }
-        let scrolled = (scrollTop-head_effect_show_drawn_shop-lab_offset) / (lab_chip - clientHeight);
+        let scrolled = (scrollTop-head_effect_show_drawn_shop_boom-lab_offset) / (lab_chip - clientHeight);
         //let scrolled = document.documentElement.scrollTop / (document.documentElement.scrollHeight - document.documentElement.clientHeight)
         //console.log("scrollTop:"+scrollTop+";scrollHeight:"+scrollHeight+";clientHeight:"+clientHeight+";scrolled:"+scrolled);
         let $h1 = document.querySelector('#the-h1')
