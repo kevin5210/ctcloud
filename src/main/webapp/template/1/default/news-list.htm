@@ -113,7 +113,7 @@
 
     </p>
 
-    <a href="#" class="js-video-button video-item au-btn au-btn-pill au-btn-icon" data-channel="video" data-video-url="{ms:global.host/}/upload/1/cms/content/editor/1614850323897.mp4"><span><!-- class="btn-text"-->观看演示视频</span>
+    <a href="#" class="js-video-button video-item video-item-right au-btn au-btn-pill au-btn-icon" data-channel="video" data-video-url="{ms:global.host/}/upload/1/cms/content/editor/1614850323897.mp4"><span><!-- class="btn-text"-->观看演示视频</span>
      <!--<i class="btn-icon fa fa-chevron-right"></i>-->
     </a>
    </div>
@@ -157,7 +157,7 @@
     </div>
 
     </p>
-    <a href="#" class="js-video-button video-item au-btn au-btn-pill au-btn-icon" data-channel="video" data-video-url="{ms:global.host/}/upload/1/cms/content/editor/1613786376832.mp4"><span><!-- class="btn-text"-->观看演示视频</span>
+    <a href="#" class="js-video-button video-item video-item-left au-btn au-btn-pill au-btn-icon" data-channel="video" data-video-url="{ms:global.host/}/upload/1/cms/content/editor/1613786376832.mp4"><span><!-- class="btn-text"-->观看演示视频</span>
      <!--<i class="btn-icon fa fa-chevron-right"></i>-->
     </a>
    </div>
@@ -210,7 +210,7 @@
    </div>
 
    </p>
-   <a href="#" class="js-video-button video-item au-btn au-btn-pill au-btn-icon" data-channel="video" data-video-url="{ms:global.host/}/upload/1/cms/content/editor/1613789424816.mp4"><span><!-- class="btn-text"-->观看演示视频</span>
+   <a href="#" class="js-video-button video-item video-item-right au-btn au-btn-pill au-btn-icon" data-channel="video" data-video-url="{ms:global.host/}/upload/1/cms/content/editor/1613789424816.mp4"><span><!-- class="btn-text"-->观看演示视频</span>
     <!--<i class="btn-icon fa fa-chevron-right"></i>-->
    </a>
   </div>
@@ -254,7 +254,7 @@
    </div>
 
    </p>
-   <a href="#" class="js-video-button video-item au-btn au-btn-pill au-btn-icon" data-channel="video" data-video-url="{ms:global.host/}/upload/1/cms/content/editor/1614219869817.mp4"><span><!-- class="btn-text"-->观看演示视频</span>
+   <a href="#" class="js-video-button video-item video-item-left au-btn au-btn-pill au-btn-icon" data-channel="video" data-video-url="{ms:global.host/}/upload/1/cms/content/editor/1614219869817.mp4"><span><!-- class="btn-text"-->观看演示视频</span>
     <!--<i class="btn-icon fa fa-chevron-right"></i>-->
    </a>
   </div>
@@ -868,6 +868,36 @@ $(".js-video-button").modalVideo({
                 margin-left:10px;
         }
 
-}</style>
+}
+.video-item-right::after {
+        position: absolute;
+        content: '';
+        display: inline-block;
+        top: 48%;
+        left: -57%;
+        width: 67px;
+        height: 67px;
+        background-image: url({ms:global.host/}/static/images/toplay.svg);
+        background-size: 90%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        cursor: pointer;
+}
+.video-item-left::after {
+        position: absolute;
+        content: '';
+        display: inline-block;
+        top: 39%;
+        left: 145%;
+        width: 67px;
+        height: 67px;
+        background-image: url({ms:global.host/}/static/images/toplay.svg);
+        background-size: 90%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        z-index: 1;
+}
+</style>
 </body>
 </html>
